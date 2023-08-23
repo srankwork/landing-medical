@@ -18,9 +18,9 @@ const IndexPage = () => {
       <ServiceIntroduction />
       <ResultContainer />
       <DoctorSction />
-      <ReviewContainer />
+      {/* <ReviewContainer />
       <AboutUs />
-      <FaqContainer />
+      <FaqContainer /> */}
       {/* <div id='scroll-container' className='bg-gray-200 h-screen w-full'></div> */}
     </main>
   );
