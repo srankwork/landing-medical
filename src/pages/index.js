@@ -18,10 +18,16 @@ const IndexPage = () => {
       <ServiceIntroduction />
       <ResultContainer />
       <DoctorSction />
-      {/* <ReviewContainer />
       <AboutUs />
-      <FaqContainer /> */}
-      {/* <div id='scroll-container' className='bg-gray-200 h-screen w-full'></div> */}
+      <ReviewContainer />
+      <FaqContainer />
+      <hr className='mt-10' />
+      <div
+        id='scroll-container'
+        className=' bg-appointment-btn h-10 w-full text-center flex flex-col text-white justify-center'
+      >
+        <span>©2023</span>
+      </div>
     </main>
   );
 };

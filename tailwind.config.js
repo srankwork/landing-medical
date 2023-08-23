@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       backgroundColor:{
         'appointment-btn':'#785546',
-        'doctor-info':'#EEE4DE'
+        'doctor-info':'#EEE4DE',
+        'review-section':'#F5EFEE'
       },
       borderColor:{
         'input-border':'102,49,48'

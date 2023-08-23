@@ -10,13 +10,13 @@ const FaqItem = ({ question, answer }) => {
   return (
     <div className='mb-4'>
       <button
-        className='text-left w-full text-xl font-semibold bg-white p-3 rounded-md shadow-md focus:outline-none'
+        className='text-left w-full md:text-xl font-semibold bg-white p-3 rounded-md shadow-sm focus:outline-none'
         onClick={toggleAnswer}
       >
         {question}
       </button>
       {isOpen && (
-        <div className='bg-gray-100 p-3 rounded-md mt-2'>
+        <div className='ml-2 p-3 rounded-md mt-1'>
           <p>{answer}</p>
         </div>
       )}
@@ -38,8 +38,8 @@ const FaqContainer = () => {
   ];
 
   return (
-    <div className='max-w-screen-lg mx-auto p-6'>
-      <h2 className='text-3xl font-semibold mb-8 text-center'>
+    <div className='max-w-screen-lg mx-auto p-4 md:p-6 mt-6 md:mt-14'>
+      <h2 className=' text-xl md:text-3xl font-semibold mb-8 text-center'>
         Frequently Asked Questions
       </h2>
 
