@@ -2,7 +2,7 @@
   "name": "my-gatsby-site ",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://mk1319.github.io/landingpage-medical",
+  "homepage": "https://srankwork.github.io/landing-medical",
   "description": "my-gatsby-site",
   "author": "mukeshcoutloot",
   "keywords": [
@@ -11,7 +11,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby build && gh-pages -d public -b gh-pages",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
