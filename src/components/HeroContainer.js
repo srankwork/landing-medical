@@ -21,7 +21,7 @@ const HeroContainer = () => {
       </div>
 
       {/* <!-- Right Box (Image) --> */}
-      <div className="lg:w-1/2 order-1 lg:order-2">
+      <div className="hidden md:block lg:w-1/2 order-1 lg:order-2">
         <img
           src="https://img.freepik.com/premium-photo/head-balding-man-before-after-hair-transplant-surgery-man-losing-his-hair-has-become-shaggy-advertising-poster-hair-transplant-clinic-treatment-baldness_168410-1887.jpg?w=1060"
           alt="Image"

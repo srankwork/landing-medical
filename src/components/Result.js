@@ -10,7 +10,7 @@ const ResultContainer = () => {
       <h1 className='mt-4 text-2xl md:text-5xl font-semibold leading-128 font-montserrat text-center'>
         Result that's show our value
       </h1>
-      <div className='mt-12 w-1/2 m-auto'>
+      <div className='mt-12 w-full md:w-1/2 m-auto'>
         <div className='w-full h-full'>
 
         <img src='https://img.freepik.com/premium-photo/head-balding-man-before-after-hair-transplant-surgery-man-losing-his-hair-has-become-shaggy-advertising-poster-hair-transplant-clinic-treatment-baldness_168410-1887.jpg?w=1060' />
