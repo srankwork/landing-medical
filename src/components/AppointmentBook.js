@@ -2,7 +2,7 @@ import React from 'react';
 const BookAppointment = () => {
   return (
     <div className="mx-10 mt-8 md:mt-28">
-      <h1 className="block md:hidden text-2xl md:text-3xl font-semibold leading-128 font-montserrat text-center">
+      <h1 className="block md:hidden text-2xl md:text-3xl font-poppins font-semibold leading-tight tracking-tight text-header">
         Book Your Appointment
       </h1>
       <div className="md:flex md:space-x-4 mt-6 md:mt-14">
@@ -12,14 +12,14 @@ const BookAppointment = () => {
               <div className="mt-2 md:w-1/2">
                 <input
                   type="text"
-                  className="border-b-2 border-red-400 border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-gray-400"
+                  className="border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder"
                   placeholder="NAME"
                 />
               </div>
               <div className="mt-2 md:w-1/2">
                 <input
                   type="text"
-                  className="border-b-2 border-red-400 border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-gray-400"
+                  className="border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder"
                   placeholder="REASON FOR APPOINTMENT"
                 />
               </div>
@@ -28,34 +28,34 @@ const BookAppointment = () => {
               <div className="mt-2 md:w-1/3">
                 <input
                   type="text"
-                  className="border-b-2 border-red-400 border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-gray-400"
+                  className="border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder"
                   placeholder="YOUR EMAIL"
                 />
               </div>
               <div className="mt-2 md:w-1/3">
                 <input
                   type="text"
-                  className="border-b-2 border-red-400 border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-gray-400"
+                  className="border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder"
                   placeholder="DATE & TIME"
                 />
               </div>
               <div className="mt-2 md:w-1/3">
                 <input
                   type="text"
-                  className="border-b-2 border-red-400 border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-gray-400"
+                  className="border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder"
                   placeholder="TREATMENT TYPE"
                 />
               </div>
             </div>
           </form>
         </div>
-        <div className="md:w-1/4 mt-12 md:mt-0 ">
-          <h1 className="hidden md:block text-2xl md:text-3xl font-semibold leading-128 font-montserrat text-center mb-6">
+        <div className="md:w-1/4 mt-12 md:mt-0 items-center flex flex-col">
+          <h1 className="hidden md:block text-2xl md:text-3xl font-poppins font-semibold leading-tight tracking-tight text-header text-center mb-6">
             Book Your Appointment
           </h1>
-          <div className="bg-appointment-btn text-center py-2 px-4 rounded-sm transition-all duration-500 hover:bg-amber-900">
-            <a href="#" className="text-white text-center">
-              BOOK SLOT
+          <div className=" w-3/4 bg-primary py-2 px-6 rounded-sm transition-all duration-500 font-semibold text-lg text-center">
+            <a href="#" className="text-white">
+              Appointment
             </a>
           </div>
         </div>

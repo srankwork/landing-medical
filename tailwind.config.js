@@ -7,20 +7,30 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor:{
-        'appointment-btn':'#785546',
-        'doctor-info':'#EEE4DE',
-        'review-section':'#F5EFEE'
+        'primary':'#08589F',
+        'secondry':'#9ECA3D',
+        'background':'#E5EDF4',
       },
       borderColor:{
-        'input-border':'102,49,48'
+        'border':'#9ECA3D',
+        'primary':'#08589F'
+      },
+      placeholderColor:{
+        'placeholder':'#636363',
       },
       lineHeight: {
-        '128': '1.28',
+        '118': '1.18',
       },
       textColor:{
-        'primary-color':'#663130'
+        'primary':'#08589F',
+        'secondry':'#9ECA3D',
+        'info-color':'#B1C8DC',
+        'lightblue':'#4D83B2',
+        'header':'#4F4F4F'
       }
     },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 }

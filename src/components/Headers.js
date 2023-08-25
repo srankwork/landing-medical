@@ -4,12 +4,12 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <div className='my-6 mx-4 md:mx-10'>
-      <div className='container mx-auto flex items-center justify-between'>
+    <div className="mt-8 px-4 md:px-10">
+      <div className="container mx-auto flex items-center justify-between">
         <img
-          src='https://sirpi.wpengine.com/wp-content/uploads/2023/05/Logo-main.svg'
-          alt='Logo'
-          className='h-14 md:h-16'
+          src="https://www.novacutisclinics.com/assets/images/logo.png"
+          alt="Logo"
+          className="h-16 md:h-20"
         />
 
         {/* <div className='hidden md:flex space-x-4'>
@@ -32,8 +32,8 @@ const Header = () => {
             Contact
           </a>
         </div> */}
-        <div className='bg-appointment-btn py-2 px-4 rounded-sm transition-all duration-500 hover:bg-amber-900'>
-          <a href='#' className='text-white '>
+        <div className="bg-primary py-2 px-4 md:px-6 rounded-sm transition-all duration-500 font-semibold md:text-lg">
+          <a href="#" className="text-white ">
             Appointment
           </a>
         </div>
