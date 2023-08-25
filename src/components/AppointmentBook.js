@@ -1,7 +1,7 @@
 import React from 'react';
 const BookAppointment = () => {
   return (
-    <div className="mx-10 mt-8 md:mt-28">
+    <div className="mx-10 mt-14 md:mt-28">
       <h1 className="block md:hidden text-2xl md:text-3xl font-poppins font-semibold leading-tight tracking-tight text-header">
         Book Your Appointment
       </h1>

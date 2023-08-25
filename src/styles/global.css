@@ -24,6 +24,21 @@ body::-webkit-scrollbar-thumb:hover {
   font-weight: 400;
 }
 
+
+
+
+.up-arrow::before {
+  content: "";
+  border-width: 0.25rem 0.25rem 0 0.25rem;
+  border-color: currentColor;
+  border-style: solid;
+  display: inline-block;
+  transform: rotate(-45deg);
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-right: 0.25rem;
+}
+
 @keyframes moveDashedLine {
   0% {
     background-position: 0 0;
