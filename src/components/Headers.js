@@ -33,8 +33,8 @@ const Header = () => {
           </a>
         </div> */}
         <div className="bg-primary py-2 px-4 md:px-6 rounded-sm transition-all duration-500 font-semibold md:text-lg">
-          <a href="#" className="text-white ">
-            Appointment
+          <a href="tel:+917208330809" className="text-white ">
+            Call us
           </a>
         </div>
       </div>
