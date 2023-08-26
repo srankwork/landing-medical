@@ -14,7 +14,7 @@ const IndexPage = () => {
     <main className="w-full h-screen animate-fade-in ">
       <div className=" bg-secondry h-10 w-full text-center flex  items-center text-white justify-around">
         <span>
-          <a href="tel:+917208330809" className="font-semibold">
+          <a href="tel:+917208330809" rel="noreferrer"  className="font-semibold">
             +91 7208330809
           </a>
         </span>
@@ -23,6 +23,7 @@ const IndexPage = () => {
             href="https://www.novacutisclinics.com/location"
             className="flex items-center"
             target="_blank"
+            rel="noreferrer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -44,12 +45,12 @@ const IndexPage = () => {
       </div>
       <Header />
       <HeroContainer />
-      <BookAppointment />
       <ServiceIntroduction />
       <ResultContainer />
       <DoctorSction />
       <AboutUs />
       <ReviewContainer />
+      <BookAppointment />
       <FaqContainer />
       <hr className="mt-10" />
 
@@ -61,6 +62,7 @@ const IndexPage = () => {
         >
           <img
             className="w-14 h-14"
+            alt="whatsapp"
             src="https://tradebook.in.net/whatsapp.png"
           />
         </a>

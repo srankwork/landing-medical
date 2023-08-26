@@ -4,7 +4,7 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <div className='my-4 md:my-6 px-4 md:px-10'>
+    <div className='my-2 md:my-4 px-4 md:px-10'>
       <div className='container mx-auto flex items-center justify-between'>
         <img
           src='https://www.novacutisclinics.com/assets/images/logo.png'
