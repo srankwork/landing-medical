@@ -2,11 +2,13 @@ import React, { useState, useRef } from 'react';
 
 const ImageSlider = ({ oldImage, newImage }) => {
   const [imageReveal, setimageReveal] = useState(0.5);
+  const [isDrag, setIsDrag] = useState(false);
   const imageContainer = useRef(null);
 
   const slide = (xPosition) => {
     const containerBoundingRect =
       imageContainer.current.getBoundingClientRect();
+    setIsDrag(true);
 
     setimageReveal(() => {
       if (xPosition < containerBoundingRect.left) {
@@ -22,15 +24,18 @@ const ImageSlider = ({ oldImage, newImage }) => {
   };
 
   const handleTouchMove = (e) => {
+    setIsDrag(true);
     slide(e.touches.item(0).clientX);
   };
 
   const handleMouseDown = () => {
     window.onmousemove = (e) => {
+      setIsDrag(true);
       slide(e.clientX);
     };
 
     window.onmouseup = (e) => {
+      setIsDrag(false);
       window.onmousemove = undefined;
       window.onmouseup = undefined;
     };
@@ -42,13 +47,17 @@ const ImageSlider = ({ oldImage, newImage }) => {
       className="max-w-lg w-full mx-auto  relative select-none"
     >
       <img
-        src="https://sirpi.wpengine.com/wp-content/uploads/2023/06/home-1-after-image-three.webp"
+        src={oldImage}
         alt="Before"
         className="pointer-events-none"
+        width="auto"
+        height="auto"
       />
       <img
-        src="https://sirpi.wpengine.com/wp-content/uploads/2023/06/home-1-before-image-three.webp"
+        src={newImage}
         alt="After"
+        width="auto"
+        height="auto"
         style={{
           clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
             imageReveal * 100
@@ -61,12 +70,24 @@ const ImageSlider = ({ oldImage, newImage }) => {
         className="absolute inset-y-0"
       >
         <div className="relative h-full">
-          <div className="absolute inset-y-0 bg-white w-0.5  -ml-px"></div>
+          <div className="absolute inset-y-0 bg-white w-1  -ml-0.5 "></div>
           <div
             onMouseDown={handleMouseDown}
             onTouchMove={handleTouchMove}
-            className="h-6 w-6 -ml-3 -mt-3 rounded-full bg-white absolute top-1/2 shadow-4xl"
-          ></div>
+            role="button"
+            tabIndex={0}
+            className={`group h-10 md:h-14 w-10 md:w-14 -ml-5 md:-ml-7 -mt-5 md:-mt-7 rounded-full  ${
+              isDrag ? 'bg-primary' : 'bg-white'
+            } hover:bg-primary absolute top-1/2 shadow-4xl flex justify-center items-center`}
+          >
+            <span
+              className={`font-bold group-hover:text-white text-xs md:text-sm ${
+                isDrag ? 'text-white' : 'text-primary'
+              }`}
+            >
+              Drag
+            </span>
+          </div>
         </div>
       </div>
     </div>

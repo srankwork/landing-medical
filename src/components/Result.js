@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ImageSlider from './ImageSlider';
 
 import { useInView } from 'react-intersection-observer';
@@ -23,11 +23,19 @@ const ResultContainer = () => {
       <h1 className="mt-3 font-poppins text-2xl md:text-6xl font-semibold leading-tight tracking-tighter text-header text-center">
         Result that's show our value
       </h1>
-      <div className="mt-14 flex items-center justify-center">
-        <ImageSlider
-          oldImage="https://sirpi.wpengine.com/wp-content/uploads/2023/06/home-1-before-image-three.webp"
-          newImage="https://sirpi.wpengine.com/wp-content/uploads/2023/06/home-1-after-image-three.webp"
-        />
+      <div className="mt-14 md:flex px-4 justify-around">
+        <div>
+          <ImageSlider
+            oldImage="https://sirpi.wpengine.com/wp-content/uploads/2023/06/home-1-before-image-three.webp"
+            newImage="https://sirpi.wpengine.com/wp-content/uploads/2023/06/home-1-after-image-three.webp"
+          />
+        </div>
+        <div className="mt-6 md:mt-0">
+          <ImageSlider
+            oldImage="https://sirpi.wpengine.com/wp-content/uploads/2023/06/home-1-before-image-three.webp"
+            newImage="https://sirpi.wpengine.com/wp-content/uploads/2023/06/home-1-after-image-three.webp"
+          />
+        </div>
       </div>
     </motion.div>
   );

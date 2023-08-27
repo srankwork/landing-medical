@@ -30,7 +30,7 @@ const ServiceIntroduction = () => {
         }}
       ></div>
 
-      <div className="w-full md:w-1/2 p-10 text-white">
+      <div className="w-full md:w-1/2 p-10 px-4 text-white">
         <p className="uppercase text-white font-poppins text-xl font-semibold leading-tight tracking-tighter">
           What we do
         </p>

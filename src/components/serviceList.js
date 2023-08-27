@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
@@ -33,7 +33,6 @@ const services = [
 ];
 
 export default function ServiceList() {
-  const [counter, setCounter] = useState(0);
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -63,6 +62,8 @@ export default function ServiceList() {
               className="w-40 h-40"
               src="https://img.freepik.com/free-vector/hand-drawn-hair-transplant-infographic_23-2149735588.jpg?w=826&t=st=1693132713~exp=1693133313~hmac=850e0eef15c3217a8488aae17783d2402d1d9dd688658adcc5563d2b2afb362e"
               alt="service"
+              width="auto"
+              height="auto"
             />
             <p className="mt-6 font-poppins text-center text-sm md:text-base font-semibold leading-6 tracking-wider  mb-2">
               Hair Transplant
@@ -80,6 +81,8 @@ export default function ServiceList() {
               className="w-40 h-40"
               src="https://img.freepik.com/free-vector/hand-drawn-hair-transplant-infographic_23-2149735588.jpg?w=826&t=st=1693132713~exp=1693133313~hmac=850e0eef15c3217a8488aae17783d2402d1d9dd688658adcc5563d2b2afb362e"
               alt="service"
+              width="auto"
+              height="auto"
             />
             <p className="mt-6 font-poppins text-center text-sm md:text-base font-semibold leading-6 tracking-wider  mb-2">
               Hair Transplant

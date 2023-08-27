@@ -13,7 +13,7 @@ const BookAppointment = () => {
       initial={{ scale: 0 }}
       animate={{ scale: inView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
-      className="mx-10 mt-14 md:mt-28"
+      className="px-4 md:px-10 pt-14 md:pt-28"
       id="appointmentForm"
     >
       <h1 className="block md:hidden text-2xl md:text-3xl font-poppins font-semibold leading-tight tracking-tight text-header">
@@ -68,13 +68,16 @@ const BookAppointment = () => {
             <img
               src="https://www.novacutisclinics.com/assets/images/logo.png"
               className=" h-14 md:h-16 mr-2"
+              alt="logo"
+              width="auto"
+              height="auto"
             />
             <h1 className="text-2xl md:text-2xl font-poppins font-semibold leading-tight tracking-tight text-header text-center mb-6">
               Book Your Appointment
             </h1>
           </div>
           <div className="w-full bg-primary py-2 px-6 rounded-sm transition-all duration-500 font-semibold text-lg text-center">
-            <a href="#" className="text-white">
+            <a href="#CallApi" className="text-white">
               Appointment
             </a>
           </div>
