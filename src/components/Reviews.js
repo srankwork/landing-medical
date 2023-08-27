@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Testimonial = ({ imageSrc, review, userName, rating }) => {
   return (
@@ -12,7 +12,7 @@ const Testimonial = ({ imageSrc, review, userName, rating }) => {
           className="rounded-sm w-24  md:w-60 h-24 md:h-60"
         />
       </div>
-      <div className="w-full md:w-1/3 px-2">
+      <div className="w-full md:w-1/3 px-2 mt-4 md:mt-0">
         <p className="text-white font-poppins text-sm md:text-lg font-medium leading-snug tracking-tight">
           {review}
         </p>
@@ -31,22 +31,17 @@ const Testimonial = ({ imageSrc, review, userName, rating }) => {
 };
 
 const ReviewContainer = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({ opacity: 1, y: 0 });
-    }
-  }, [controls, inView]);
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={controls}
+      initial={{ x: 100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 1 }}
-      className="mt-12 md:mt-24 pt-4 md:pt-8 pb-14 bg-secondry"
+      className="mt-12 md:mt-24 pt-14 md:pt-8 pb-14 bg-secondry"
     >
       {/* <p className='font-semibold tracking-widest uppercase text-primary text-center'>
         CLIENT REVIEWS

@@ -1,27 +1,21 @@
-import React, { useEffect } from 'react';
+import React  from 'react';
 import { useInView } from 'react-intersection-observer';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const DoctorSction = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({ opacity: 1, y: 0 });
-    }
-  }, [controls, inView]);
-
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={controls}
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: inView ? 0 : 100, opacity: inView ? 1 : 0 }}
       transition={{ duration: 1 }}
-      class="md:flex bg-primary  md:mt-24"
+      className="md:flex bg-primary  md:mt-24"
     >
       <div
-        class="md:w-1/2 h-80 md:h-auto bg-lightgray bg-cover bg-center flex flex-col"
+        className="md:w-1/2 h-80 md:h-auto bg-lightgray bg-cover bg-center flex flex-col"
         style={{
           backgroundImage: `url(https://sirpi.wpengine.com/wp-content/uploads/2023/05/Sirpi-Roll-large-Img-1.webp)`,
         }}
@@ -54,13 +48,13 @@ const DoctorSction = () => {
           Lumpur
         </p>
         {/* List of Pointers */}
-        <ul class=" p-0 mt-8 md:mt-12">
-          <li class="uppercase mb-4 md:mb-5 flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2 cursor-default text-base md:text-xl">
-            <span class=" cursor-pointer inline-block w-2 h-2 rounded-full  bg-white group-hover:bg-secondry mr-4"></span>
+        <ul className=" p-0 mt-8 md:mt-12">
+          <li className="uppercase mb-4 md:mb-5 flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2 cursor-default text-base md:text-xl">
+            <span className=" cursor-pointer inline-block w-2 h-2 rounded-full  bg-white group-hover:bg-secondry mr-4"></span>
             cosmetologist expert
           </li>
-          <li class="mb-4 md:mb-5 flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2 cursor-default text-base md:text-xl">
-            <span class="cursor-pointer inline-block w-2 h-2 rounded-full  bg-white group-hover:bg-secondry mr-4"></span>
+          <li className="mb-4 md:mb-5 flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2 cursor-default text-base md:text-xl">
+            <span className="cursor-pointer inline-block w-2 h-2 rounded-full  bg-white group-hover:bg-secondry mr-4"></span>
             aesthetic medicine
           </li>
         </ul>
