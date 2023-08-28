@@ -76,7 +76,7 @@ const IndexPage = () => {
       >
         <div className="bg-primary rounded">
           <svg
-            className="w-6 md:12 h-6 md:h-12 bg-priary"
+            className="w-6 md:w-12 h-6 md:h-12 bg-priary"
             fill="none"
             viewBox="0 0 24 24"
             stroke="white"
