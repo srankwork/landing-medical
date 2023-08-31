@@ -14,7 +14,7 @@ import Rating from '../components/Rating';
 
 const IndexPage = () => {
   return (
-    <main className="container">
+    <main className="w-full h-full">
       <div className=" bg-secondry h-10 w-full text-center flex  items-center text-white justify-around">
         <span>
           <a
@@ -59,7 +59,7 @@ const IndexPage = () => {
       <DoctorSction />
       <ServiceList />
       <ReviewContainer />
-      <BookAppointment />
+      <BookAppointment showPadding={true}/>
       <AboutUs />
       <FaqContainer />
       <hr className="mt-10" />

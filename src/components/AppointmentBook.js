@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const BookAppointment = () => {
+const BookAppointment = ({showPadding}) => {
   const [ref, inView] = useInView({
     triggerOnce: true
   });
@@ -13,7 +13,7 @@ const BookAppointment = () => {
       initial={{ scale: 0 }}
       animate={{ scale: inView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
-      className='px-4 md:px-10 pt-14 md:pt-28'
+      className={`px-4 md:px-10 ${showPadding? 'pt-14 md:pt-28':''} container m-auto`}
       id='appointmentForm'
     >
       <h1 className='block md:hidden text-2xl md:text-3xl font-poppins font-semibold leading-tight tracking-tight text-header'>
@@ -26,14 +26,14 @@ const BookAppointment = () => {
               <div className='mt-2 md:w-1/2'>
                 <input
                   type='text'
-                  className='border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder'
+                  className='border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder'
                   placeholder='NAME'
                 />
               </div>
               <div className='mt-2 md:w-1/2'>
                 <input
                   type='number'
-                  className='border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder'
+                  className='border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder'
                   placeholder='phone'
                 />
               </div>
@@ -42,21 +42,21 @@ const BookAppointment = () => {
               <div className='mt-2 md:w-1/2'>
                 <input
                   type='email'
-                  className='border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder'
+                  className='border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder'
                   placeholder='YOUR EMAIL'
                 />
               </div>
               <div className='mt-2 md:w-1/2'>
                 <input
                   type='number'
-                  className='border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder'
+                  className='border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder'
                   placeholder='YOUR AGE'
                 />
               </div>
               {/* <div className="mt-2 md:w-1/3">
                 <input
                   type="text"
-                  className="border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder"
+                  className="border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder"
                   placeholder="TREATMENT TYPE"
                 />
               </div> */}
@@ -65,11 +65,11 @@ const BookAppointment = () => {
               {[1, 2, 3, 4, 5, 6, 7, 8].map((e) => (
                 <div
                   key={`radiobutton-${e}`}
-                  class='mr-10 mt-4 flex flex-col items-center space-y-4 space-x-2'
+                  class='mr-6 md:mr-10 mt-4 flex flex-col items-center space-y-2'
                 >
                   <img
                     src='https://img.freepik.com/free-photo/bold-man-needing-follicular-unit-extraction_23-2149106290.jpg'
-                    className='w-12 h-12 rounded-full'
+                    className='w-8 md:w-12 h-8 md:h-12 rounded-full'
                   />
                   <input
                     type='radio'

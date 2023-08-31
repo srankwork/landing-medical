@@ -45,7 +45,7 @@ export default function ServiceList() {
       transition={{ duration: 1 }}
       className="mt-14 md:mt-24 px-4 md:w-3/4 justify-center m-auto"
     >
-      <p className="font-poppins text-center text-sm md:text-base font-semibold leading-6 tracking-wider uppercase text-primary mb-2">
+      <p className="font-poppins text-lg md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center">
         Hair - Transplant
       </p>
       <h1 className="mt-1 font-poppins text-center text-2xl md:text-5xl font-semibold leading-none md:leading-snug  text-header">
