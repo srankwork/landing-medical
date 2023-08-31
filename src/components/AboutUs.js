@@ -13,12 +13,12 @@ const AboutUs = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: inView ? 1 : 0 }}
       transition={{ duration: 1 }}
-      className="mt-14 md:mt-28 bg-background pt-12 pb-12"
+      className="mt-14 md:mt-28 bg-background pt-8 md:pt-16 pb-16"
     >
       <h1 className="mt-3 font-poppins text-4xl md:text-6xl font-semibold leading-tight tracking-tighter text-header text-center">
         About Us
       </h1>
-      <div className="mt-12 flex items-center justify-center">
+      <div className="mt-8 md:mt-12 flex items-center justify-center">
         <img
           src="https://www.novacutisclinics.com/assets/images/logo.png"
           className=" h-32 md:h-60"

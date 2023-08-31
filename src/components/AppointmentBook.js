@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 
 const BookAppointment = () => {
   const [ref, inView] = useInView({
-    triggerOnce: true,
+    triggerOnce: true
   });
 
   return (
@@ -13,44 +13,44 @@ const BookAppointment = () => {
       initial={{ scale: 0 }}
       animate={{ scale: inView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
-      className="px-4 md:px-10 pt-14 md:pt-28"
-      id="appointmentForm"
+      className='px-4 md:px-10 pt-14 md:pt-28'
+      id='appointmentForm'
     >
-      <h1 className="block md:hidden text-2xl md:text-3xl font-poppins font-semibold leading-tight tracking-tight text-header">
+      <h1 className='block md:hidden text-2xl md:text-3xl font-poppins font-semibold leading-tight tracking-tight text-header'>
         Book Your Appointment
       </h1>
-      <div className="md:flex md:space-x-4 mt-6 md:mt-14">
-        <div className="md:w-3/4">
+      <div className='md:flex md:space-x-4 mt-6 md:mt-14'>
+        <div className='md:w-3/4'>
           <form>
-            <div className="md:flex md:space-x-4  mb-0 md:mb-8">
-              <div className="mt-2 md:w-1/2">
+            <div className='md:flex md:space-x-4  mb-0 md:mb-8'>
+              <div className='mt-2 md:w-1/2'>
                 <input
-                  type="text"
-                  className="border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder"
-                  placeholder="NAME"
+                  type='text'
+                  className='border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder'
+                  placeholder='NAME'
                 />
               </div>
-              <div className="mt-2 md:w-1/2">
+              <div className='mt-2 md:w-1/2'>
                 <input
-                  type="number"
-                  className="border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder"
-                  placeholder="phone"
+                  type='number'
+                  className='border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder'
+                  placeholder='phone'
                 />
               </div>
             </div>
-            <div className="mb-4 md:flex md:space-x-4">
-              <div className="mt-2 md:w-1/2">
+            <div className='mb-4 md:flex md:space-x-4'>
+              <div className='mt-2 md:w-1/2'>
                 <input
-                  type="email"
-                  className="border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder"
-                  placeholder="YOUR EMAIL"
+                  type='email'
+                  className='border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder'
+                  placeholder='YOUR EMAIL'
                 />
               </div>
-              <div className="mt-2 md:w-1/2">
+              <div className='mt-2 md:w-1/2'>
                 <input
-                  type="number"
-                  className="border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder"
-                  placeholder="YOUR AGE"
+                  type='number'
+                  className='border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder'
+                  placeholder='YOUR AGE'
                 />
               </div>
               {/* <div className="mt-2 md:w-1/3">
@@ -61,23 +61,41 @@ const BookAppointment = () => {
                 />
               </div> */}
             </div>
+            <div className='flex flex-wrap m-auto'>
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((e) => (
+                <div
+                  key={`radiobutton-${e}`}
+                  class='mr-10 mt-4 flex flex-col items-center space-y-4 space-x-2'
+                >
+                  <img
+                    src='https://img.freepik.com/free-photo/bold-man-needing-follicular-unit-extraction_23-2149106290.jpg'
+                    className='w-12 h-12 rounded-full'
+                  />
+                  <input
+                    type='radio'
+                    class='form-radio text-indigo-600'
+                    name='radio-group'
+                  />
+                </div>
+              ))}
+            </div>
           </form>
         </div>
-        <div className="md:w-1/4 mt-12 md:mt-0 items-center flex flex-col justify-center">
-          <div className="hidden md:flex  justify-center items-center">
+        <div className='md:w-1/4 mt-12 md:mt-0 items-center flex flex-col justify-center'>
+          <div className='hidden md:flex  justify-center items-center'>
             <img
-              src="https://www.novacutisclinics.com/assets/images/logo.png"
-              className=" h-14 md:h-16 mr-2"
-              alt="logo"
-              width="auto"
-              height="auto"
+              src='https://www.novacutisclinics.com/assets/images/logo.png'
+              className=' h-14 md:h-16 mr-2'
+              alt='logo'
+              width='auto'
+              height='auto'
             />
-            <h1 className="text-2xl md:text-2xl font-poppins font-semibold leading-tight tracking-tight text-header text-center mb-6">
+            <h1 className='text-2xl md:text-2xl font-poppins font-semibold leading-tight tracking-tight text-header text-center mb-6'>
               Book Your Appointment
             </h1>
           </div>
-          <div className="w-full bg-primary py-2 px-6 rounded-sm transition-all duration-500 font-semibold text-lg text-center">
-            <a href="#CallApi" className="text-white">
+          <div className='w-full bg-primary py-2 px-6 rounded-sm transition-all duration-500 font-semibold text-lg text-center'>
+            <a href='#CallApi' className='text-white'>
               Appointment
             </a>
           </div>
