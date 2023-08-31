@@ -17,10 +17,10 @@ const ResultContainer = () => {
       transition={{ duration: 1 }}
       className="mt-10 md:mt-20"
     >
-      <p className="font-poppins text-sm md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center">
+      <p className="font-poppins text-lg md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center">
         What Clients say
       </p>
-      <h1 className="mt-4 font-poppins text-2xl md:text-6xl font-semibold leading-tight tracking-tighter text-header text-center">
+      <h1 className="mt-4 font-poppins text-3xl md:text-6xl font-semibold leading-tight tracking-tighter text-header text-center">
         Result that's show our value
       </h1>
       <div className="mt-12 md:flex px-4 justify-around">

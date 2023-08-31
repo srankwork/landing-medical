@@ -74,7 +74,7 @@ export default function Services() {
       className="mt-16 md:mt-28 px-4 md:px-0 md:w-4/5 justify-center m-auto select-none"
     >
       {/* header */}
-      <p className="font-poppins text-sm md:text-xl font-semibold leading-6 tracking-wider uppercase text-primary mb-2">
+      <p className="font-poppins text-lg md:text-xl font-semibold leading-6 tracking-wider uppercase text-primary mb-2">
         Our Services
       </p>
       <div className="flex justify-between items-center">
@@ -84,7 +84,7 @@ export default function Services() {
           </h1>
         </div>
 
-        <div className="flex space-x-4">
+        <div className="space-x-4 hidden md:flex">
           <div
             className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-primary flex items-center justify-center cursor-pointer"
             onClick={() => {
@@ -137,6 +137,52 @@ export default function Services() {
         <p>{services[counter]['content']}</p>
       </div>
       <div className="mt-8 md:mt-12 flex items-center justify-center">
+        <div
+          className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-primary  items-center justify-center cursor-pointer flex md:hidden absolute left-0"
+          onClick={() => {
+            counter == 0
+              ? setCounter(services.length - 1)
+              : setCounter(counter - 1);
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            className="w-4 md:w-6 h-4 md:h-6 text-white font-bold rotate-180"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="3"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </div>
+        <div
+          className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-primary items-center justify-center cursor-pointer flex  md:hidden absolute right-0"
+          onClick={() => {
+            counter == services.length - 1
+              ? setCounter(0)
+              : setCounter(counter + 1);
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            className="w-4 md:w-6 h-4 md:h-6 text-white font-bold"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="3"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </div>
         <img
           className="md:h-96"
           src={services[counter]['img']}

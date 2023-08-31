@@ -32,34 +32,34 @@ const BookAppointment = () => {
               </div>
               <div className="mt-2 md:w-1/2">
                 <input
-                  type="text"
+                  type="number"
                   className="border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder"
-                  placeholder="REASON FOR APPOINTMENT"
+                  placeholder="phone"
                 />
               </div>
             </div>
             <div className="mb-4 md:flex md:space-x-4">
-              <div className="mt-2 md:w-1/3">
+              <div className="mt-2 md:w-1/2">
                 <input
-                  type="text"
+                  type="email"
                   className="border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder"
                   placeholder="YOUR EMAIL"
                 />
               </div>
-              <div className="mt-2 md:w-1/3">
+              <div className="mt-2 md:w-1/2">
                 <input
-                  type="text"
+                  type="number"
                   className="border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder"
-                  placeholder="DATE & TIME"
+                  placeholder="YOUR AGE"
                 />
               </div>
-              <div className="mt-2 md:w-1/3">
+              {/* <div className="mt-2 md:w-1/3">
                 <input
                   type="text"
                   className="border-b-4 border-border border-opacity-40 outline-none font-semibold py-2 w-full uppercase font-montserrat leading-2 placeholder-placeholder"
                   placeholder="TREATMENT TYPE"
                 />
-              </div>
+              </div> */}
             </div>
           </form>
         </div>

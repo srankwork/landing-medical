@@ -98,7 +98,6 @@ const ReviewContainer = () => {
               e === sliderIndex ? 'w-8 bg-white' : 'w-4 bg-primary'
             } m-1 md:m-2 rounded-sm cursor-pointer hover:w-8 hover:bg-background transition-width  duration-300 ease-in-out text-secondry`}
           >
-            .
           </span>
         ))}
       </div>
