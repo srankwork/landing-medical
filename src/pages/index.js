@@ -10,16 +10,11 @@ import AboutUs from '../components/AboutUs';
 import FaqContainer from '../components/Faq';
 import Services from '../components/Services';
 import ServiceList from '../components/serviceList';
-const IndexPage = () => {
-  const handleScrollClick = () => {
-    const container = document.getElementById('appointmentForm');
-    if (container) {
-      container.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+import Rating from '../components/Rating';
 
+const IndexPage = () => {
   return (
-    <main className="w-full h-screen">
+    <main className="container">
       <div className=" bg-secondry h-10 w-full text-center flex  items-center text-white justify-around">
         <span>
           <a
@@ -57,6 +52,7 @@ const IndexPage = () => {
       </div>
       <Header />
       <HeroContainer />
+      <Rating />
       <Services />
       <ServiceIntroduction />
       <ResultContainer />
@@ -67,51 +63,7 @@ const IndexPage = () => {
       <AboutUs />
       <FaqContainer />
       <hr className="mt-10" />
-      <div
-        className="fixed top-1/2 right-0 cursor-pointer"
-        role="button"
-        tabIndex={0}
-        onKeyDown={handleScrollClick}
-        onClick={handleScrollClick}
-      >
-        <div className="bg-primary rounded">
-          <svg
-            className="w-6 md:w-12 h-6 md:h-12 bg-priary"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="white"
-            strokeWidth="1"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="1"
-              d="M4 5a1 1 0 011-1h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V5z"
-            />
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="1"
-              d="M4 10h16M4 14h16M10 6v4M14 6v4"
-            />
-          </svg>
-        </div>
-      </div>
-      <div className="fixed bottom-4 right-4">
-        <a
-          href="https://wa.me/+917208330809"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            className="w-10 md:w-14 h-10 md:h-14"
-            alt="whatsapp"
-            width="auto"
-            height="auto"
-            src="https://tradebook.in.net/whatsapp.png"
-          />
-        </a>
-      </div>
+
       <div className=" bg-primary h-10 w-full text-center flex flex-col text-white justify-center">
         <span>©2023</span>
       </div>

@@ -43,14 +43,23 @@ body::-webkit-scrollbar-thumb:hover {
   font-weight: 400;
 }
 
-.up-arrow::before {
-  content: '';
-  border-width: 0.25rem 0.25rem 0 0.25rem;
-  border-color: currentColor;
-  border-style: solid;
-  display: inline-block;
-  transform: rotate(-45deg);
-  width: 0.75rem;
-  height: 0.75rem;
-  margin-right: 0.25rem;
+
+.hero-bg-image {
+  background-image: url('https://plastic-surgeon.abelle.themerex.net/wp-content/uploads/2022/06/background-1-copyright.jpg') ;
+  background-size: cover;
+  background-position: center;
+}
+
+
+@keyframes rotate {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+.animate-rotate {
+  animation: rotate 15s linear infinite;
 }

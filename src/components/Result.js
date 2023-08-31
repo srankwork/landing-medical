@@ -20,10 +20,10 @@ const ResultContainer = () => {
       <p className="font-poppins text-sm md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center">
         What Clients say
       </p>
-      <h1 className="mt-3 font-poppins text-2xl md:text-6xl font-semibold leading-tight tracking-tighter text-header text-center">
+      <h1 className="mt-4 font-poppins text-2xl md:text-6xl font-semibold leading-tight tracking-tighter text-header text-center">
         Result that's show our value
       </h1>
-      <div className="mt-14 md:flex px-4 justify-around">
+      <div className="mt-12 md:flex px-4 justify-around">
         <div>
           <ImageSlider
             oldImage="https://sirpi.wpengine.com/wp-content/uploads/2023/06/home-1-before-image-three.webp"

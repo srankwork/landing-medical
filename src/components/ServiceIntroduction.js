@@ -20,7 +20,7 @@ const ServiceIntroduction = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: inView ? 0 : 100, opacity: inView ? 1 : 0 }}
       transition={{ duration: 1 }}
-      className="flex bg-primary  mt-14"
+      className="flex bg-primary  mt-28"
     >
       <div
         className="hidden md:block w-1/2 h-auto bg-lightgray bg-cover bg-center"

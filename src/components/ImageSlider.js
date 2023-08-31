@@ -43,37 +43,37 @@ const ImageSlider = ({ oldImage, newImage }) => {
   return (
     <div
       ref={imageContainer}
-      className='max-w-lg w-full mx-auto  relative select-none'
+      className="max-w-lg w-full mx-auto  relative select-none"
     >
       <img
         src={oldImage}
-        alt='Before'
-        className='pointer-events-none'
-        width='auto'
-        height='auto'
+        alt="Before"
+        className="pointer-events-none rounded-md"
+        width="auto"
+        height="auto"
       />
       <img
         src={newImage}
-        alt='After'
-        width='auto'
-        height='auto'
+        alt="After"
+        width="auto"
+        height="auto"
         style={{
           clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
             imageReveal * 100
-          }% 100%, 0 100%)`
+          }% 100%, 0 100%)`,
         }}
-        className='absolute inset-0 pointer-events-none'
+        className="absolute inset-0 pointer-events-none rounded-md"
       />
       <div
         style={{ left: `${imageReveal * 100}%` }}
-        className='absolute inset-y-0'
+        className="absolute inset-y-0"
       >
-        <div className='relative h-full'>
-          <div className='absolute inset-y-0 bg-white w-1  -ml-0.5 '></div>
+        <div className="relative h-full">
+          <div className="absolute inset-y-0 bg-white w-1  -ml-0.5 "></div>
           <div
             onMouseDown={handleMouseDown}
             onTouchMove={handleTouchMove}
-            role='button'
+            role="button"
             tabIndex={0}
             className={`group h-10 md:h-14 w-10 md:w-14 -ml-5 md:-ml-7 -mt-5 md:-mt-7 rounded-full  ${
               isDrag ? 'bg-primary' : 'bg-white'

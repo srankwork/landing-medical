@@ -10,6 +10,7 @@ module.exports = {
         'primary':'#08589F',
         'secondry':'#9ECA3D',
         'background':'#E5EDF4',
+        'overlay-bg':'#0F0A04'
       },
       borderColor:{
         'border':'#9ECA3D',
