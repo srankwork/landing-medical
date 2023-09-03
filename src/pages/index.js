@@ -46,7 +46,7 @@ const IndexPage = () => {
                 d="M12 22s-8-4.5-8-11a8 8 0 0116 0c0 6.5-8 11-8 11z"
               />
             </svg>
-            <span className="text-white font-semibold ml-2">Locate us</span>
+            <span className="text-white font-semibold ml-2">Locate Us</span>
           </a>
         </span>
       </div>

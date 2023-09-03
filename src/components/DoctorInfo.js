@@ -20,11 +20,11 @@ const DoctorSction = () => {
           backgroundImage: `url(https://sirpi.wpengine.com/wp-content/uploads/2023/05/Sirpi-Roll-large-Img-1.webp)`,
         }}
       >
-        <div className="bg-white p-4 w-full md:w-1/2 mt-auto m-10 ml-0 md:ml-10 text-center">
+        <div className="bg-white p-4 w-full md:w-1/2 mt-auto ml-0 md:ml-10 text-center">
           <h1>
             Meet
             <span className="ml-1 font-semibold text-secondry">
-              Dr. Prachi Patel
+              Dr. Prachi Patil
             </span>
           </h1>
         </div>
@@ -32,33 +32,27 @@ const DoctorSction = () => {
 
       <div className="w-full md:w-1/2 p-10 text-white pt-16 pb-16">
         <p className="text-xs font-semibold tracking-widest uppercase text-primary-color">
-        Cosmetology expert
+          Cosmetology Expert
         </p>
         <h1 className="text-3xl md:text-5xl font-semibold leading-128 font-montserrat text-white mt-2 md:mt-4">
-          Medical Head & Founder at Novacutis Clinic -{' '}
-          <span className="text-secondry">MBBS</span>
+          Medical Head & Founder at Novacutis Clinic
         </h1>
-        <p className="mt-12 text-sm md:text-lg">
-          MBBS (Government Medical College) India, Advanced Dip. in Cosmetology
-          (UK) <br />
-          <br />
-          Expert cosmetologist with 14 years of experience in medicine
-          Internationally certified trained professional in aesthetic medicine
-          <br />
-          <br />
-          Faculty member at <b>AMI (Allergan Medical Institute)</b> based in Kuala
-          Lumpur
-        </p>
         {/* List of Pointers */}
         <ul className=" p-0 mt-8 md:mt-12">
-          <li className="uppercase mb-4 md:mb-5 flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2 cursor-default text-base md:text-xl">
-            <span className=" cursor-pointer inline-block w-2 h-2 rounded-full  bg-white group-hover:bg-secondry mr-4"></span>
-            cosmetologist expert
-          </li>
-          <li className="uppercase mb-4 md:mb-5 flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2 cursor-default text-base md:text-xl">
-            <span className="cursor-pointer inline-block w-2 h-2 rounded-full  bg-white group-hover:bg-secondry mr-4"></span>
-            aesthetic medicine
-          </li>
+          {[
+            'MBBS[GOVT MEDICAL COLLEGE] India, Adv. Dip. in Cosmetology (UK)',
+            'Expert cosmetologist with over 15 years of experience in medicine.',
+            'Internationally Certified trained professionals of aesthetic medicine.',
+            'Faculty Member of AMI(Allergan Medical Institute)',
+          ].map((e) => (
+            <li
+              key={e}
+              className="mb-4 md:mb-5 flex items-center  transition-transform transform hover:translate-x-2 cursor-default text-sm md:text-lg"
+            >
+              <span className=" cursor-pointer inline-block w-2 h-2 rounded-full  bg-white mr-4"></span>
+              {e}
+            </li>
+          ))}
         </ul>
       </div>
     </motion.div>

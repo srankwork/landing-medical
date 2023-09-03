@@ -10,6 +10,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+div:focus {
+  outline: none;
+}
+
 .hover-card {
   transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
@@ -43,23 +47,20 @@ body::-webkit-scrollbar-thumb:hover {
   font-weight: 400;
 }
 
-
 .hero-bg-image {
-  background-image: url('https://plastic-surgeon.abelle.themerex.net/wp-content/uploads/2022/06/background-1-copyright.jpg') ;
+  background-image: url('https://plastic-surgeon.abelle.themerex.net/wp-content/uploads/2022/06/background-1-copyright.jpg');
   background-size: cover;
   background-position: center;
 }
 
-
 @keyframes rotate {
   0% {
-      transform: translateX(200%);
+    transform: translateX(200%);
   }
   100% {
-      transform: translateX(-300%);
+    transform: translateX(-300%);
   }
 }
-
 
 .animate-rotate {
   animation: rotate 10s linear infinite;
