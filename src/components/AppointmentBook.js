@@ -78,6 +78,7 @@ const BookAppointment = ({ showPadding }) => {
                 />
               </div>
             </div>
+            <p className='text-center text-primary font-semibold mt-6 mb-2'>Grade of Baldness:</p>
             <div className="flex flex-wrap m-auto justify-center">
               {[...radioImage.slice(0, 4)].map((e) => (
                 <div

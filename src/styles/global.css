@@ -55,7 +55,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 @keyframes rotate {
   0% {
-    transform: translateX(30%);
+    transform: translateX(-0%);
   }
   100% {
     transform: translateX(-100%);
@@ -63,5 +63,5 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .animate-rotate {
-  animation: rotate 10s linear infinite;
+  animation: rotate 150s linear infinite;
 }
