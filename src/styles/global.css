@@ -48,17 +48,18 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .hero-bg-image {
-  background-image: url('https://plastic-surgeon.abelle.themerex.net/wp-content/uploads/2022/06/background-1-copyright.jpg');
+  background-image: url('../image/hair-transplate/photos/hero.jpg');
   background-size: cover;
   background-position: center;
 }
 
+
 @keyframes rotate {
   0% {
-    transform: translateX(200%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-300%);
+    transform: translateX(-200%);
   }
 }
 

@@ -46,23 +46,23 @@ export default function ServiceList() {
       initial={{ x: -100, opacity: 0 }}
       animate={{ x: inView ? 0 : -100, opacity: inView ? 1 : 0 }}
       transition={{ duration: 1 }}
-      className="mt-14 md:mt-24 px-4 md:w-3/4 justify-center m-auto"
+      className="mt-16 md:mt-24 px-4 md:w-3/4 justify-center m-auto"
     >
       <p className="font-poppins text-lg md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center">
         Hair Care
       </p>
-      <h1 className="mt-1 font-poppins text-center text-2xl md:text-5xl font-semibold leading-none md:leading-snug  text-header">
+      <h1 className="mt-4 font-poppins text-center text-2xl md:text-5xl font-semibold leading-none md:leading-snug  text-header">
         A variety of solutions for your individual needs
       </h1>
 
-      <div className="md:flex justify-between mt-14">
+      <div className="md:flex justify-between mt-16">
         {services.slice(0, 3).map((e) => (
           <div
             key={`service-${e['header']}`}
             className="flex flex-col justify-center items-center md:w-4/3 hover-card mt-8 md:mt-0 m-4 text-center"
           >
             <img
-              className="w-40 h-40"
+              className="w-24 h-24"
               src={e['img']}
               alt="service"
               width="auto"

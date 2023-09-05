@@ -151,7 +151,7 @@ export default function Services() {
           onClick={() => {
             setIsExpanded(!isExpanded);
           }}
-          className=" text-primary text-sm"
+          className=" text-primary text-sm cursor-pointer"
         >
           {isExpanded ? 'Read Less' : 'Read More'}
         </span>

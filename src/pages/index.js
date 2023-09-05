@@ -62,7 +62,7 @@ const IndexPage = () => {
       <BookAppointment showPadding={true}/>
       <AboutUs />
       <FaqContainer />
-      <hr className="mt-10" />
+      <hr className="mt-16" />
 
       <div className=" bg-primary h-10 w-full text-center flex flex-col text-white justify-center">
         <span>©2023</span>

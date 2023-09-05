@@ -1,6 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import doctorImg from '../image/hair-transplate/photos/dr-prachi-patil.png';
 
 const DoctorSction = () => {
   const [ref, inView] = useInView({
@@ -15,12 +16,12 @@ const DoctorSction = () => {
       className="md:flex bg-primary mt-16 md:mt-24"
     >
       <div
-        className="md:w-1/2 h-80 md:h-auto bg-lightgray bg-cover bg-center flex flex-col"
+        className="md:w-1/2 h-96 md:h-auto  bg-lightgray bg-center flex flex-col bg-contain bg-no-repeat"
         style={{
-          backgroundImage: `url(https://sirpi.wpengine.com/wp-content/uploads/2023/05/Sirpi-Roll-large-Img-1.webp)`,
+          backgroundImage: `url('${doctorImg}')`,
         }}
       >
-        <div className="bg-white p-4 w-full md:w-1/2 mt-auto ml-0 md:ml-10 text-center">
+        <div className="bg-white p-4 w-full md:w-1/2 mt-auto ml-0 md:ml-auto mr-auto text-center">
           <h1>
             Meet
             <span className="ml-1 font-semibold text-secondry">
@@ -32,7 +33,7 @@ const DoctorSction = () => {
 
       <div className="w-full md:w-1/2 p-10 text-white pt-16 pb-16">
         <p className="text-xs font-semibold tracking-widest uppercase text-primary-color">
-          Cosmetology Expert
+          Celebrity Cosmetologist
         </p>
         <h1 className="text-3xl md:text-5xl font-semibold leading-128 font-montserrat text-white mt-2 md:mt-4">
           Medical Head & Founder at Novacutis Clinic
@@ -40,10 +41,10 @@ const DoctorSction = () => {
         {/* List of Pointers */}
         <ul className=" p-0 mt-8 md:mt-12">
           {[
-            'MBBS[GOVT MEDICAL COLLEGE] India, Adv. Dip. in Cosmetology (UK)',
+            'MBBS - GOVT MEDICAL COLLEGE (India), Adv. Diploma in Cosmetology (UK)',
             'Expert cosmetologist with over 15 years of experience in medicine.',
             'Internationally Certified trained professionals of aesthetic medicine.',
-            'Faculty Member of AMI(Allergan Medical Institute)',
+            'Faculty Member of AMI(Allergan Medical Institute).',
           ].map((e) => (
             <li
               key={e}

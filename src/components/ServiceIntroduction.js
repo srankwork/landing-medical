@@ -1,7 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import solution from '../image/hair-transplate/photos/Ultimate solution.jpg';
+import whychooseus from '../image/hair-transplate/photos/whychooseus.jpeg';
 
 const ServiceIntroduction = () => {
   const serviceList = [
@@ -26,18 +26,18 @@ const ServiceIntroduction = () => {
       <div
         className="hidden md:block w-1/2 h-auto bg-lightgray bg-cover bg-center"
         style={{
-          backgroundImage: `url('${solution}')`,
+          backgroundImage: `url('${whychooseus}')`,
         }}
       ></div>
 
-      <div className="w-full md:w-1/2 p-10 px-4 text-white">
+      <div className="w-full md:w-1/2 px-4 text-white p-10 p-0 md:pl-6">
         <p className="uppercase text-white font-poppins text-xl font-semibold leading-tight tracking-tighter">
           Why choose us
         </p>
         <div
           className="block md:hidden mt-3 md:w-1/2 h-60 md:h-screen bg-cover bg-no-repeat bg-center relative"
           style={{
-            backgroundImage: `url('${solution}')`,
+            backgroundImage: `url('${whychooseus}')`,
           }}
         ></div>
         <h1 className="capitalize text-2xl md:text-5xl font-semibold font-montserrat mt-4 md:mt-3 text-white font-poppins leading-tight tracking-tighter">

@@ -2,15 +2,13 @@ import React, { useState, useRef } from 'react';
 
 const ImageSlider = ({ oldImage, newImage }) => {
   const [imageReveal, setimageReveal] = useState(0.5);
-  const [isDrag, setIsDrag] = useState(false);
+
   const imageContainer = useRef(null);
 
   const slide = (xPosition) => {
     const containerBoundingRect =
       imageContainer.current.getBoundingClientRect();
-    if (!isDrag) {
-      setIsDrag(true);
-    }
+
     setimageReveal(() => {
       if (xPosition < containerBoundingRect.left) {
         return 0;
@@ -34,7 +32,6 @@ const ImageSlider = ({ oldImage, newImage }) => {
     };
 
     window.onmouseup = (e) => {
-      setIsDrag(false);
       window.onmousemove = undefined;
       window.onmouseup = undefined;
     };
@@ -43,7 +40,7 @@ const ImageSlider = ({ oldImage, newImage }) => {
   return (
     <div
       ref={imageContainer}
-      className="max-w-lg w-full mx-auto  relative select-none"
+      className="max-w-md w-full mx-auto  relative select-none"
     >
       <img
         src={oldImage}
@@ -75,14 +72,10 @@ const ImageSlider = ({ oldImage, newImage }) => {
             onTouchMove={handleTouchMove}
             role="button"
             tabIndex={0}
-            className={`group h-10 md:h-14 w-10 md:w-14 -ml-5 md:-ml-7 -mt-5 md:-mt-7 rounded-full  ${
-              isDrag ? 'bg-primary' : 'bg-white'
-            } hover:bg-primary absolute top-1/2 shadow-4xl flex justify-center items-center`}
+            className={`group h-10 md:h-14 w-10 md:w-14 -ml-5 md:-ml-7 -mt-5 md:-mt-7 rounded-full  ${'bg-primary'} hover:bg-primary absolute top-1/2 shadow-4xl flex justify-center items-center`}
           >
             <span
-              className={`font-bold group-hover:text-white text-xs md:text-sm ${
-                isDrag ? 'text-white' : 'text-primary'
-              }`}
+              className={`font-bold group-hover:text-white text-xs md:text-sm ${'text-white'}`}
             >
               Drag
             </span>

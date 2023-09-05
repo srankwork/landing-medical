@@ -1,6 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import video from '../image/hair-transplate/photos/about_us.mp4';
 
 const AboutUs = () => {
   const [ref, inView] = useInView({
@@ -19,16 +20,12 @@ const AboutUs = () => {
         About Us
       </h1>
       <div className="mt-8 md:mt-12 flex items-center justify-center">
-        <img
-          src="https://www.novacutisclinics.com/assets/images/logo.png"
-          className=" h-32 md:h-60"
-          alt="logo"
-          width="auto"
-          height="auto"
-        />
+        <video controls className="rounded-sm">
+          <source src={video} type="video/mp4" />
+        </video>
       </div>
       <div className="flex justify-center items-center">
-        <p className="px-4 md:w-3/4 text-center mt-4 md:mt-10 font-normal md:tracking-wide text-sm md:text-lg text-header">
+        <p className="px-4 md:w-3/4 text-center mt-8 md:mt-10 font-normal md:tracking-wide text-sm md:text-lg text-header">
           Dr. Prachi Patel's Novacutis Skin, Hair Transplant & Cosmetic Clinic
           is an advanced medical facility equipped with international US
           FDA-approved machines, located in the heart of Mumbai providing a wide
