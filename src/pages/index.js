@@ -59,7 +59,7 @@ const IndexPage = () => {
       <DoctorSction />
       <ServiceList />
       <ReviewContainer />
-      <BookAppointment showPadding={true}/>
+      <BookAppointment forModal={false}/>
       <AboutUs />
       <FaqContainer />
       <hr className="mt-16" />

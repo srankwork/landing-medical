@@ -11,9 +11,9 @@ const AboutUs = () => {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: inView ? 1 : 0 }}
-      transition={{ duration: 1 }}
+      initial={{ x: 0, opacity: 0 }}
+      animate={{ x: 0, opacity: inView ? 1 : 0 }}
+      transition={{ duration: 1.5 }}
       className="mt-14 md:mt-28 bg-background pt-8 md:pt-16 pb-16"
     >
       <h1 className="mt-3 font-poppins text-4xl md:text-6xl font-semibold leading-tight tracking-tighter text-header text-center">

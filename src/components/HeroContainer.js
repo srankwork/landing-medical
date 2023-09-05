@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import AppoitmentModal from './AppointmentModal';
 import hero from '../image/hair-transplate/photos/hero.jpg';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 const HeroContainer = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
 
   const handleScrollClick = () => {
     setShowPopup(true);
@@ -11,7 +16,13 @@ const HeroContainer = () => {
 
   return (
     <>
-      <div className="bg-background lg:flex lg:justify-around lg:items-center hero-bg-image md:bg-none relative pb-12 md:pb-0 ">
+      <motion.div
+        ref={ref}
+        initial={{ x: 0, opacity: 0 }}
+        animate={{ x: 0, opacity: inView ? 1 : 0 }}
+        transition={{ duration: 1.5 }}
+        className="bg-background lg:flex lg:justify-around lg:items-center hero-bg-image md:bg-none relative pb-12 md:pb-0 "
+      >
         <div className="block md:hidden h-full w-full opacity-40 transition duration-300 ease-in-out bg-overlay-bg absolute"></div>
         <div className="lg:w-1/2 p-8 order-2 lg:order-1 relative flex flex-col justify-between h-fit">
           <p className="mt-6 md:mt-0 font-poppins text-base  md:text-base font-semibold leading-6 tracking-wider uppercase text-white md:text-primary text-center md:text-start mb-2">
@@ -34,7 +45,7 @@ const HeroContainer = () => {
         <div className="hidden md:flex  order-1 lg:order-2 h-max w-1/2">
           <img src={hero} alt="hero image" className="h-full w-full" />
         </div>
-      </div>
+      </motion.div>
       <AppoitmentModal show={showPopup} onClose={() => setShowPopup(false)} />
     </>
   );

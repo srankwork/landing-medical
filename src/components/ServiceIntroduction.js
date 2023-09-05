@@ -16,21 +16,23 @@ const ServiceIntroduction = () => {
   const [ref, inView] = useInView({ triggerOnce: true });
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: inView ? 0 : 100, opacity: inView ? 1 : 0 }}
-      transition={{ duration: 1 }}
-      className="flex bg-primary  mt-28"
-    >
-      <div
+    <div ref={ref} className="flex bg-primary  mt-28">
+      <motion.div
+        initial={{ x: '-25%', opacity: 0 }}
+        animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
+        transition={{ duration: 1 }}
         className="hidden md:block w-1/2 h-auto bg-lightgray bg-cover bg-center"
         style={{
           backgroundImage: `url('${whychooseus}')`,
         }}
-      ></div>
+      ></motion.div>
 
-      <div className="w-full md:w-1/2 px-4 text-white p-10 p-0 md:pl-6">
+      <motion.div
+        initial={{ x: '25%', opacity: 0 }}
+        animate={{ x: inView ? 0 : '25%', opacity: inView ? 1 : 0 }}
+        transition={{ duration: 1 }}
+        className="w-full md:w-1/2 px-4 text-white p-10 md:pl-6"
+      >
         <p className="uppercase text-white font-poppins text-xl font-semibold leading-tight tracking-tighter">
           Why choose us
         </p>
@@ -53,7 +55,7 @@ const ServiceIntroduction = () => {
 
         <ul className="list-none p-0 mt-8 md:mt-12">
           {serviceList.map((e) => (
-            <>
+            <div key={`${e.header}`}>
               <li
                 key={e['header']}
                 className=" font-semibold mt-4 flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2 cursor-default text-base md:text-xl"
@@ -62,29 +64,20 @@ const ServiceIntroduction = () => {
                 {e['header']}
               </li>
 
-              {e['child'].length ? (
-                e['child'].map((c) => (
-                  <li
-                    key={c}
-                    className="mt-2 ml-6  flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2 cursor-default text-base md:text-lg"
-                  >
-                    <span className="cursor-pointer inline-block w-2 h-2 rounded-full  bg-white group-hover:bg-secondry mr-4"></span>
-                    {c}
-                  </li>
-                ))
-              ) : (
-                <></>
-              )}
-            </>
+              {e['child'].map((c) => (
+                <li
+                  key={c}
+                  className="mt-2 ml-6  flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2 cursor-default text-base md:text-lg"
+                >
+                  <span className="cursor-pointer inline-block w-2 h-2 rounded-full  bg-white group-hover:bg-secondry mr-4"></span>
+                  {c}
+                </li>
+              ))}
+            </div>
           ))}
         </ul>
-      </div>
-
-      {/* <div className=" bg-primary hidden md:block w-80 md:w-1/2 h-96 md:h-screen bg-cover bg-no-repeat bg-center">
-          <img src="https://plastic-surgeon.abelle.themerex.net/wp-content/uploads/2022/06/background-1-copyright.jpg" />
-        </div>
-   */}
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 

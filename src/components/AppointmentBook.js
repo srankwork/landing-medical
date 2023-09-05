@@ -21,7 +21,7 @@ const radioImage = [
   { img: stage8, value: 8 },
 ];
 
-const BookAppointment = ({ showPadding }) => {
+const BookAppointment = ({ forModal }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
@@ -29,20 +29,21 @@ const BookAppointment = ({ showPadding }) => {
   return (
     <motion.div
       ref={ref}
-      initial={{ x: -100, opacity: 0 }}
-      animate={{ x: inView ? 0 : -100, opacity: inView ? 1 : 0 }}
+      initial={{ x: '-20%', opacity: 0 }}
+      animate={{ x: inView ? 0 : '-20%', opacity: inView ? 1 : 0 }}
       transition={{ duration: 1 }}
       className={`px-4 md:px-10 ${
-        showPadding ? 'pt-14 md:pt-28' : ''
+        forModal ? '' : 'pt-14 md:pt-28'
       } container m-auto`}
       id="appointmentForm"
     >
-      <p className=" mb-8 font-poppins text-lg md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center">
+      <p className="font-poppins text-xl md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center">
         Curious about how much it will cost you?
       </p>
-      <h1 className="block md:hidden text-2xl md:text-3xl font-poppins font-semibold leading-tight tracking-tight text-header">
-        Book Your Appointment
+      <h1 className="mt-6 font-poppins text-center text-lg md:text-3xl font-semibold leading-none md:leading-snug  text-header">
+        Find out the cost of a hair transformation tailored to your needs!
       </h1>
+
       <div className="md:flex md:space-x-4 mt-6 md:mt-14">
         <div className="md:w-3/4">
           <form>
@@ -78,12 +79,14 @@ const BookAppointment = ({ showPadding }) => {
                 />
               </div>
             </div>
-            <p className='text-center text-primary font-semibold mt-6 mb-2'>Grade of Baldness:</p>
+            <p className="text-center text-primary font-semibold mt-8 mb-2">
+              Grade of Baldness:
+            </p>
             <div className="flex flex-wrap m-auto justify-center">
               {[...radioImage.slice(0, 4)].map((e) => (
                 <div
                   key={`radiobutton-${e.value}`}
-                  class="mr-6 md:mr-10 mt-4 flex flex-col items-center space-y-2"
+                  className="mr-6 md:mr-10 mt-4 flex flex-col items-center space-y-2"
                 >
                   <img
                     src={e.img}
@@ -92,7 +95,7 @@ const BookAppointment = ({ showPadding }) => {
                   <input
                     type="radio"
                     value={e.value}
-                    class="form-radio text-indigo-600"
+                    className="form-radio text-indigo-600"
                     name="radio-group"
                   />
                 </div>
@@ -102,7 +105,7 @@ const BookAppointment = ({ showPadding }) => {
               {[...radioImage.slice(4)].map((e) => (
                 <div
                   key={`radiobutton-${e.value}`}
-                  class="mr-6 md:mr-10 mt-4 flex flex-col items-center space-y-2"
+                  className="mr-6 md:mr-10 mt-4 flex flex-col items-center space-y-2"
                 >
                   <img
                     src={e.img}
@@ -111,7 +114,7 @@ const BookAppointment = ({ showPadding }) => {
                   <input
                     type="radio"
                     value={e.value}
-                    class="form-radio text-indigo-600"
+                    className="form-radio text-indigo-600"
                     name="radio-group"
                   />
                 </div>
@@ -128,13 +131,13 @@ const BookAppointment = ({ showPadding }) => {
               width="auto"
               height="auto"
             />
-            <h1 className="text-2xl md:text-2xl font-poppins font-semibold leading-tight tracking-tight text-header text-center mb-6">
+            <h1 className="text-2xl md:text-2xl font-poppins font-semibold leading-tight tracking-tight text-header text-center mb-6 w-4/6">
               Book Your Appointment
             </h1>
           </div>
           <div className="w-full bg-primary py-2 px-6 rounded-sm transition-all duration-500 font-semibold text-lg text-center">
             <a href="#CallApi" className="text-white">
-              Appointment
+              Find Out Now!
             </a>
           </div>
         </div>
