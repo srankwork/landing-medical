@@ -3,8 +3,8 @@ import ImageSlider from './ImageSlider';
 
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import before1 from '../image/hair-transplate/photos/b&a1.2.jpg';
-import after1 from '../image/hair-transplate/photos/b&a1.1.jpg';
+import after1 from '../image/hair-transplate/photos/b&a1.2.jpg';
+import before1 from '../image/hair-transplate/photos/b&a1.1.jpg';
 import after2 from '../image/hair-transplate/photos/b&a2.2.jpg';
 import before2 from '../image/hair-transplate/photos/b&a2.1.jpg';
 

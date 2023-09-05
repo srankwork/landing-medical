@@ -37,6 +37,9 @@ const BookAppointment = ({ showPadding }) => {
       } container m-auto`}
       id="appointmentForm"
     >
+      <p className=" mb-8 font-poppins text-lg md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center">
+        Curious about how much it will cost you?
+      </p>
       <h1 className="block md:hidden text-2xl md:text-3xl font-poppins font-semibold leading-tight tracking-tight text-header">
         Book Your Appointment
       </h1>

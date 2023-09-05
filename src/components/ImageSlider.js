@@ -43,15 +43,15 @@ const ImageSlider = ({ oldImage, newImage }) => {
       className="max-w-md w-full mx-auto  relative select-none"
     >
       <img
-        src={oldImage}
-        alt="Before"
+        src={newImage}
+        alt="After"
         className="pointer-events-none rounded-md"
         width="auto"
         height="auto"
       />
       <img
-        src={newImage}
-        alt="After"
+        src={oldImage}
+        alt="Before"
         width="auto"
         height="auto"
         style={{
