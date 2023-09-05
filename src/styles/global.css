@@ -53,13 +53,12 @@ body::-webkit-scrollbar-thumb:hover {
   background-position: center;
 }
 
-
 @keyframes rotate {
   0% {
-    transform: translateX(0%);
+    transform: translateX(30%);
   }
   100% {
-    transform: translateX(-200%);
+    transform: translateX(-100%);
   }
 }
 

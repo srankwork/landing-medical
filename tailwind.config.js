@@ -6,32 +6,30 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundColor:{
-        'primary':'#08589F',
-        'secondry':'#9ECA3D',
-        'background':'#E5EDF4',
-        'overlay-bg':'#060402'
+      backgroundColor: {
+        primary: '#08589F',
+        secondry: '#9ECA3D',
+        background: '#E5EDF4',
+        'overlay-bg': '#060402',
       },
-      borderColor:{
-        'border':'#9ECA3D',
-        'primary':'#08589F'
+      borderColor: {
+        border: '#9ECA3D',
+        primary: '#08589F',
       },
-      placeholderColor:{
-        'placeholder':'#636363',
+      placeholderColor: {
+        placeholder: '#636363',
       },
       lineHeight: {
-        '118': '1.18',
+        118: '1.18',
       },
-      textColor:{
-        'primary':'#08589F',
-        'secondry':'#9ECA3D',
-        'info-color':'#B1C8DC',
-        'lightblue':'#4D83B2',
-        'header':'#4F4F4F'
-      }
+      textColor: {
+        primary: '#08589F',
+        secondry: '#9ECA3D',
+        'info-color': '#B1C8DC',
+        lightblue: '#4D83B2',
+        header: '#4F4F4F',
+      },
     },
   },
-  plugins: [
-    
-  ],
-}
+  plugins: [],
+};
