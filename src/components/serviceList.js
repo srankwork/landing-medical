@@ -76,13 +76,13 @@ export default function ServiceList() {
         ))}
       </div>
       <div className="md:flex justify-between md:mt-16">
-        {services.slice(3).map((e) => (
+        {services.slice(3).map((e,index) => (
           <div
             key={`service-${e['header']}`}
             className="flex flex-col justify-center items-center md:w-4/3 hover-card mt-8 md:mt-0 m-4 text-center"
           >
             <img
-              className="w-40 h-40"
+              className={`${index ==1 ?'h-32 w-32':'h-40 w-40'}`}
               src={e['img']}
               alt="service"
               width="auto"

@@ -44,11 +44,11 @@ const review = [
 const Testimonial = ({ review, userName, reviewCount }) => {
   return (
     <div className="md:flex items-center justify-center">
-      <div className="w-full md:w-2/3 px-4 mt-4 md:mt-0">
-        <p className="text-white font-poppins text-sm md:text-lg font-medium leading-snug tracking-tight">
+      <div className="w-full md:w-2/3 px-4 mt-4 md:mt-0 flex flex-col justify-between">
+        <p className="text-white font-poppins text-sm md:text-lg font-medium leading-snug tracking-tight h-[18vh]">
           {review}
         </p>
-        <p className="capitalize mt-4 md:mt-6 text-black-600 font-semibold md:font-bold text-center text-header ">
+        <p className="capitalize mt-4 md:mt-6 text-black-600 font-semibold md:font-bold text-center text-header">
           {userName}
         </p>
         <div className="flex items-center justify-center mt-2">

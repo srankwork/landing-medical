@@ -11,14 +11,14 @@ import stage7 from '../image/hair-transplate/Icons/Stage7.png';
 import stage8 from '../image/hair-transplate/Icons/Stage8.png';
 
 const radioImage = [
-  { img: stage1, value: 1 },
-  { img: stage2, value: 2 },
-  { img: stage3, value: 3 },
-  { img: stage4, value: 4 },
-  { img: stage5, value: 5 },
-  { img: stage6, value: 6 },
-  { img: stage7, value: 7 },
-  { img: stage8, value: 8 },
+  { img: stage1, value: 1, number: 'I' },
+  { img: stage2, value: 2, number: 'II' },
+  { img: stage3, value: 3, number: 'III' },
+  { img: stage4, value: 4, number: 'IV' },
+  { img: stage5, value: 5, number: 'V' },
+  { img: stage6, value: 6, number: 'VI' },
+  { img: stage7, value: 7, number: 'VII' },
+  { img: stage8, value: 8, number: 'VIII' },
 ];
 
 const BookAppointment = ({ forModal }) => {
@@ -92,6 +92,7 @@ const BookAppointment = ({ forModal }) => {
                     src={e.img}
                     className="w-8 md:w-12 h-8 md:h-12 rounded-full"
                   />
+                  <label className="font-semibold text-xs">{e.number}</label>
                   <input
                     type="radio"
                     value={e.value}
@@ -111,6 +112,8 @@ const BookAppointment = ({ forModal }) => {
                     src={e.img}
                     className="w-8 md:w-12 h-8 md:h-12 rounded-full"
                   />
+                  <label className="font-semibold text-xs">{e.number}</label>
+
                   <input
                     type="radio"
                     value={e.value}
