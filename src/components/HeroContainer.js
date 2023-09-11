@@ -3,7 +3,6 @@ import AppoitmentModal from './AppointmentModal';
 import hero from '../image/hair-transplate/photos/hero.png';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import { withPrefix } from 'gatsby';
 
 const HeroContainer = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -45,7 +44,7 @@ const HeroContainer = () => {
         </div>
 
         <div className="hidden md:flex  order-1 lg:order-2 h-max w-1/2">
-          <img src={withPrefix(hero)} alt="hero image" className="h-full w-full" />
+          <img src={hero} alt="hero image" className="h-full w-full" />
         </div>
       </motion.div>
       <AppoitmentModal show={showPopup} onClose={() => setShowPopup(false)} />

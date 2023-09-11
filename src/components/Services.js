@@ -5,7 +5,6 @@ import costImg from '../image/hair-transplate/photos/cost.jpg';
 import cuttingedgeImg from '../image/hair-transplate/photos/cuttingedge.png';
 import effectiveImg from '../image/hair-transplate/photos/effective.jpg';
 import quickImg from '../image/hair-transplate/photos/quick.jpg';
-import { withPrefix } from 'gatsby';
 
 const services = [
   {
@@ -223,7 +222,7 @@ export default function Services({serviceId}) {
         </div>
         <img
           className="md:h-96"
-          src={withPrefix(services[counter]['img'])}
+          src={services[counter]['img']}
           alt="our services"
           width="auto"
           height="auto"

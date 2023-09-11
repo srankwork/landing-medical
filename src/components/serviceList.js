@@ -5,7 +5,6 @@ import costImg from '../image/hair-transplate/Icons/cost.jpg';
 import cuttingedgeImg from '../image/hair-transplate/Icons/cuttingedge.png';
 import effectiveImg from '../image/hair-transplate/Icons/effective.jpeg';
 import quickImg from '../image/hair-transplate/Icons/quick.jpg';
-import { withPrefix } from 'gatsby';
 
 const services = [
   {
@@ -63,7 +62,7 @@ export default function ServiceList() {
           >
             <img
               className="w-24 h-24"
-              src={withPrefix(e['img'])}
+              src={e['img']}
               alt="service"
               width="auto"
               height="auto"
@@ -83,7 +82,7 @@ export default function ServiceList() {
           >
             <img
               className="h-16 w-44"
-              src={withPrefix(e['img'])}
+              src={e['img']}
               alt="service"
               width="auto"
               height="auto"
