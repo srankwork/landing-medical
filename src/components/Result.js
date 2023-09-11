@@ -19,7 +19,7 @@ const ResultContainer = () => {
       <motion.p
         initial={{ x: '-25%', opacity: 0 }}
         animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.5 }}
         className="font-poppins text-lg md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center"
       >
         Remarkable Results
@@ -27,7 +27,7 @@ const ResultContainer = () => {
       <motion.h1
         initial={{ x: '-25%', opacity: 0 }}
         animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.5 }}
         className=" capitalize mt-4 font-poppins text-3xl md:text-6xl font-semibold leading-tight tracking-tighter text-header text-center"
       >
         Transforming Dreams into Reality
@@ -49,7 +49,7 @@ const ResultContainer = () => {
           <ImageSlider oldImage={before2} newImage={after2} />
         </motion.div>
       </div>
-      <div className="mt-8 block md:hidden">
+      <div className="mt-8 block md:hidden w-screen overflow-hidden">
         <motion.div
           initial={{ x: '-25%', opacity: 0 }}
           animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}

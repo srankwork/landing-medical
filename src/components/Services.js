@@ -13,42 +13,55 @@ const services = [
     header: 'Rediscover your beauty',
     content:
       "Experience rejuvenation in various facial regions, where subtle enhancements can help you recapture your youthful glow. Our carefully administered treatments target specific areas, resulting in smoother, refreshed skin and a revitalized appearance. Whether it's lip augmentation or lines around the eyes, forehead creases, or crow's feet, our techniques provide a tailored touch to bring out your best self.",
+    id: 'rediscover_your_beauty',
   },
   {
     img: LipsImg,
     header: 'Get Luscious Lips',
     content:
       "Whether you're looking to restore lost volume, balance asymmetry, or simply achieve a more youthful pout, lip fillers offer a customizable solution tailored to your unique features and preferences. Say goodbye to fine lines and hello to a plumper pout in just a 30-minute procedure.",
+    id: 'get_luscious_lips',
   },
   {
     img: forheadImg,
     header: 'Treat your forehead wrinkles',
     content:
-      'The premier injectable muscle relaxer gently diminishes facial wrinkles. With FDA approval dating back to 1989, Supported by a 2016 clinical study, this treatment proves simple and effective for reducing forehead wrinkles.',
+      'The premier injectable muscle relaxer gently diminishes facial wrinkles. With FDA approval dating back to 1989, supported by a 2016 clinical study, this treatment proves simple and effective for reducing forehead wrinkles.',
+    id: 'treat_your_forehead_wrinkles',
   },
   {
     img: completelyImg,
     header: 'Completely Safe',
     content:
-      ' Say goodbye to wrinkles with our safe, effective, and minimally invasive treatment administered by internationally certified technicians who have the experience to deliver wrinkle-free perfection.',
+      'Say goodbye to wrinkles with our safe, effective, and minimally invasive treatment administered by internationally certified technicians who have the experience to deliver wrinkle-free perfection.',
+    id: 'completely_safe',
   },
   {
     img: economicalImg,
     header: 'Economical Transformation',
     content:
       'Experience a youthful transformation without worrying about a costly procedure. Novacutis Clinic offers the best anti-wrinkle treatments in Mumbai at a very affordable cost.',
+    id: 'economical_transformation',
   },
 ];
 
-export default function Services() {
+export default function Services({ serviceId }) {
   const [counter, setCounter] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
-  const { refImg, refImgInView } = useInView({
-    triggerOnce: true,
-  });
+
+  useEffect(() => {
+    if (serviceId) {
+      const index = services.findIndex((e) => e.id == serviceId);
+      if (index != -1) {
+        setCounter(index);
+      }
+    }
+
+    return () => {};
+  }, [serviceId]);
 
   useEffect(() => {
     const textContainer = document.querySelector('.p-text-container');
@@ -66,6 +79,7 @@ export default function Services() {
     <div
       ref={ref}
       className="mt-16 md:mt-28 px-4 md:px-0 md:w-4/5 justify-center m-auto select-none"
+      id="serviceContainer"
     >
       {/* header */}
       <motion.p
@@ -79,9 +93,9 @@ export default function Services() {
 
       <div className="flex justify-between items-center">
         <motion.div
-          initial={{ x: '-15%', opacity: 0 }}
-          animate={{ x: inView ? 0 : '-15%', opacity: inView ? 1 : 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{ x: '-5%', opacity: 0 }}
+          animate={{ x: inView ? 0 : '-5%', opacity: inView ? 1 : 0 }}
+          transition={{ duration: 0.3 }}
         >
           <h1 className="mt-8 font-poppins text-xl md:text-4xl font-semibold leading-none md:leading-snug  text-header">
             {services[counter]['header']}
@@ -151,14 +165,16 @@ export default function Services() {
         >
           {services[counter]['content']}
         </p>
-        <span
-          onClick={() => {
-            setIsExpanded(!isExpanded);
-          }}
-          className=" text-primary text-sm cursor-pointer read-more"
-        >
-          {isExpanded ? 'Read Less' : 'Read More'}
-        </span>
+        <div className="h-8">
+          <span
+            onClick={() => {
+              setIsExpanded(!isExpanded);
+            }}
+            className=" text-primary text-sm cursor-pointer read-more"
+          >
+            {isExpanded ? 'Read Less' : 'Read More'}
+          </span>
+        </div>
       </motion.div>
 
       <motion.div

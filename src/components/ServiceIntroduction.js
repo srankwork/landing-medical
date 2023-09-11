@@ -3,15 +3,30 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import whychooseus from '../image/hair-transplate/photos/whychooseus.jpeg';
 
-const ServiceIntroduction = () => {
+const ServiceIntroduction = ({ changeServiceId }) => {
   const serviceList = [
-    { header: 'Rediscover your beauty', child: [] },
-    { header: 'Get Luscious Lips', child: [] },
-    { header: 'Treat Forehead Wrinkles', child: [] },
-    { header: 'Completely Safe & Natural Looking', child: [] },
-    { header: 'Economical Transformation', child: [] },
+    {
+      header: 'Rediscover your beauty',
+      child: [],
+      id: 'rediscover_your_beauty',
+    },
+    { header: 'Get Luscious Lips', child: [], id: 'get_luscious_lips' },
+    {
+      header: 'Treat Forehead Wrinkles',
+      child: [],
+      id: 'treat_your_forehead_wrinkles',
+    },
+    {
+      header: 'Completely Safe & Natural Looking',
+      child: [],
+      id: 'completely_safe',
+    },
+    {
+      header: 'Economical Transformation',
+      child: [],
+      id: 'economical_transformation',
+    },
   ];
-
   const [ref, inView] = useInView({ triggerOnce: true });
 
   return (
@@ -54,10 +69,11 @@ const ServiceIntroduction = () => {
 
         <ul className="list-none p-0 mt-8 md:mt-12">
           {serviceList.map((e) => (
-            <div key={`${e.header}`}>
+            <div key={`${e.id}`}>
               <li
                 key={e['header']}
-                className=" font-semibold mt-4 flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2 cursor-default text-base md:text-xl"
+                onClick={() => changeServiceId(e['id'])}
+                className=" font-semibold mt-4 flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2 cursor-pointer text-base md:text-xl"
               >
                 <span className="cursor-pointer inline-block w-2 h-2 rounded-full  bg-white group-hover:bg-secondry mr-4"></span>
                 {e['header']}
@@ -65,11 +81,12 @@ const ServiceIntroduction = () => {
 
               {e['child'].map((c) => (
                 <li
-                  key={c}
-                  className="mt-2 ml-6  flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2 cursor-default text-base md:text-lg"
+                  key={c.id}
+                  onClick={() => changeServiceId(c['id'])}
+                  className="mt-2 ml-6  flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2 cursor-pointer text-base md:text-lg"
                 >
                   <span className="cursor-pointer inline-block w-2 h-2 rounded-full  bg-white group-hover:bg-secondry mr-4"></span>
-                  {c}
+                  {c.name}
                 </li>
               ))}
             </div>
