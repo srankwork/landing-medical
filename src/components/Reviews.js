@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
@@ -66,15 +66,15 @@ const ReviewContainer = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
-
   const [sliderIndex, setSliderIndex] = useState(0);
+
 
   return (
     <motion.div
       ref={ref}
       initial={{ x: 100, opacity: 0 }}
       animate={{ x: 0, opacity: inView ? 1 : 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
       className="mt-12 md:mt-24 pt-14 md:pt-14 pb-14 bg-secondry select-none"
     >
       <h1 className=" text-center font-poppins text-3xl md:text-5xl font-semibold leading-tight tracking-tighter text-header">
@@ -89,7 +89,7 @@ const ReviewContainer = () => {
         />
       </div>
       <div className="flex justify-center mt-8">
-        {[0, 1, 2, 3, 4, 5].map((e) => (
+        {review.map((value, e) => (
           <span
             key={`slider-${e}`}
             onClick={() => setSliderIndex(e)}

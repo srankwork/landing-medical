@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../components/Headers';
 import HeroContainer from '../components/HeroContainer';
 import ServiceIntroduction from '../components/ServiceIntroduction';
@@ -13,6 +13,16 @@ import ServiceList from '../components/serviceList';
 import Rating from '../components/Rating';
 
 const IndexPage = () => {
+  const [serviceId, setServiceId] = useState(null);
+
+  function changeServiceId(id) {
+    const container = document.getElementById('serviceContainer');
+    if (container) {
+      container.scrollIntoView({ behavior: 'smooth' });
+    }
+    setServiceId(id);
+  }
+
   return (
     <main className="w-full h-full">
       <div className=" bg-secondry h-10 w-full text-center flex  items-center text-white justify-around">
@@ -53,13 +63,13 @@ const IndexPage = () => {
       <Header />
       <HeroContainer />
       <Rating />
-      <Services />
-      <ServiceIntroduction />
+      <Services serviceId={serviceId} />
+      <ServiceIntroduction changeServiceId={changeServiceId} />
       <ResultContainer />
       <DoctorSction />
       <ServiceList />
       <ReviewContainer />
-      <BookAppointment forModal={false}/>
+      <BookAppointment forModal={false} />
       <AboutUs />
       <FaqContainer />
       <hr className="mt-16" />

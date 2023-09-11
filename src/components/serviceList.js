@@ -6,6 +6,7 @@ import fue from '../image/hair-transplate/Icons/FUE.jpeg';
 import prp from '../image/hair-transplate/Icons/PRP.png';
 import meso from '../image/hair-transplate/Icons/meso.jpg';
 import derma from '../image/hair-transplate/Icons/derma_pen.png';
+import { withPrefix } from 'gatsby';
 
 const services = [
   {
@@ -45,7 +46,7 @@ export default function ServiceList() {
       ref={ref}
       initial={{ x: -100, opacity: 0 }}
       animate={{ x: inView ? 0 : -100, opacity: inView ? 1 : 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
       className="mt-16 md:mt-24 px-4 md:w-3/4 justify-center m-auto"
     >
       <p className="font-poppins text-lg md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center">
@@ -63,7 +64,7 @@ export default function ServiceList() {
           >
             <img
               className="w-24 h-24"
-              src={e['img']}
+              src={withPrefix(e['img'])}
               alt="service"
               width="auto"
               height="auto"
@@ -83,7 +84,7 @@ export default function ServiceList() {
           >
             <img
               className={`${index ==1 ?'h-32 w-32':'h-40 w-40'}`}
-              src={e['img']}
+              src={withPrefix(e['img'])}
               alt="service"
               width="auto"
               height="auto"

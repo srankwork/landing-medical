@@ -2,6 +2,7 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import practo from '../image/hair-transplate/Icons/Practo.png';
+import { withPrefix } from 'gatsby';
 
 function replicateArray(arr, times) {
   const result = [];
@@ -22,7 +23,7 @@ const Rating = () => {
         ref={ref}
         initial={{ opacity: 0 }}
         animate={{ opacity: inView ? 1 : 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.5 }}
         className=' flex justify-center items-center m-auto mt-20 md:mt-28 px-4 md:px-0 w-full md:w-4/5'
       >
         <div className='relative overflow-hidden flex justify-between w-full'>
@@ -49,7 +50,7 @@ const Rating = () => {
                 className='flex items-center justify-center md:justify-start min-w-fit mr-12 md:mr-0'
               >
                 <img
-                  src={e.img}
+                  src={withPrefix(e.img)}
                   className='h-16 md:h-20  w-16 md:w-20 rounded-full'
                   alt='logo'
                 />
@@ -92,7 +93,7 @@ const Rating = () => {
                 style={{ width: '200px' }}
               >
                 <img
-                  src={e.img}
+                  src={withPrefix(e.img)}
                   className='h-16 md:h-20  w-16 md:w-20 rounded-full'
                   alt='logo'
                 />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { withPrefix } from 'gatsby';
 import { useInView } from 'react-intersection-observer';
 import stage1 from '../image/hair-transplate/Icons/Stage1.png';
 import stage2 from '../image/hair-transplate/Icons/Stage2.png';
@@ -31,7 +32,7 @@ const BookAppointment = ({ forModal }) => {
       ref={ref}
       initial={{ x: '-20%', opacity: 0 }}
       animate={{ x: inView ? 0 : '-20%', opacity: inView ? 1 : 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
       className={`px-4 md:px-10 ${
         forModal ? '' : 'pt-14 md:pt-28'
       } container m-auto`}
@@ -89,7 +90,7 @@ const BookAppointment = ({ forModal }) => {
                   className="mr-6 md:mr-10 mt-4 flex flex-col items-center space-y-2"
                 >
                   <img
-                    src={e.img}
+                    src={withPrefix(e.img)}
                     className="w-8 md:w-12 h-8 md:h-12 rounded-full"
                   />
                   <label className="font-semibold text-xs">{e.number}</label>
@@ -109,7 +110,7 @@ const BookAppointment = ({ forModal }) => {
                   className="mr-6 md:mr-10 mt-4 flex flex-col items-center space-y-2"
                 >
                   <img
-                    src={e.img}
+                    src={withPrefix(e.img)}
                     className="w-8 md:w-12 h-8 md:h-12 rounded-full"
                   />
                   <label className="font-semibold text-xs">{e.number}</label>

@@ -1,3 +1,4 @@
+import { withPrefix } from 'gatsby';
 import React, { useState, useRef } from 'react';
 
 const ImageSlider = ({ oldImage, newImage }) => {
@@ -43,14 +44,14 @@ const ImageSlider = ({ oldImage, newImage }) => {
       className="max-w-md w-full mx-auto  relative select-none"
     >
       <img
-        src={newImage}
+        src={withPrefix(newImage)}
         alt="After"
         className="pointer-events-none rounded-md"
         width="auto"
         height="auto"
       />
       <img
-        src={oldImage}
+        src={withPrefix(oldImage)}
         alt="Before"
         width="auto"
         height="auto"
