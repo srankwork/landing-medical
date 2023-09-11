@@ -12,7 +12,7 @@ const DoctorSction = () => {
       ref={ref}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: inView ? 0 : 100, opacity: inView ? 1 : 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.3 }}
       className="md:flex bg-primary mt-16 md:mt-24"
     >
       <div

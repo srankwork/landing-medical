@@ -20,19 +20,21 @@ const HeroContainer = () => {
         ref={ref}
         initial={{ x: 0, opacity: 0 }}
         animate={{ x: 0, opacity: inView ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.5 }}
         className="bg-background lg:flex lg:justify-around lg:items-center hero-bg-image md:bg-none relative pb-12 md:pb-0 "
       >
         <div className="block md:hidden h-full w-full opacity-50 transition duration-300 ease-in-out bg-overlay-bg absolute"></div>
         <div className="lg:w-1/2 p-8 order-2 lg:order-1 relative flex flex-col justify-between h-fit ">
           <p className="mt-8 md:mt-0 font-poppins text-base  md:text-base font-semibold leading-6 tracking-wider uppercase text-white md:text-primary text-center md:text-start mb-2">
-            Is hair loss making you pull your hair out?
+            Fine lines and wrinkles making you conscious of your age and
+            appearance?
           </p>
           <h1 className="mt-20 md:mt-6 capitalize text-center md:text-start font-poppins text-4xl md:text-5xl font-semibold  leading-tight md:leading-snug  text-white md:text-header">
-            Get the hair you've always dreamed of!
+            Feel confident and look youthful with state-of-the-art cosmetic
+            injectables.
           </h1>
           <p className="mt-20 md:mt-12 text-center md:text-start text-white md:text-lightblue font-poppins text-base md:text-xl  leading-snug font-medium">
-            Lastest Hair Transplant Techniques at Novacutis Clinic
+            Turn back time to the good old days with Novacutis Clinic
           </p>
           <button
             onClick={handleScrollClick}

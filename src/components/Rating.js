@@ -22,7 +22,7 @@ const Rating = () => {
         ref={ref}
         initial={{ opacity: 0 }}
         animate={{ opacity: inView ? 1 : 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.5 }}
         className=' flex justify-center items-center m-auto mt-20 md:mt-28 px-4 md:px-0 w-full md:w-4/5'
       >
         <div className='relative overflow-hidden flex justify-between w-full'>

@@ -1,70 +1,42 @@
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import enhance from '../image/hair-transplate/photos/Enhance.jpg';
-import solution from '../image/hair-transplate/photos/Ultimate solution.jpg';
-import advance from '../image/hair-transplate/photos/Advanced.jpg';
-import fue from '../image/hair-transplate/photos/FUE.jpg';
-import bio from '../image/hair-transplate/photos/BIO FUE.png';
-import complementary from '../image/hair-transplate/photos/Complementary.jpeg';
-import prp from '../image/hair-transplate/photos/PRP.jpg';
-import meso from '../image/hair-transplate/photos/meso.jpg';
-import derma from '../image/hair-transplate/photos/Derma.jpeg';
+import rediscoverImg from '../image/hair-transplate/photos/rediscover.png';
+import LipsImg from '../image/hair-transplate/photos/lips.jpg';
+import completelyImg from '../image/hair-transplate/photos/completely.jpg';
+import forheadImg from '../image/hair-transplate/photos/forhead.png';
+import economicalImg from '../image/hair-transplate/photos/economical.jpg';
 
 const services = [
   {
-    img: solution,
-    header: 'The ultimate solution for hair loss',
+    img: rediscoverImg,
+    header: 'Rediscover your beauty',
     content:
-      'The hair transplant procedure relocates follicles from one part of the body (usually the back of the head) to bald or thinning areas, treating pattern baldness and enhancing eyebrows, lashes, beard, and more.',
+      "Experience rejuvenation in various facial regions, where subtle enhancements can help you recapture your youthful glow. Our carefully administered treatments target specific areas, resulting in smoother, refreshed skin and a revitalized appearance. Whether it's lip augmentation or lines around the eyes, forehead creases, or crow's feet, our techniques provide a tailored touch to bring out your best self.",
   },
   {
-    img: enhance,
-    header: 'Enhance your facial features',
+    img: LipsImg,
+    header: 'Get Luscious Lips',
     content:
-      'With meticulous precision, our skilled team implants individual hair follicles, creating beautifully defined eyebrows or a fuller, more masculine beard.',
+      "Whether you're looking to restore lost volume, balance asymmetry, or simply achieve a more youthful pout, lip fillers offer a customizable solution tailored to your unique features and preferences. Say goodbye to fine lines and hello to a plumper pout in just a 30-minute procedure.",
   },
   {
-    img: advance,
-    header: 'Advanced Techniques',
+    img: forheadImg,
+    header: 'Treat your forehead wrinkles',
     content:
-      'Novacutis Clinic by Dr. Prachi offers a wide range of advanced techniques to battle hair loss like mesotherapy, PRP treatment for hair, 2nd gen FUE and 3rd gen BIO FUE to name a few. Follicular Unit Extraction (FUE) is the industry standard technique used around the world. BIO FUE is a more efficient and advanced technique for hair transplant.',
+      'The premier injectable muscle relaxer gently diminishes facial wrinkles. With FDA approval dating back to 1989, Supported by a 2016 clinical study, this treatment proves simple and effective for reducing forehead wrinkles.',
   },
   {
-    img: fue,
-    header: '2nd Gen FUE',
+    img: completelyImg,
+    header: 'Completely Safe',
     content:
-      'Follicular Unit Extraction (FUE) involves extracting individual hair follicles from donor areas and implanting them in the target region, leaving no visible scars.',
+      ' Say goodbye to wrinkles with our safe, effective, and minimally invasive treatment administered by internationally certified technicians who have the experience to deliver wrinkle-free perfection.',
   },
   {
-    img: bio,
-    header: '3rd Gen BIO FUE',
+    img: economicalImg,
+    header: 'Economical Transformation',
     content:
-      "The revolutionary BIO FUE (Bioenhanced Follicular Unit Extraction) technique for hair transplant, takes the benefits of traditional FUE a step further by enriching the extracted follicles with growth factors from your blood, enhancing their survival rate and promoting robust hair growth. This cutting-edge approach ensures not only natural-looking results but also accelerated healing and impressive hair density. With BIO FUE, you're not just restoring hair; you're optimizing your hair's potential.",
-  },
-  {
-    img: complementary,
-    header: 'Complementing Haircare Therapy',
-    content:
-      'In addition to our advanced hair transplant techniques, we offer a range of effective services that work in harmony to maximise your hair transplant results. Platelet-Rich Plasma (PRP) therapy, DermaPen treatment, and Hair Mesotherapy are all powerful methods that stimulate hair growth, enhance blood circulation, and promote overall hair health. When combined with our cutting-edge hair transplant procedures, these services create a synergy that ensures you achieve the most natural-looking and long-lasting results possible',
-  },
-  {
-    img: prp,
-    header: 'PRP Therapy',
-    content:
-      'Platelet-Rich Plasma(PRP) involves harnessing the regenerative potential of your own blood, concentrating growth factors, and injecting them into the scalp. This holistic approach stimulates dormant hair follicles, promoting hair growth and thickness. The procedure is virtually painless and requires no downtime, making it an excellent complement to hair transplant techniques like FUE and BIO FUE.',
-  },
-  {
-    img: meso,
-    header: 'Hair Meso Therapy',
-    content:
-      'This non-invasive technique involves micro-injections of a specialized cocktail of vitamins, minerals, and growth factors directly into the scalp. These essential nutrients rejuvenate hair follicles, stimulate hair growth, and improve overall hair quality. Hair Meso Therapy is a gentle yet powerful solution that enhances blood circulation and nourishes your scalp, leading to healthier and more vibrant hair. With minimal discomfort and no downtime, you can achieve a revitalized head of hair that boosts your confidence.',
-  },
-  {
-    img: derma,
-    header: 'Derma Pen',
-    content:
-      'This cutting-edge method involves micro-needling the scalp with precision, stimulating collagen production and enhancing blood circulation. By creating tiny channels, the Derma Pen promotes the absorption of hair growth serums and encourages dormant hair follicles to awaken. With this minimally invasive procedure, you can experience improved hair density, thickness, and overall quality.',
+      'Experience a youthful transformation without worrying about a costly procedure. Novacutis Clinic offers the best anti-wrinkle treatments in Mumbai at a very affordable cost.',
   },
 ];
 
@@ -97,19 +69,19 @@ export default function Services() {
     >
       {/* header */}
       <motion.p
-        initial={{ x: '-25%', opacity: 0 }}
-        animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
-        transition={{ duration: 0.8 }}
+        initial={{ x: '-5%', opacity: 0 }}
+        animate={{ x: inView ? 0 : '-5%', opacity: inView ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
         className="font-poppins text-lg md:text-xl font-semibold leading-6 tracking-wider uppercase text-primary mb-2"
       >
-        Our Services
+        What We Offer
       </motion.p>
 
       <div className="flex justify-between items-center">
         <motion.div
-          initial={{ x: '-25%', opacity: 0 }}
-          animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ x: '-15%', opacity: 0 }}
+          animate={{ x: inView ? 0 : '-15%', opacity: inView ? 1 : 0 }}
+          transition={{ duration: 0.5 }}
         >
           <h1 className="mt-8 font-poppins text-xl md:text-4xl font-semibold leading-none md:leading-snug  text-header">
             {services[counter]['header']}
@@ -167,9 +139,9 @@ export default function Services() {
       </div>
 
       <motion.div
-        initial={{ x: '-25%', opacity: 0 }}
-        animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
-        transition={{ duration: 1 }}
+        initial={{ x: '-20%', opacity: 0 }}
+        animate={{ x: inView ? 0 : '-20%', opacity: inView ? 1 : 0 }}
+        transition={{ duration: 0.5 }}
         className="mt-4 md:w-3/4 font-normal md:tracking-wide text-sm md:text-lg text-header"
       >
         <p
@@ -190,9 +162,9 @@ export default function Services() {
       </motion.div>
 
       <motion.div
-        initial={{ y: '-20%', opacity: 0 }}
-        animate={{ y: inView ? 0 : '-20%', opacity: inView ? 1 : 0 }}
-        transition={{ duration: 1.5 }}
+        initial={{ y: '-15%', opacity: 0 }}
+        animate={{ y: inView ? 0 : '-15%', opacity: inView ? 1 : 0 }}
+        transition={{ duration: 0.5 }}
         className="mt-8 md:mt-12 flex items-center justify-center"
       >
         <div

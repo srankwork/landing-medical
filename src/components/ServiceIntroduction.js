@@ -5,12 +5,11 @@ import whychooseus from '../image/hair-transplate/photos/whychooseus.jpeg';
 
 const ServiceIntroduction = () => {
   const serviceList = [
-    { header: 'Enhance your facial features', child: [] },
-    { header: 'Advance Techniques', child: ['2nd Gen FUE', '3rd Gen BIO FUE'] },
-    {
-      header: 'Complementing Haircare Therapy',
-      child: ['PRP Therapy', 'Mesotherapy', 'Derma Pen Therapy'],
-    },
+    { header: 'Rediscover your beauty', child: [] },
+    { header: 'Get Luscious Lips', child: [] },
+    { header: 'Treat Forehead Wrinkles', child: [] },
+    { header: 'Completely Safe & Natural Looking', child: [] },
+    { header: 'Economical Transformation', child: [] },
   ];
 
   const [ref, inView] = useInView({ triggerOnce: true });
@@ -18,9 +17,9 @@ const ServiceIntroduction = () => {
   return (
     <div ref={ref} className="flex bg-primary  mt-28">
       <motion.div
-        initial={{ x: '-25%', opacity: 0 }}
-        animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
-        transition={{ duration: 1 }}
+        initial={{ x: 0, opacity: 0 }}
+        animate={{ x: 0, opacity: inView ? 1 : 0 }}
+        transition={{ duration: 0.5 }}
         className="hidden md:block w-1/2 h-auto bg-lightgray bg-cover bg-center"
         style={{
           backgroundImage: `url('${whychooseus}')`,
@@ -28,8 +27,8 @@ const ServiceIntroduction = () => {
       ></motion.div>
 
       <motion.div
-        initial={{ x: '25%', opacity: 0 }}
-        animate={{ x: inView ? 0 : '25%', opacity: inView ? 1 : 0 }}
+        initial={{ x: 0, opacity: 0 }}
+        animate={{ x: 0, opacity: inView ? 1 : 0 }}
         transition={{ duration: 1 }}
         className="w-full md:w-1/2 px-4 text-white p-10 md:pl-6"
       >
@@ -43,14 +42,14 @@ const ServiceIntroduction = () => {
           }}
         ></div>
         <h1 className="capitalize text-2xl md:text-5xl font-semibold font-montserrat mt-4 md:mt-3 text-white font-poppins leading-tight tracking-tighter">
-          The Ultimate Hair Loss Solution
+          Smooth away wrinkles and embrace a revitalised you!
         </h1>
         <p className="mt-2 md:mt-5 text-info-color font-poppins text-base md:text-xl font-medium leading-tight md:tracking-tighter">
-          At Novacutis Cosmetic Clinic, we offer a wide range of advanced
-          techniques to battle hair loss. We believe in a holistic approach to
-          hair restoration that is why in addition to our advanced hair
-          transplant techniques, we offer a range of effective services that
-          work in harmony to maximise your hair transplant results.
+          At Novacutis Cosmetic Clinic, we offer the latest procedures to fight
+          wrinkles, fine lines and signs of ageing. We believe in a holistic
+          approach to cosmetic injectable procedures that is why we use only FDA
+          approved products administered by internationally trained
+          professionals, for your safety and comfort.
         </p>
 
         <ul className="list-none p-0 mt-8 md:mt-12">

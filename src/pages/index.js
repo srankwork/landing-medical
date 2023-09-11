@@ -73,4 +73,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Hair Transplant</title>;
+export const Head = () => <title>Botox</title>;

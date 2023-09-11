@@ -26,44 +26,59 @@ const FaqItem = ({ question, answer }) => {
 const FaqContainer = () => {
   const faqData = [
     {
-      question: 'Is hair transplant surgery safe?',
+      question: 'Is laser hair removal permanent?',
       answer:
-        "Hair transplant procedures are generally considered safe when performed by qualified and experienced medical professionals in a controlled clinical setting. However, like any surgical procedure, there are risks involved, including infection, scarring, and complications related to anaesthesia. It's essential to choose a reputable clinic and discuss potential risks with your surgeon during the consultation to make an informed decision about your treatment.",
-    },
-    {
-      question: 'Is hair transplant painful?',
-      answer:
-        'Local anaesthesia is used during the procedure, so patients typically do not feel pain. Some discomfort or soreness may be experienced during recovery.',
-    },
-    {
-      question: 'How long does a typical hair transplant procedure take?',
-      answer:
-        'The duration of a hair transplant can vary depending on the extent of the procedure, but it often ranges from 4 to 8 hours.',
-    },
-    {
-      question: 'How long does it take to see results?',
-      answer:
-        'It may take several months (typically 6-12) for the transplanted hair to grow and achieve the desired thickness.',
-    },
-    {
-      question: 'Are there any risks or side effects to the procedure?',
-      answer:
-        "Common side effects include swelling, bruising, and minor discomfort. In rare cases, infection or scarring can occur. It's essential to choose a qualified surgeon to minimise risks.",
+        'While it can significantly reduce hair growth, laser hair removal is often described as long-lasting but not entirely permanent. Maintenance sessions may be required over time to maintain hair reduction.',
     },
     {
       question:
-        'How soon can I return to work or normal activities after the procedure?',
+        'Is laser hair removal safe for all skin types and hair colours?',
       answer:
-        'Most patients can resume light activities within a few days to a week after the procedure, but strenuous activities should be avoided for a few weeks.',
+        'Advancements in laser technology have made it more effective for a variety of skin tones and hair colours. However, the ideal treatment settings may vary based on your specific skin and hair type.',
     },
     {
-      question: 'Is there any non-surgical alternative to hair transplant?',
+      question: 'Does laser hair removal hurt?',
       answer:
-        'Yes, non-surgical options include Mesotherapy, Derma Pen Therapy and platelet-rich plasma (PRP) treatments.',
+        'Many people describe the sensation as similar to a rubber band snapping against the skin. It can be uncomfortable, but most find it tolerable. Some lasers have built-in cooling systems to minimise discomfort.',
     },
-    // Add more FAQ items here
+    {
+      question: 'How long does a laser hair removal session take?',
+      answer:
+        'The duration of a session depends on the size of the treatment area. Small areas like the upper lip may take just a few minutes, while larger areas like the legs may take an hour or more.',
+    },
+    {
+      question: 'How many sessions are typically needed for effective results?',
+      answer:
+        'Most people require multiple sessions (usually 6 to 8) spaced a few weeks apart to achieve significant and long-lasting hair reduction. The exact number varies depending on factors like hair colour, thickness and skin type.',
+    },
+    {
+      question: 'Are there any side effects of laser hair removal?',
+      answer:
+        'Temporary side effects can include redness, swelling, and minor discomfort, but these typically subside within a day or two. Serious side effects are rare when the procedure is performed by a trained professional.',
+    },
+    {
+      question: 'Is there any downtime after a laser hair removal session?',
+      answer:
+        "There is usually little to no downtime, and you can typically resume your regular activities immediately after treatment. However, it's essential to follow post-treatment care instructions, including sun protection.",
+    },
+    {
+      question:
+        'Are there any specific pre-treatment preparations I should be aware of?',
+      answer:
+        "Depending on your provider's recommendations, you may be advised to avoid sun exposure, waxing, or plucking in the treatment area before your session.",
+    },
+    {
+      question: 'Is laser hair removal suitable for facial hair removal?',
+      answer:
+        'Yes, laser hair removal can be used to target facial hair, including areas like the upper lip, chin, and sideburns.',
+    },
+    {
+      question:
+        'Is laser hair removal safe for sensitive areas like the bikini line or underarms?',
+      answer:
+        "Yes, laser hair removal can be used on sensitive areas, but it's essential to choose a skilled practitioner experienced in treating these areas.",
+    },
   ];
-
   return (
     <div className="max-w-screen-lg mx-auto p-4 md:p-6 mt-6 md:mt-12">
       <h2 className="text-center font-poppins text-4xl md:text-5xl font-semibold leading-tight tracking-tighter text-header">
