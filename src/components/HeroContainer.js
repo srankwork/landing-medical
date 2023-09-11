@@ -20,7 +20,7 @@ const HeroContainer = () => {
         ref={ref}
         initial={{ x: 0, opacity: 0 }}
         animate={{ x: 0, opacity: inView ? 1 : 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.2 }}
         className="bg-background lg:flex lg:justify-around lg:items-center hero-bg-image md:bg-none relative pb-12 md:pb-0 "
       >
         <div className="block md:hidden h-full w-full opacity-50 transition duration-300 ease-in-out bg-overlay-bg absolute"></div>
@@ -30,8 +30,8 @@ const HeroContainer = () => {
             appearance?
           </p>
           <h1 className="mt-20 md:mt-6 capitalize text-center md:text-start font-poppins text-4xl md:text-5xl font-semibold  leading-tight md:leading-snug  text-white md:text-header">
-            Feel confident and look youthful with state-of-the-art cosmetic
-            injectables.
+            Feel confident and look youthful with the safest dermal filler
+            treatments.
           </h1>
           <p className="mt-20 md:mt-12 text-center md:text-start text-white md:text-lightblue font-poppins text-base md:text-xl  leading-snug font-medium">
             Turn back time to the good old days with Novacutis Clinic

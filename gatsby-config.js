@@ -2,9 +2,9 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: '/services/botox',
+  pathPrefix: '/services/dermal',
   siteMetadata: {
-    title: `Botox`,
+    title: `Dermal Fillers & Lip Fillers`,
     siteUrl: `https://novacutisclinics.com`,
   },
   plugins: [

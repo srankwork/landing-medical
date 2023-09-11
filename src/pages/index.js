@@ -83,4 +83,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Botox</title>;
+export const Head = () => <title>Dermal Fillers & Lip Fillers</title>;
