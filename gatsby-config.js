@@ -2,9 +2,9 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: '/landing-medical',
+  pathPrefix: '/services/laser-hair-removal',
   siteMetadata: {
-    title: `My Gatsby Site`,
+    title: `Laser Hair Removal`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: ['gatsby-plugin-postcss'],

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AppoitmentModal from './AppointmentModal';
-import hero from '../image/hair-transplate/photos/hero.jpg';
+import hero from '../image/hair-transplate/photos/hero.png';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
@@ -26,13 +26,14 @@ const HeroContainer = () => {
         <div className="block md:hidden h-full w-full opacity-50 transition duration-300 ease-in-out bg-overlay-bg absolute"></div>
         <div className="lg:w-1/2 p-8 order-2 lg:order-1 relative flex flex-col justify-between h-fit ">
           <p className="mt-8 md:mt-0 font-poppins text-base  md:text-base font-semibold leading-6 tracking-wider uppercase text-white md:text-primary text-center md:text-start mb-2">
-            Is hair loss making you pull your hair out?
+            Fed up of monthly wax appointments? Looking for a easy and permanent
+            solution to hair removal?
           </p>
           <h1 className="mt-20 md:mt-6 capitalize text-center md:text-start font-poppins text-4xl md:text-5xl font-semibold  leading-tight md:leading-snug  text-white md:text-header">
-            Get the hair you've always dreamed of!
+            Say goodbye to agonizing wax appointments and annoying razors!
           </h1>
           <p className="mt-20 md:mt-12 text-center md:text-start text-white md:text-lightblue font-poppins text-base md:text-xl  leading-snug font-medium">
-            Lastest Hair Transplant Techniques at Novacutis Clinic
+            Be silky smooth, all year round with Novacutis Clinic
           </p>
           <button
             onClick={handleScrollClick}

@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <>
+    <div className='w-screen'>
       <AppoitmentModal
         show={showPopup}
         onClose={() => {
@@ -60,7 +60,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

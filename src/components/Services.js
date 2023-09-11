@@ -1,70 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import enhance from '../image/hair-transplate/photos/Enhance.jpg';
-import solution from '../image/hair-transplate/photos/Ultimate solution.jpg';
-import advance from '../image/hair-transplate/photos/Advanced.jpg';
-import fue from '../image/hair-transplate/photos/FUE.jpg';
-import bio from '../image/hair-transplate/photos/BIO FUE.png';
-import complementary from '../image/hair-transplate/photos/Complementary.jpeg';
-import prp from '../image/hair-transplate/photos/PRP.jpg';
-import meso from '../image/hair-transplate/photos/meso.jpg';
-import derma from '../image/hair-transplate/photos/Derma.jpeg';
+import costImg from '../image/hair-transplate/photos/cost.jpg';
+import cuttingedgeImg from '../image/hair-transplate/photos/cuttingedge.png';
+import effectiveImg from '../image/hair-transplate/photos/effective.jpg';
+import quickImg from '../image/hair-transplate/photos/quick.jpg';
 
 const services = [
   {
-    img: solution,
-    header: 'The ultimate solution for hair loss',
+    img: effectiveImg,
+    header: 'Effective & Permanent',
     content:
-      'The hair transplant procedure relocates follicles from one part of the body (usually the back of the head) to bald or thinning areas, treating pattern baldness and enhancing eyebrows, lashes, beard, and more.',
+      'Trained laser technicians use the latest safe and effective technology in laser hair removal to offer you the luxury of silky-smooth and ready-for-anything skin all year round!',
   },
   {
-    img: enhance,
-    header: 'Enhance your facial features',
+    img: quickImg,
+    header: 'Quick & Painless',
     content:
-      'With meticulous precision, our skilled team implants individual hair follicles, creating beautifully defined eyebrows or a fuller, more masculine beard.',
+      ' Time to ditch ancient practices of painful wax appointments and rushing with razors for a permanent laser solution. Although laser is fast, it can only treat your hair during the growth phase, so a series of 6-12 treatment sessions will be required before seeing those silky-smooth results.',
   },
   {
-    img: advance,
-    header: 'Advanced Techniques',
+    img: costImg,
+    header: 'Cost-Effective',
     content:
-      'Novacutis Clinic by Dr. Prachi offers a wide range of advanced techniques to battle hair loss like mesotherapy, PRP treatment for hair, 2nd gen FUE and 3rd gen BIO FUE to name a few. Follicular Unit Extraction (FUE) is the industry standard technique used around the world. BIO FUE is a more efficient and advanced technique for hair transplant.',
+      'The treatment is tailored to an individuals needs to eradicate unwanted hair from the chosen area. Laser hair removal is affordable and cheaper than waxing in the long run.',
   },
   {
-    img: fue,
-    header: '2nd Gen FUE',
+    img: cuttingedgeImg,
+    header: 'Cutting-edge Technology',
     content:
-      'Follicular Unit Extraction (FUE) involves extracting individual hair follicles from donor areas and implanting them in the target region, leaving no visible scars.',
-  },
-  {
-    img: bio,
-    header: '3rd Gen BIO FUE',
-    content:
-      "The revolutionary BIO FUE (Bioenhanced Follicular Unit Extraction) technique for hair transplant, takes the benefits of traditional FUE a step further by enriching the extracted follicles with growth factors from your blood, enhancing their survival rate and promoting robust hair growth. This cutting-edge approach ensures not only natural-looking results but also accelerated healing and impressive hair density. With BIO FUE, you're not just restoring hair; you're optimizing your hair's potential.",
-  },
-  {
-    img: complementary,
-    header: 'Complementing Haircare Therapy',
-    content:
-      'In addition to our advanced hair transplant techniques, we offer a range of effective services that work in harmony to maximise your hair transplant results. Platelet-Rich Plasma (PRP) therapy, DermaPen treatment, and Hair Mesotherapy are all powerful methods that stimulate hair growth, enhance blood circulation, and promote overall hair health. When combined with our cutting-edge hair transplant procedures, these services create a synergy that ensures you achieve the most natural-looking and long-lasting results possible',
-  },
-  {
-    img: prp,
-    header: 'PRP Therapy',
-    content:
-      'Platelet-Rich Plasma(PRP) involves harnessing the regenerative potential of your own blood, concentrating growth factors, and injecting them into the scalp. This holistic approach stimulates dormant hair follicles, promoting hair growth and thickness. The procedure is virtually painless and requires no downtime, making it an excellent complement to hair transplant techniques like FUE and BIO FUE.',
-  },
-  {
-    img: meso,
-    header: 'Hair Meso Therapy',
-    content:
-      'This non-invasive technique involves micro-injections of a specialized cocktail of vitamins, minerals, and growth factors directly into the scalp. These essential nutrients rejuvenate hair follicles, stimulate hair growth, and improve overall hair quality. Hair Meso Therapy is a gentle yet powerful solution that enhances blood circulation and nourishes your scalp, leading to healthier and more vibrant hair. With minimal discomfort and no downtime, you can achieve a revitalized head of hair that boosts your confidence.',
-  },
-  {
-    img: derma,
-    header: 'Derma Pen',
-    content:
-      'This cutting-edge method involves micro-needling the scalp with precision, stimulating collagen production and enhancing blood circulation. By creating tiny channels, the Derma Pen promotes the absorption of hair growth serums and encourages dormant hair follicles to awaken. With this minimally invasive procedure, you can experience improved hair density, thickness, and overall quality.',
+      'Lasermach Technology stands at the forefront of advanced hair removal solutions. Leveraging cutting-edge laser precision, it delivers unmatched efficacy in eliminating unwanted hair, offering you the lasting results you desire. Experience the future of smooth, flawless skin with Lasermach.',
   },
 ];
 
@@ -102,7 +67,7 @@ export default function Services() {
         transition={{ duration: 0.8 }}
         className="font-poppins text-lg md:text-xl font-semibold leading-6 tracking-wider uppercase text-primary mb-2"
       >
-        Our Services
+        Laser Hair Removal with LasermachⓇ
       </motion.p>
 
       <div className="flex justify-between items-center">

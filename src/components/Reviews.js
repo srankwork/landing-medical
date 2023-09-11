@@ -5,39 +5,33 @@ import { motion } from 'framer-motion';
 const review = [
   {
     review:
-      "Dr. Prachi has such a wonderful personality. I came in to treat severe hair fall. The rapport that formed between us made my anguish disappear. Her genuineness in work can be seen through the effort she takes. She explained the treatment's goal and how each component of it will help to improve the condition. I'm glad she's my doctor.",
-    name: 'Rutuja Patil',
-    reviewCount: '2',
-  },
-  {
-    review:
-      'I am from Canada, and a friend of mine suggested I see Dr. Prachi about my hair loss issues while I was on vacation in India. I would like to say that my experience as a patient seeking a hair restoration treatment has been wonderful and incredibly satisfying. She is utterly competent, friendly, welcoming, and empathetic toward my needs as a client. For hair treatments, I would definitely suggest Novacutis and Dr. Prachi Patil.',
-    name: 'deep sumal',
-    reviewCount: '3',
-  },
-  {
-    review:
-      "I recently went under hair transplant and I'm really thrilled with the experience and with my results thanks to the doctor. ",
-    name: 'Darshan Mane',
-    reviewCount: '1',
-  },
-  {
-    review:
-      'Such professionalism! So comfortable through the whole experience and the team was lovely! My experience with the doctor was great and she did a fantastic job! So pleased with the end result! My aftercare was second to none and well worth the money spent! Thank you all!!',
-    name: 'bhaskar anil',
-    reviewCount: '2',
-  },
-  {
-    review:
-      "I had a great experience all around at Novacutis clinic, everyone was extremely courteous and helpful. At Dr.Prachi's clinic, all procedures went smoothly and so far I am very much happy with my hair transplant. Thankful & grateful to Dr. Prachi",
-    name: 'Sharad Wasnik',
+      'Amazing services, extremely long lasting results, very gracious staff ambience and lasers are international quality. Been seeing Dr Prachi for 8 years. Everyone I meet adores the texture of my skin.',
+    name: 'Rajshri Bhatia',
     reviewCount: '4',
   },
   {
     review:
-      'I visited Dr. Prachi for my hair fall issues. Saw the results within a month. My hair is better than ever. Had the best experience. She is professional, well experienced and very sweet. I would recommend Novacutis and Dr. Prachi everytime',
-    name: 'MINAL BHAGAT',
+      "It's a lovely and friendly treatment. It's a very great experience. The treatments are very best and the staff is also very friendly.",
+    name: 'Srushti Dhotre',
     reviewCount: '3',
+  },
+  {
+    review:
+      "I love the way every patient is treated and greeted. Every time I visit, it's a great experience. Special care is taken during each and every treatment as per your skin type. The doctor and staff are very much cooperative when it comes to understanding your needs of treatment and while the treatment is going on. Thanks for such a lovely experience.",
+    name: 'Nisha Gupta',
+    reviewCount: '1',
+  },
+  {
+    review:
+      'Dr. Prachi is a very talented and smart skin specialist and she knows her job well. I love visiting her for treatments and the best part is her nature and staff is also very good and attentive.',
+    name: 'Monica Damania',
+    reviewCount: '2',
+  },
+  {
+    review:
+      "Dr. Prachi's treatment is very effective and the way she handles the patients is really appreciable…the improvement in skin appearance is really remarkable..",
+    name: 'Sudhir Mirgal (Sam)',
+    reviewCount: '4',
   },
 ];
 
@@ -89,7 +83,7 @@ const ReviewContainer = () => {
         />
       </div>
       <div className="flex justify-center mt-8">
-        {[0, 1, 2, 3, 4, 5].map((e) => (
+        {review.map((value, e) => (
           <span
             key={`slider-${e}`}
             onClick={() => setSliderIndex(e)}

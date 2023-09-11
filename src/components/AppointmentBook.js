@@ -1,25 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import stage1 from '../image/hair-transplate/Icons/Stage1.png';
-import stage2 from '../image/hair-transplate/Icons/Stage2.png';
-import stage3 from '../image/hair-transplate/Icons/Stage3.png';
-import stage4 from '../image/hair-transplate/Icons/Stage4.png';
-import stage5 from '../image/hair-transplate/Icons/Stage5.png';
-import stage6 from '../image/hair-transplate/Icons/Stage6.png';
-import stage7 from '../image/hair-transplate/Icons/Stage7.png';
-import stage8 from '../image/hair-transplate/Icons/Stage8.png';
-
-const radioImage = [
-  { img: stage1, value: 1, number: 'I' },
-  { img: stage2, value: 2, number: 'II' },
-  { img: stage3, value: 3, number: 'III' },
-  { img: stage4, value: 4, number: 'IV' },
-  { img: stage5, value: 5, number: 'V' },
-  { img: stage6, value: 6, number: 'VI' },
-  { img: stage7, value: 7, number: 'VII' },
-  { img: stage8, value: 8, number: 'VIII' },
-];
 
 const BookAppointment = ({ forModal }) => {
   const [ref, inView] = useInView({
@@ -41,7 +22,7 @@ const BookAppointment = ({ forModal }) => {
         Curious about how much it will cost you?
       </p>
       <h1 className="mt-6 font-poppins text-center text-lg md:text-3xl font-semibold leading-none md:leading-snug  text-header">
-        Find out the cost of a hair transformation tailored to your needs!
+        Experience the confidence of flawless skin with Novacutis Clinic
       </h1>
 
       <div className="md:flex md:space-x-4 mt-6 md:mt-14">
@@ -73,55 +54,11 @@ const BookAppointment = ({ forModal }) => {
               </div>
               <div className="mt-2 md:w-1/2">
                 <input
-                  type="number"
+                  type="text"
                   className="border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder"
-                  placeholder="YOUR AGE"
+                  placeholder="AREA OF UNWANTED HAIR:"
                 />
               </div>
-            </div>
-            <p className="text-center text-primary font-semibold mt-8 mb-2">
-              Grade of Baldness:
-            </p>
-            <div className="flex flex-wrap m-auto justify-center">
-              {[...radioImage.slice(0, 4)].map((e) => (
-                <div
-                  key={`radiobutton-${e.value}`}
-                  className="mr-6 md:mr-10 mt-4 flex flex-col items-center space-y-2"
-                >
-                  <img
-                    src={e.img}
-                    className="w-8 md:w-12 h-8 md:h-12 rounded-full"
-                  />
-                  <label className="font-semibold text-xs">{e.number}</label>
-                  <input
-                    type="radio"
-                    value={e.value}
-                    className="form-radio text-indigo-600"
-                    name="radio-group"
-                  />
-                </div>
-              ))}
-            </div>
-            <div className="flex flex-wrap m-auto justify-center">
-              {[...radioImage.slice(4)].map((e) => (
-                <div
-                  key={`radiobutton-${e.value}`}
-                  className="mr-6 md:mr-10 mt-4 flex flex-col items-center space-y-2"
-                >
-                  <img
-                    src={e.img}
-                    className="w-8 md:w-12 h-8 md:h-12 rounded-full"
-                  />
-                  <label className="font-semibold text-xs">{e.number}</label>
-
-                  <input
-                    type="radio"
-                    value={e.value}
-                    className="form-radio text-indigo-600"
-                    name="radio-group"
-                  />
-                </div>
-              ))}
             </div>
           </form>
         </div>
