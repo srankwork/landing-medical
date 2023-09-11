@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <div className='w-screen'>
+    <>
       <AppoitmentModal
         show={showPopup}
         onClose={() => {
@@ -18,7 +18,7 @@ const Header = () => {
         }}
       />
       <div
-        className='fixed rotate-90 top-1/2 right-0 cursor-pointer origin-right  mr-4 mt-4 z-40'
+        className='fixed rotate-90 top-1/2 right-1 cursor-pointer origin-right  mr-4 mt-4 z-40'
         role='button'
         tabIndex={0}
         onKeyDown={handleScrollClick}
@@ -28,7 +28,7 @@ const Header = () => {
           Book Appointment
         </p>
       </div>
-      <div className='fixed bottom-4 right-4 z-40'>
+      <div className='fixed bottom-4 right-2 z-40'>
         <a
           href='https://wa.me/+917208330809'
           target='_blank'
@@ -60,7 +60,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

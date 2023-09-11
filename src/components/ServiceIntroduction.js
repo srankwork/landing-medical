@@ -2,14 +2,31 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import whychooseus from '../image/hair-transplate/photos/whychooseus.jpg';
+import { withPrefix } from 'gatsby';
 
-const ServiceIntroduction = () => {
+const ServiceIntroduction = ({ changeServiceId }) => {
   const serviceList = [
-    { header: 'Reduce the chance of ingrown hair', child: [] },
-    { header: 'Avoid uncomfortable shaving rashes', child: [] },
-    { header: 'Achieve silky smooth skin', child: [] },
-    { header: 'Cheaper than waxing', child: [] },
-    { header: 'Safe & Effective technology', child: [] },
+    {
+      header: 'Reduce the chance of ingrown hair',
+      child: [],
+      id: 'reduce_the_chance_of_ingrown_hair',
+    },
+    {
+      header: 'Avoid uncomfortable shaving rashes',
+      child: [],
+      id: 'avoid_uncomfortable_shaving_rashes',
+    },
+    {
+      header: 'Achieve silky smooth skin',
+      child: [],
+      id: 'achieve_silky_smooth_skin',
+    },
+    { header: 'Cheaper than waxing', child: [], id: 'cheaper_than_waxing' },
+    {
+      header: 'Safe & Effective technology',
+      child: [],
+      id: 'cutting-edge_technology',
+    },
   ];
 
   const [ref, inView] = useInView({ triggerOnce: true });
@@ -17,18 +34,18 @@ const ServiceIntroduction = () => {
   return (
     <div ref={ref} className="flex bg-primary  mt-28">
       <motion.div
-        initial={{ x: '-25%', opacity: 0 }}
-        animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
-        transition={{ duration: 1 }}
+        initial={{ x: 0, opacity: 0 }}
+        animate={{ x: 0, opacity: inView ? 1 : 0 }}
+        transition={{ duration: 0.5 }}
         className="hidden md:block w-1/2 h-auto bg-lightgray bg-cover bg-center"
         style={{
-          backgroundImage: `url('${whychooseus}')`,
+          backgroundImage: `url('${withPrefix(whychooseus)}')`,
         }}
       ></motion.div>
 
       <motion.div
-        initial={{ x: '25%', opacity: 0 }}
-        animate={{ x: inView ? 0 : '25%', opacity: inView ? 1 : 0 }}
+        initial={{ x: 0, opacity: 0 }}
+        animate={{ x: 0, opacity: inView ? 1 : 0 }}
         transition={{ duration: 1 }}
         className="w-full md:w-1/2 px-4 text-white p-10 md:pl-6"
       >
@@ -38,7 +55,7 @@ const ServiceIntroduction = () => {
         <div
           className="block md:hidden mt-3 md:w-1/2 h-60 md:h-screen bg-cover bg-no-repeat bg-center relative"
           style={{
-            backgroundImage: `url('${whychooseus}')`,
+            backgroundImage: `url('${withPrefix(whychooseus)}')`,
           }}
         ></div>
         <h1 className="capitalize text-2xl md:text-5xl font-semibold font-montserrat mt-4 md:mt-3 text-white font-poppins leading-tight tracking-tighter">
@@ -54,10 +71,11 @@ const ServiceIntroduction = () => {
 
         <ul className="list-none p-0 mt-8 md:mt-12">
           {serviceList.map((e) => (
-            <div key={`${e.header}`}>
+            <div key={`${e.id}`}>
               <li
                 key={e['header']}
-                className=" font-semibold mt-4 flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2 cursor-default text-base md:text-xl cursor-pointer"
+                onClick={() => changeServiceId(e['id'])}
+                className=" font-semibold mt-4 flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2  text-base md:text-xl cursor-pointer"
               >
                 <span className="cursor-pointer inline-block w-2 h-2 rounded-full  bg-white group-hover:bg-secondry mr-4"></span>
                 {e['header']}
@@ -65,11 +83,12 @@ const ServiceIntroduction = () => {
 
               {e['child'].map((c) => (
                 <li
-                  key={c}
-                  className="mt-2 ml-6  flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2 cursor-default text-base md:text-lg"
+                  key={c.id}
+                  onClick={() => changeServiceId(c['id'])}
+                  className="mt-2 ml-6  flex items-center group hover:text-secondry transition-transform transform hover:translate-x-2 cursor-pointer text-base md:text-lg"
                 >
                   <span className="cursor-pointer inline-block w-2 h-2 rounded-full  bg-white group-hover:bg-secondry mr-4"></span>
-                  {c}
+                  {c.name}
                 </li>
               ))}
             </div>

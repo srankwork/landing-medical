@@ -12,7 +12,7 @@ const BookAppointment = ({ forModal }) => {
       ref={ref}
       initial={{ x: '-20%', opacity: 0 }}
       animate={{ x: inView ? 0 : '-20%', opacity: inView ? 1 : 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
       className={`px-4 md:px-10 ${
         forModal ? '' : 'pt-14 md:pt-28'
       } container m-auto`}

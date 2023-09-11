@@ -5,6 +5,7 @@ import costImg from '../image/hair-transplate/photos/cost.jpg';
 import cuttingedgeImg from '../image/hair-transplate/photos/cuttingedge.png';
 import effectiveImg from '../image/hair-transplate/photos/effective.jpg';
 import quickImg from '../image/hair-transplate/photos/quick.jpg';
+import { withPrefix } from 'gatsby';
 
 const services = [
   {
@@ -12,36 +13,47 @@ const services = [
     header: 'Effective & Permanent',
     content:
       'Trained laser technicians use the latest safe and effective technology in laser hair removal to offer you the luxury of silky-smooth and ready-for-anything skin all year round!',
+    id: 'effective_and_permanent',
   },
   {
     img: quickImg,
     header: 'Quick & Painless',
     content:
-      ' Time to ditch ancient practices of painful wax appointments and rushing with razors for a permanent laser solution. Although laser is fast, it can only treat your hair during the growth phase, so a series of 6-12 treatment sessions will be required before seeing those silky-smooth results.',
+      'Time to ditch ancient practices of painful wax appointments and rushing with razors for a permanent laser solution. Although laser is fast, it can only treat your hair during the growth phase, so a series of 6-12 treatment sessions will be required before seeing those silky-smooth results.',
+    id: 'quick_and_painless',
   },
   {
     img: costImg,
     header: 'Cost-Effective',
     content:
-      'The treatment is tailored to an individuals needs to eradicate unwanted hair from the chosen area. Laser hair removal is affordable and cheaper than waxing in the long run.',
+      "The treatment is tailored to an individual's needs to eradicate unwanted hair from the chosen area. Laser hair removal is affordable and cheaper than waxing in the long run.",
+    id: 'cost-effective',
   },
   {
     img: cuttingedgeImg,
     header: 'Cutting-edge Technology',
     content:
       'Lasermach Technology stands at the forefront of advanced hair removal solutions. Leveraging cutting-edge laser precision, it delivers unmatched efficacy in eliminating unwanted hair, offering you the lasting results you desire. Experience the future of smooth, flawless skin with Lasermach.',
+    id: 'cutting-edge_technology',
   },
 ];
-
-export default function Services() {
+export default function Services({serviceId}) {
   const [counter, setCounter] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
-  const { refImg, refImgInView } = useInView({
-    triggerOnce: true,
-  });
+
+  useEffect(() => {
+    if (serviceId) {
+     const index =  services.findIndex((e) => e.id == serviceId);
+      if(index != -1){
+        setCounter(index)
+      }
+    }
+
+    return () => {};
+  }, [serviceId]);
 
   useEffect(() => {
     const textContainer = document.querySelector('.p-text-container');
@@ -59,12 +71,13 @@ export default function Services() {
     <div
       ref={ref}
       className="mt-16 md:mt-28 px-4 md:px-0 md:w-4/5 justify-center m-auto select-none"
+      id="serviceContainer"
     >
       {/* header */}
       <motion.p
-        initial={{ x: '-25%', opacity: 0 }}
-        animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
-        transition={{ duration: 0.8 }}
+        initial={{ x: '-5%', opacity: 0 }}
+        animate={{ x: inView ? 0 : '-5%', opacity: inView ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
         className="font-poppins text-lg md:text-xl font-semibold leading-6 tracking-wider uppercase text-primary mb-2"
       >
         Laser Hair Removal with LasermachⓇ
@@ -72,9 +85,9 @@ export default function Services() {
 
       <div className="flex justify-between items-center">
         <motion.div
-          initial={{ x: '-25%', opacity: 0 }}
-          animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ x: '-5%', opacity: 0 }}
+          animate={{ x: inView ? 0 : '-5%', opacity: inView ? 1 : 0 }}
+          transition={{ duration: 0.3 }}
         >
           <h1 className="mt-8 font-poppins text-xl md:text-4xl font-semibold leading-none md:leading-snug  text-header">
             {services[counter]['header']}
@@ -132,9 +145,9 @@ export default function Services() {
       </div>
 
       <motion.div
-        initial={{ x: '-25%', opacity: 0 }}
-        animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
-        transition={{ duration: 1 }}
+        initial={{ x: '-20%', opacity: 0 }}
+        animate={{ x: inView ? 0 : '-20%', opacity: inView ? 1 : 0 }}
+        transition={{ duration: 0.5 }}
         className="mt-4 md:w-3/4 font-normal md:tracking-wide text-sm md:text-lg text-header"
       >
         <p
@@ -144,20 +157,22 @@ export default function Services() {
         >
           {services[counter]['content']}
         </p>
-        <span
-          onClick={() => {
-            setIsExpanded(!isExpanded);
-          }}
-          className=" text-primary text-sm cursor-pointer read-more"
-        >
-          {isExpanded ? 'Read Less' : 'Read More'}
-        </span>
+        <div className="h-8">
+          <span
+            onClick={() => {
+              setIsExpanded(!isExpanded);
+            }}
+            className=" text-primary text-sm cursor-pointer read-more"
+          >
+            {isExpanded ? 'Read Less' : 'Read More'}
+          </span>
+        </div>
       </motion.div>
 
       <motion.div
-        initial={{ y: '-20%', opacity: 0 }}
-        animate={{ y: inView ? 0 : '-20%', opacity: inView ? 1 : 0 }}
-        transition={{ duration: 1.5 }}
+        initial={{ y: '-15%', opacity: 0 }}
+        animate={{ y: inView ? 0 : '-15%', opacity: inView ? 1 : 0 }}
+        transition={{ duration: 0.5 }}
         className="mt-8 md:mt-12 flex items-center justify-center"
       >
         <div
@@ -208,7 +223,7 @@ export default function Services() {
         </div>
         <img
           className="md:h-96"
-          src={services[counter]['img']}
+          src={withPrefix(services[counter]['img'])}
           alt="our services"
           width="auto"
           height="auto"

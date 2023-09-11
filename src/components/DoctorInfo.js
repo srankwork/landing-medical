@@ -2,6 +2,7 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import doctorImg from '../image/hair-transplate/photos/dr-prachi-patil.png';
+import { withPrefix } from 'gatsby';
 
 const DoctorSction = () => {
   const [ref, inView] = useInView({
@@ -12,13 +13,13 @@ const DoctorSction = () => {
       ref={ref}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: inView ? 0 : 100, opacity: inView ? 1 : 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
       className="md:flex bg-primary mt-16 md:mt-24"
     >
       <div
         className="md:w-1/2 h-96 md:h-auto  bg-lightgray bg-center flex flex-col bg-contain bg-no-repeat"
         style={{
-          backgroundImage: `url('${doctorImg}')`,
+          backgroundImage: `url('${withPrefix(doctorImg)}')`,
         }}
       >
         <div className="bg-white p-4 w-full md:w-1/2 mt-auto ml-0 md:ml-auto mr-auto text-center">

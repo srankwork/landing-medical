@@ -68,7 +68,7 @@ const ReviewContainer = () => {
       ref={ref}
       initial={{ x: 100, opacity: 0 }}
       animate={{ x: 0, opacity: inView ? 1 : 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
       className="mt-12 md:mt-24 pt-14 md:pt-14 pb-14 bg-secondry select-none"
     >
       <h1 className=" text-center font-poppins text-3xl md:text-5xl font-semibold leading-tight tracking-tighter text-header">

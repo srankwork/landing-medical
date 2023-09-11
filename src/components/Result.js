@@ -17,7 +17,7 @@ const ResultContainer = () => {
       <motion.p
         initial={{ x: '-25%', opacity: 0 }}
         animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.5 }}
         className="font-poppins text-lg md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center"
       >
         Remarkable Results
@@ -25,23 +25,23 @@ const ResultContainer = () => {
       <motion.h1
         initial={{ x: '-25%', opacity: 0 }}
         animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.5 }}
         className=" capitalize mt-4 font-poppins text-3xl md:text-6xl font-semibold leading-tight tracking-tighter text-header text-center"
       >
         Transforming Dreams into Reality
       </motion.h1>
-      <div className="mt-12 md:flex px-4 justify-around">
+      <div className="mt-12 md:flex px-4 justify-around   w-screen overflow-hidden">
         <motion.div
           initial={{ x: '-25%', opacity: 0 }}
           animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 0.5 }}
         >
           <ImageSlider oldImage={before1} newImage={after1} />
         </motion.div>
         <motion.div
           initial={{ x: '25%', opacity: 0 }}
           animate={{ x: inView ? 0 : '25%', opacity: inView ? 1 : 0 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 0.5 }}
           className="mt-6 md:mt-0"
         >
           <ImageSlider oldImage={before2} newImage={after2} />

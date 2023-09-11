@@ -2,6 +2,7 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import video from '../image/hair-transplate/photos/about_us.mp4';
+import { withPrefix } from 'gatsby';
 
 const AboutUs = () => {
   const [ref, inView] = useInView({
@@ -13,7 +14,7 @@ const AboutUs = () => {
       ref={ref}
       initial={{ x: 0, opacity: 0 }}
       animate={{ x: 0, opacity: inView ? 1 : 0 }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 0.5 }}
       className="mt-14 md:mt-28 bg-background pt-8 md:pt-16 pb-16"
     >
       <h1 className="mt-3 font-poppins text-4xl md:text-6xl font-semibold leading-tight tracking-tighter text-header text-center">
@@ -21,7 +22,7 @@ const AboutUs = () => {
       </h1>
       <div className="mt-8 md:mt-12 flex items-center justify-center">
         <video controls className="rounded-sm">
-          <source src={video} type="video/mp4" />
+          <source src={withPrefix(video)} type="video/mp4" />
         </video>
       </div>
       <div className="flex justify-center items-center">
