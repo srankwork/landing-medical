@@ -33,7 +33,7 @@ const Rating = () => {
               {
                 star: 4.9,
                 review: 182,
-                img: { google },
+                img: google ,
               },
               {
                 star: 5,
