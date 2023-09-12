@@ -1,7 +1,9 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import practo from '../image/hair-transplate/Icons/Practo.png';
+import practo from '../image/Icons/Practo.png';
+import google from '../image/Icons/google.png';
+import jd from '../image/Icons/jd.png';
 
 function replicateArray(arr, times) {
   const result = [];
@@ -31,7 +33,7 @@ const Rating = () => {
               {
                 star: 4.9,
                 review: 182,
-                img: 'https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png',
+                img: { google },
               },
               {
                 star: 5,
@@ -41,7 +43,7 @@ const Rating = () => {
               {
                 star: 4.8,
                 review: 137,
-                img: 'https://user-images.githubusercontent.com/42868728/70027410-164cdd00-15c8-11ea-9852-6982408e4ea6.png',
+                img: jd,
               },
             ].map((e, index) => (
               <div
@@ -67,7 +69,7 @@ const Rating = () => {
                       ></div>
                     </div>
                     <span className=" ml-2 font-medium text-sm md:text-lg text-header">
-                      (e.star)
+                      {e.star}
                     </span>
                   </span>
                   <p className="font-normal text-sm md:text-lg text-center text-header">
@@ -83,7 +85,7 @@ const Rating = () => {
                 {
                   star: 4.9,
                   review: 182,
-                  img: 'https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png',
+                  img: google,
                 },
                 {
                   star: 5,
@@ -93,7 +95,7 @@ const Rating = () => {
                 {
                   star: 4.8,
                   review: 137,
-                  img: 'https://user-images.githubusercontent.com/42868728/70027410-164cdd00-15c8-11ea-9852-6982408e4ea6.png',
+                  img: jd,
                 },
               ],
               20
@@ -122,7 +124,7 @@ const Rating = () => {
                       ></div>
                     </div>
                     <span className=" ml-2 font-medium text-sm md:text-lg text-header">
-                      (e.star)
+                      ({e.star})
                     </span>
                   </span>
                   <p className="font-normal text-sm md:text-lg text-center text-header">

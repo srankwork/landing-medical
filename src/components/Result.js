@@ -2,14 +2,14 @@ import React from 'react';
 import ImageSlider from './ImageSlider';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import after1 from '../image/hair-transplate/photos/b_a1.2.jpg';
-import before1 from '../image/hair-transplate/photos/b_a1.1.jpg';
-import after2 from '../image/hair-transplate/photos/b_a2.2.jpg';
-import before2 from '../image/hair-transplate/photos/b_a2.1.jpg';
-import after3 from '../image/hair-transplate/photos/b_a3.2.jpg';
-import before3 from '../image/hair-transplate/photos/b_a3.1.jpg';
-import after4 from '../image/hair-transplate/photos/b_a4.2.jpg';
-import before4 from '../image/hair-transplate/photos/b_a4.1.jpg';
+import after1 from '../image/photos/b_a1.2.jpg';
+import before1 from '../image/photos/b_a1.1.jpg';
+import after2 from '../image/photos/b_a2.2.jpg';
+import before2 from '../image/photos/b_a2.1.jpg';
+import after3 from '../image/photos/b_a3.2.jpg';
+import before3 from '../image/photos/b_a3.1.jpg';
+import after4 from '../image/photos/b_a4.2.jpg';
+import before4 from '../image/photos/b_a4.1.jpg';
 
 const ResultContainer = () => {
   const [ref, inView] = useInView({

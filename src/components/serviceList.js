@@ -1,11 +1,11 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import forheadImg from '../image/hair-transplate/Icons/forhead.png';
-import completelyImg from '../image/hair-transplate/Icons/completely.jpg';
-import lipsImg from '../image/hair-transplate/Icons/lips.png';
-import rediscImg from '../image/hair-transplate/Icons/redisc.png';
-import economImg from '../image/hair-transplate/Icons/econom.png';
+import forheadImg from '../image/Icons/forhead.png';
+import completelyImg from '../image/Icons/completely.jpg';
+import lipsImg from '../image/Icons/lips.png';
+import rediscImg from '../image/Icons/redisc.png';
+import economImg from '../image/Icons/econom.png';
 
 const services = [
   {

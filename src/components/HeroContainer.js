@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AppoitmentModal from './AppointmentModal';
-import hero from '../image/hair-transplate/photos/hero.jpg';
+import hero from '../image/photos/hero.jpg';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
