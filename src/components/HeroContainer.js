@@ -20,7 +20,7 @@ const HeroContainer = () => {
         ref={ref}
         initial={{ x: 0, opacity: 0 }}
         animate={{ x: 0, opacity: inView ? 1 : 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.3 }}
         className="bg-background lg:flex lg:justify-around lg:items-center hero-bg-image md:bg-none relative pb-12 md:pb-0 "
       >
         <div className="block md:hidden h-full w-full opacity-50 transition duration-300 ease-in-out bg-overlay-bg absolute"></div>
