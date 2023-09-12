@@ -26,57 +26,57 @@ const FaqItem = ({ question, answer }) => {
 const FaqContainer = () => {
   const faqData = [
     {
-      question: 'Is laser hair removal permanent?',
+      question: 'How much does this treatment cost?',
       answer:
-        'While it can significantly reduce hair growth, laser hair removal is often described as long-lasting but not entirely permanent. Maintenance sessions may be required over time to maintain hair reduction.',
+        "The cost of a cosmetic injectable treatment can vary widely depending on factors such as the area treated, the number of units used, and geographic location. It's best to consult with a provider for specific pricing.",
+    },
+    {
+      question: 'Is there an optimal age to start these treatments?',
+      answer:
+        "There is no specific age requirement for cosmetic injectables, and it can be used by individuals at various stages of life. It's often used to address wrinkles and fine lines that result from repeated facial expressions.",
     },
     {
       question:
-        'Is laser hair removal safe for all skin types and hair colours?',
+        'Can this procedure be used to treat excessive sweating (hyperhidrosis)?',
       answer:
-        'Advancements in laser technology have made it more effective for a variety of skin tones and hair colours. However, the ideal treatment settings may vary based on your specific skin and hair type.',
-    },
-    {
-      question: 'Does laser hair removal hurt?',
-      answer:
-        'Many people describe the sensation as similar to a rubber band snapping against the skin. It can be uncomfortable, but most find it tolerable. Some lasers have built-in cooling systems to minimise discomfort.',
-    },
-    {
-      question: 'How long does a laser hair removal session take?',
-      answer:
-        'The duration of a session depends on the size of the treatment area. Small areas like the upper lip may take just a few minutes, while larger areas like the legs may take an hour or more.',
-    },
-    {
-      question: 'How many sessions are typically needed for effective results?',
-      answer:
-        'Most people require multiple sessions (usually 6 to 8) spaced a few weeks apart to achieve significant and long-lasting hair reduction. The exact number varies depending on factors like hair colour, thickness and skin type.',
-    },
-    {
-      question: 'Are there any side effects of laser hair removal?',
-      answer:
-        'Temporary side effects can include redness, swelling, and minor discomfort, but these typically subside within a day or two. Serious side effects are rare when the procedure is performed by a trained professional.',
-    },
-    {
-      question: 'Is there any downtime after a laser hair removal session?',
-      answer:
-        "There is usually little to no downtime, and you can typically resume your regular activities immediately after treatment. However, it's essential to follow post-treatment care instructions, including sun protection.",
+        'Yes, this procedure can effectively treat excessive sweating in areas like the underarms, hands, and feet by temporarily blocking the nerve signals that stimulate sweat glands.',
     },
     {
       question:
-        'Are there any specific pre-treatment preparations I should be aware of?',
+        'Are there any long-term effects of using these cosmetic injectables?',
       answer:
-        "Depending on your provider's recommendations, you may be advised to avoid sun exposure, waxing, or plucking in the treatment area before your session.",
+        'Long-term effects of cosmetic injectable use are generally considered safe when administered by a qualified professional. Continuous treatments can provide ongoing wrinkle reduction.',
     },
     {
-      question: 'Is laser hair removal suitable for facial hair removal?',
+      question: 'How do I choose a qualified cosmetic injectable provider?',
       answer:
-        'Yes, laser hair removal can be used to target facial hair, including areas like the upper lip, chin, and sideburns.',
+        "It's essential to choose a board-certified dermatologist, cosmetologist, or experienced medical professional for muscle relaxing injections. Ask for referrals, check reviews, and inquire about their experience.",
+    },
+    {
+      question: 'Can I have allergic reactions to cosmetic injectables?',
+      answer:
+        'While allergic reactions to cosmetic injectables are rare, they can occur. Be sure to inform your provider of any allergies or previous allergic reactions to similar products.',
+    },
+    {
+      question: 'How should I prepare for my appointment?',
+      answer:
+        "There are typically no specific pre-treatment preparations needed. However, it's advisable to inform your provider about any medications, supplements, or medical conditions you have.",
     },
     {
       question:
-        'Is laser hair removal safe for sensitive areas like the bikini line or underarms?',
+        'Is the premier muscle relaxer only used for cosmetic purposes?',
       answer:
-        "Yes, laser hair removal can be used on sensitive areas, but it's essential to choose a skilled practitioner experienced in treating these areas.",
+        "No, it has both cosmetic and medical applications. It's used to treat various medical conditions, including migraines, muscle spasms, and overactive bladder.",
+    },
+    {
+      question: 'Can men get these treatments?',
+      answer:
+        'Absolutely. This injectable is not limited by gender and is commonly sought after by both men and women for cosmetic and medical purposes.',
+    },
+    {
+      question: 'How does this differ from dermal fillers?',
+      answer:
+        'This cosmetic injectable works by temporarily relaxing muscles to reduce wrinkles, while dermal fillers add volume to areas with lines and wrinkles. Both are used for facial rejuvenation but target different concerns.',
     },
   ];
   return (

@@ -1,31 +1,37 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import bio_fue from '../image/hair-transplate/Icons/bio_fue.png';
-import fue from '../image/hair-transplate/Icons/FUE.jpeg';
-import prp from '../image/hair-transplate/Icons/PRP.png';
-import meso from '../image/hair-transplate/Icons/meso.jpg';
+import forheadImg from '../image/Icons/forhead.png';
+import completelyImg from '../image/Icons/completely.jpg';
+import lipsImg from '../image/Icons/lips.png';
+import rediscImg from '../image/Icons/redisc.png';
+import economImg from '../image/Icons/econom.png';
 
 const services = [
   {
-    header: 'Effective & Permanent',
-    img: fue,
-    disc: 'Novacutis Clinic offers expert laser technicians, using only the latest technology for year-round silky-smooth perfection.',
+    header: 'Rediscover your beauty',
+    img: rediscImg,
+    disc: 'From lips to eyes, our tailored treatments bring out your best self, leaving you with refreshed, smoother skin.',
   },
   {
-    header: 'Quick & Painless',
-    img: bio_fue,
-    disc: 'Elevate your hair removal routine with our permanent laser solution, leaving waxing and razors behind.',
+    header: 'Get Luscious Lips',
+    img: lipsImg,
+    disc: 'Achieve youthful, balanced perfection and get a plumper pout in just 30 minutes.',
   },
   {
-    header: 'Cost-Effective',
-    img: prp,
-    disc: 'Our laser treatment eradicates unwanted hair, providing a cost-effective alternative to your monthly waxing sessions.',
+    header: 'Treat Forehead Wrinkles',
+    img: forheadImg,
+    disc: 'The simple, effective and FDA-approved solution for smoothing forehead wrinkles.',
   },
   {
-    header: 'Cutting-Edge Tech',
-    img: meso,
-    disc: 'The future of hair removal,  Lasermach Technology utilises cutting-edge laser precision, guaranteeing enduring results, eliminating the need for temporary solutions and leaving your skin flawlessly smooth.',
+    header: 'Completely Safe & Natural Looking',
+    img: completelyImg,
+    disc: 'Minimally invasive treatment, administered by internationally certified technicians.',
+  },
+  {
+    header: 'Economical Transformation',
+    img: economImg,
+    disc: 'No need to break the bank for timeless beauty, experience a wallet-friendly transformation at Novacutis Clinic.',
   },
 ];
 
@@ -43,10 +49,10 @@ export default function ServiceList() {
       className="mt-16 md:mt-24 px-4 md:w-3/4 justify-center m-auto"
     >
       <p className="font-poppins text-lg md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center">
-        Laser Hair Removal
+        Cosmetic Injectables
       </p>
       <h1 className="mt-4 font-poppins text-center text-2xl md:text-5xl font-semibold leading-none md:leading-snug  text-header">
-        Benefits of Permanent Laser Hair Removal
+        Embrace a revitalised you!
       </h1>
 
       <div className="md:flex justify-between mt-16">
@@ -76,7 +82,7 @@ export default function ServiceList() {
             className="flex flex-col justify-center items-center md:w-4/3 hover-card mt-8 md:mt-0 m-4 text-center"
           >
             <img
-              className={`${index == 1 ? 'h-32 w-32' : 'h-40 w-40'}`}
+              className={`${index == 1 ? 'h-32 w-32' : 'h-28 w-32'}`}
               src={e['img']}
               alt="service"
               width="auto"
