@@ -1,7 +1,9 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import practo from '../image/hair-transplate/Icons/Practo.png';
+import practo from '../image/Icons/Practo.png';
+import google from '../image/Icons/google.png';
+import jd from '../image/Icons/jd.png';
 
 function replicateArray(arr, times) {
   const result = [];
@@ -29,9 +31,9 @@ const Rating = () => {
           <div className="hidden md:flex items-center justify-between animate-rotate md:animate-none w-full">
             {[
               {
-                star: 5,
+                star: 4.9,
                 review: 182,
-                img: 'https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png',
+                img: google ,
               },
               {
                 star: 5,
@@ -39,9 +41,9 @@ const Rating = () => {
                 img: practo,
               },
               {
-                star: 5,
+                star: 4.8,
                 review: 137,
-                img: 'https://user-images.githubusercontent.com/42868728/70027410-164cdd00-15c8-11ea-9852-6982408e4ea6.png',
+                img: jd,
               },
             ].map((e, index) => (
               <div
@@ -54,10 +56,20 @@ const Rating = () => {
                   alt="logo"
                 />
                 <div className="ml-4 space-y-1 flex flex-col">
-                  <span className=" text-yellow-300 text-xl md:text-2xl">
-                    ★★★★★
+                  <span className=" text-xl md:text-2xl flex items-center">
+                    <div class="flex">
+                      <div class="star star-filled"></div>
+                      <div class="star star-filled"></div>
+                      <div class="star star-filled"></div>
+                      <div class="star star-filled"></div>
+                      <div
+                        class={`star ${
+                          e.star == 5 ? 'star-filled' : 'star-half-filled'
+                        }`}
+                      ></div>
+                    </div>
                     <span className=" ml-2 font-medium text-sm md:text-lg text-header">
-                      (5)
+                      {e.star}
                     </span>
                   </span>
                   <p className="font-normal text-sm md:text-lg text-center text-header">
@@ -71,9 +83,9 @@ const Rating = () => {
             {replicateArray(
               [
                 {
-                  star: 5,
+                  star: 4.9,
                   review: 182,
-                  img: 'https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png',
+                  img: google,
                 },
                 {
                   star: 5,
@@ -81,9 +93,9 @@ const Rating = () => {
                   img: practo,
                 },
                 {
-                  star: 5,
+                  star: 4.8,
                   review: 137,
-                  img: 'https://user-images.githubusercontent.com/42868728/70027410-164cdd00-15c8-11ea-9852-6982408e4ea6.png',
+                  img: jd,
                 },
               ],
               20
@@ -99,10 +111,20 @@ const Rating = () => {
                   alt="logo"
                 />
                 <div className="ml-4 space-y-1 flex flex-col">
-                  <span className=" text-yellow-300 text-xl md:text-2xl">
-                    ★★★★★
+                  <span className=" text-xl md:text-2xl flex items-center">
+                    <div class="flex">
+                      <div class="star star-filled"></div>
+                      <div class="star star-filled"></div>
+                      <div class="star star-filled"></div>
+                      <div class="star star-filled"></div>
+                      <div
+                        class={`star ${
+                          e.star == 5 ? 'star-filled' : 'star-half-filled'
+                        }`}
+                      ></div>
+                    </div>
                     <span className=" ml-2 font-medium text-sm md:text-lg text-header">
-                      (5)
+                      ({e.star})
                     </span>
                   </span>
                   <p className="font-normal text-sm md:text-lg text-center text-header">
