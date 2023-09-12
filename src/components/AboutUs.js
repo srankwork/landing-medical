@@ -2,7 +2,6 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import video from '../image/photos/about_us.mp4';
-import { withPrefix } from 'gatsby';
 
 const AboutUs = () => {
   const [ref, inView] = useInView({
@@ -22,7 +21,7 @@ const AboutUs = () => {
       </h1>
       <div className="mt-8 md:mt-12 flex items-center justify-center">
         <video controls className="rounded-sm">
-          <source src={withPrefix(`${video}`)} type="video/mp4" />
+          <source src={video} type="video/mp4" />
         </video>
       </div>
       <div className="flex justify-center items-center">

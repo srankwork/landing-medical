@@ -10,8 +10,6 @@ import complementary from '../image/photos/Complementary.jpeg';
 import prp from '../image/photos/PRP.jpg';
 import meso from '../image/photos/meso.jpg';
 import derma from '../image/photos/Derma.jpeg';
-import { withPrefix } from 'gatsby';
-
 const services = [
   {
     img: solution,
@@ -263,7 +261,7 @@ export default function Services({ serviceId }) {
         </div>
         <img
           className="md:h-96"
-          src={withPrefix(services[counter]['img'])}
+          src={services[counter]['img']}
           alt="our services"
           width="auto"
           height="auto"

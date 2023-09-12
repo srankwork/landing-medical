@@ -2,7 +2,7 @@
   "name": "my-gatsby-site ",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://srankwork.github.io/landing-medical",
+  "homepage": "https://novacutisclinics.com",
   "description": "my-gatsby-site",
   "author": "mukeshcoutloot",
   "keywords": [
@@ -22,6 +22,7 @@
     "gatsby": "^5.11.0",
     "gatsby-plugin-google-gtag": "^5.12.0",
     "gatsby-plugin-postcss": "^6.11.0",
+    "gatsby-plugin-react-helmet": "^6.12.0",
     "postcss": "^8.4.28",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

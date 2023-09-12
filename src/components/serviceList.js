@@ -6,7 +6,6 @@ import fue from '../image/Icons/FUE.jpeg';
 import prp from '../image/Icons/PRP.png';
 import meso from '../image/Icons/meso.jpg';
 import derma from '../image/Icons/derma_pen.png';
-import { withPrefix } from 'gatsby';
 
 const services = [
   {
@@ -64,7 +63,7 @@ export default function ServiceList() {
           >
             <img
               className="w-24 h-24"
-              src={withPrefix(e['img'])}
+              src={e['img']}
               alt="service"
               width="auto"
               height="auto"
@@ -84,7 +83,7 @@ export default function ServiceList() {
           >
             <img
               className={`${index ==1 ?'h-32 w-32':'h-40 w-40'}`}
-              src={withPrefix(e['img'])}
+              src={e['img']}
               alt="service"
               width="auto"
               height="auto"

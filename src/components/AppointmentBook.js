@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { withPrefix } from 'gatsby';
 import { useInView } from 'react-intersection-observer';
 import stage1 from '../image/Icons/Stage1.png';
 import stage2 from '../image/Icons/Stage2.png';
@@ -90,7 +89,7 @@ const BookAppointment = ({ forModal }) => {
                   className="mr-6 md:mr-10 mt-4 flex flex-col items-center space-y-2"
                 >
                   <img
-                    src={withPrefix(e.img)}
+                    src={e.img}
                     className="w-8 md:w-12 h-8 md:h-12 rounded-full"
                   />
                   <label className="font-semibold text-xs">{e.number}</label>
@@ -110,7 +109,7 @@ const BookAppointment = ({ forModal }) => {
                   className="mr-6 md:mr-10 mt-4 flex flex-col items-center space-y-2"
                 >
                   <img
-                    src={withPrefix(e.img)}
+                    src={e.img}
                     className="w-8 md:w-12 h-8 md:h-12 rounded-full"
                   />
                   <label className="font-semibold text-xs">{e.number}</label>

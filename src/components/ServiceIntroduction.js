@@ -2,7 +2,7 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import whychooseus from '../image/photos/whychooseus.jpeg';
-import { withPrefix } from 'gatsby';
+
 
 const ServiceIntroduction = ({ changeServiceId }) => {
   const serviceList = [
@@ -40,7 +40,7 @@ const ServiceIntroduction = ({ changeServiceId }) => {
         transition={{ duration: 0.5 }}
         className="hidden md:block w-1/2 h-auto bg-lightgray bg-cover bg-center"
         style={{
-          backgroundImage: `url('${withPrefix(whychooseus)}')`,
+          backgroundImage: `url('${whychooseus}')`,
         }}
       ></motion.div>
 
@@ -56,7 +56,7 @@ const ServiceIntroduction = ({ changeServiceId }) => {
         <div
           className="block md:hidden mt-3 md:w-1/2 h-60 md:h-screen bg-cover bg-no-repeat bg-center relative"
           style={{
-            backgroundImage: `url('${withPrefix(whychooseus)}')`,
+            backgroundImage: `url('${whychooseus}')`,
           }}
         ></div>
         <h1 className="capitalize text-2xl md:text-5xl font-semibold font-montserrat mt-4 md:mt-3 text-white font-poppins leading-tight tracking-tighter">

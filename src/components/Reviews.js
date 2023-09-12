@@ -45,7 +45,7 @@ const Testimonial = ({ review, userName, reviewCount }) => {
   return (
     <div className="md:flex items-center justify-center">
       <div className="w-full md:w-2/3 px-4 mt-4 md:mt-0 flex flex-col justify-between">
-        <p className="text-white font-poppins text-sm md:text-lg font-medium leading-snug tracking-tight h-[18vh]">
+        <p className="text-white font-poppins text-sm md:text-lg font-medium leading-snug tracking-tight h-[150px]">
           {review}
         </p>
         <p className="capitalize mt-4 md:mt-6 text-black-600 font-semibold md:font-bold text-center text-header">
@@ -67,7 +67,31 @@ const ReviewContainer = () => {
     triggerOnce: true,
   });
   const [sliderIndex, setSliderIndex] = useState(0);
+  const [intervalId, setIntervalId] = useState(null);
 
+  useEffect(() => {
+    if (!intervalId) {
+      const id = setInterval(() => {
+        setSliderIndex((prevCounter) => (prevCounter + 1) % 6);
+      }, 3000);
+      setIntervalId(id);
+    }
+
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    };
+  }, []);
+
+
+  const handleClearInterval = (e) => {
+    setSliderIndex(e);
+    if (intervalId) {
+      clearInterval(intervalId);
+      setIntervalId(null);
+    }
+  };
 
   return (
     <motion.div
@@ -92,10 +116,10 @@ const ReviewContainer = () => {
         {review.map((value, e) => (
           <span
             key={`slider-${e}`}
-            onClick={() => setSliderIndex(e)}
+            onClick={() => handleClearInterval(e)}
             role="button"
             tabIndex={0}
-            onKeyDown={() => setSliderIndex(e)}
+            onKeyDown={() => handleClearInterval(e)}
             className={`h-1 ${
               e === sliderIndex ? 'w-8 bg-white' : 'w-4 bg-primary'
             } m-1 md:m-2 rounded-sm cursor-pointer hover:w-8 hover:bg-background transition-width  duration-300 ease-in-out text-secondry`}
