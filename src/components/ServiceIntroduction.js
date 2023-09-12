@@ -6,24 +6,29 @@ import whychooseus from '../image/photos/whychoose.jpg';
 const ServiceIntroduction = ({ changeServiceId }) => {
   const serviceList = [
     {
-      header: 'Personalised Care',
+      header: 'Preventive Anti-Aging',
       child: [],
-      id: 'rediscover_your_beauty',
+      id: 'preventive_anti_aging',
     },
     {
-      header: 'Minimally Invasive Excellence',
+      header: 'Non-surgical Facelift',
+      child: [],
+      id: 'non_surgical_facelift',
+    },
+    {
+      header: 'Get Luscious Lips',
       child: [],
       id: 'get_luscious_lips',
     },
     {
-      header: 'Get Immediate & Progressive Results',
-      child: [],
-      id: 'economical_transformation',
-    },
-    {
-      header: 'Safety & Trust',
+      header: 'Completely Safe & Natural Looking',
       child: [],
       id: 'completely_safe',
+    },
+    {
+      header: 'Economical Transformation',
+      child: [],
+      id: 'economical_transformation',
     },
   ];
   const [ref, inView] = useInView({ triggerOnce: true });
@@ -56,7 +61,7 @@ const ServiceIntroduction = ({ changeServiceId }) => {
           }}
         ></div>
         <h1 className="capitalize text-2xl md:text-5xl font-semibold font-montserrat mt-4 md:mt-3 text-white font-poppins leading-tight tracking-tighter">
-          Elevate your beauty, naturally!
+          Smooth away wrinkles and embrace a more youthful you!
         </h1>
         <p className="mt-2 md:mt-5 text-info-color font-poppins text-base md:text-xl font-medium leading-tight md:tracking-tighter">
           At Novacutis Cosmetic Clinic, we offer the latest procedures to fight

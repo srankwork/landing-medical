@@ -9,9 +9,14 @@ import economImg from '../image/Icons/econom.png';
 
 const services = [
   {
-    header: 'Rediscover your beauty',
+    header: 'Preventive Anti-aging',
     img: rediscImg,
-    disc: 'From lips to eyes, our tailored treatments bring out your best self, leaving you with refreshed, smoother skin.',
+    disc: 'Boost your beauty naturally with proactive anti-aging magic.',
+  },
+  {
+    header: 'Non-surgical Facelift',
+    img: forheadImg,
+    disc: 'Discover your best aesthetic, minus the surgery.',
   },
   {
     header: 'Get Luscious Lips',
@@ -19,18 +24,8 @@ const services = [
     disc: 'Achieve youthful, balanced perfection and get a plumper pout in just 30 minutes.',
   },
   {
-    header: 'Treat Forehead Wrinkles',
-    img: forheadImg,
-    disc: 'The simple, effective and FDA-approved solution for smoothing forehead wrinkles.',
-  },
-  {
     header: 'Completely Safe & Natural Looking',
     img: completelyImg,
-    disc: 'Minimally invasive treatment, administered by internationally certified technicians.',
-  },
-  {
-    header: 'Economical Transformation',
-    img: economImg,
     disc: 'No need to break the bank for timeless beauty, experience a wallet-friendly transformation at Novacutis Clinic.',
   },
 ];
@@ -49,10 +44,10 @@ export default function ServiceList() {
       className="mt-16 md:mt-24 px-4 md:w-3/4 justify-center m-auto"
     >
       <p className="font-poppins text-lg md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center">
-        Cosmetic Injectables
+        Dermal Fillers
       </p>
       <h1 className="mt-4 font-poppins text-center text-2xl md:text-5xl font-semibold leading-none md:leading-snug  text-header">
-        Embrace a revitalised you!
+        Unveil a more youthful you!
       </h1>
 
       <div className="md:flex justify-between mt-16">
@@ -75,7 +70,7 @@ export default function ServiceList() {
           </div>
         ))}
       </div>
-      <div className="md:flex justify-between md:mt-16">
+      <div className="md:flex justify-center md:mt-16">
         {services.slice(3).map((e, index) => (
           <div
             key={`service-${e['header']}`}

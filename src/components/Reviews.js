@@ -4,34 +4,29 @@ import { motion } from 'framer-motion';
 
 const review = [
   {
+    name: 'Bhaskar Anil',
     review:
-      "I came here for my first botox treatment. Staff is very professional. They handle each and every client very well. Actually I was very nervous and wasn't sure about the treatment. Thanks to Doc Prachi and their assistants, they gave me a detailed walkthrough about the procedure and all the precautions they take at every step. Even after the treatment, I received a couple of calls from the clinic to ask how I was doing. Overall it was such a warming experience Thank you Doc Prachi, you are a true blessing ❤",
-    name: 'Monu Gayamukhe',
+      'Such professionalism! So comfortable through the whole experience and the team was lovely! My experience with the doctor was great and she did a fantastic job! So pleased with the end result! My aftercare was second to none and well worth the money spent! Thank you all!!',
   },
   {
-    review:
-      'Dr. Prachi  is very sweet and honest and her staff are very cooperative. I am always comfortable and safe for any treatment from her clinic. Trust me, it really works, since Dr. Prachi is an expert in her field. I have personally taken Lazer, coolsculpting, facial botox and results have dramatically changed my look.',
     name: 'Yogavarsha V',
+    review:
+      'Dr. Prachi is very sweet and honest and her staff are very cooperative. I am always comfortable and safe for any treatment from her clinic. Trust me, it really works, since Dr. Prachi is an expert in her field. I have personally taken Lazer, coolsculpting, facial botox and results have dramatically changed my look.',
   },
   {
+    name: 'Nisha Gupta',
     review:
       "I love the way every patient is treated and greeted. Every time I visit, it's a great experience. Special care is taken during each and every treatment as per your skin type. The doctor and staff are very much cooperative when it comes to understanding your needs of treatment and while the treatment is going on. Thanks for such a lovely experience.",
-    name: 'Nisha Gupta',
   },
   {
+    name: 'Monica Damania',
     review:
       'Dr. Prachi is a very talented and smart skin specialist and she knows her job well. I love visiting her for treatments and the best part is her nature and staff is also very good and attentive.',
-    name: 'Monica Damania',
   },
   {
-    review:
-      "I visited the Novacutis clinic for Anti-ageing treatment after consulting the doctor who said cosmetic injectables will be the best for me. I had an amazing experience with the prime muscle relaxer at novacutis clinic thanks to their exceptional doctor. From the moment I stepped into the clinic, the staff was friendly and welcoming. The doctor's expertise and precision during the procedure were impressive, and the results were fantastic! The clinic is clean and modern, creating a comfortable atmosphere. I highly recommend the clinic for Botox treatments, especially with their skilled and talented doctor. You won't be disappointed!",
     name: 'Jayesh Yadav',
-  },
-  {
     review:
-      'Such a professionalism! So comfortable through the whole experience and the team were lovely! My experience with the doctor was great and had done a fantastic job! So pleased with the end result! My aftercare was second to none and well worth the money spent! Thank you all!!',
-    name: 'bhaskar anil',
+      "I visited the Novacutis clinic for Anti-ageing treatment after consulting the doctor who said cosmetic injectables will be the best for me. I had an amazing experience with the prime muscle relaxer at novacutis clinic thanks to their exceptional doctor. From the moment I stepped into the clinic, the staff was friendly and welcoming. The doctor's expertise and precision during the procedure were impressive and the results were fantastic! The clinic is clean and modern, creating a comfortable atmosphere. I highly recommend the clinic for Botox treatments, especially with their skilled and talented doctor. You won't be disappointed!",
   },
 ];
 const Testimonial = ({ review, userName, reviewCount }) => {
@@ -66,7 +61,7 @@ const ReviewContainer = () => {
   useEffect(() => {
     if (!intervalId) {
       const id = setInterval(() => {
-        setSliderIndex((prevCounter) => (prevCounter + 1) % 6);
+        setSliderIndex((prevCounter) => (prevCounter + 1) % 5);
       }, 3000);
       setIntervalId(id);
     }

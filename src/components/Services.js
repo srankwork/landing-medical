@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import rediscoverImg from '../image/photos/rediscover.png';
 import LipsImg from '../image/photos/lips.jpg';
 import completelyImg from '../image/photos/completely.jpg';
-import forheadImg from '../image/photos/forhead.png';
+import nonsurgicalImg from '../image/photos/non-surgical.jpg';
 import economicalImg from '../image/photos/economical.jpg';
 
 const services = [
@@ -16,14 +16,14 @@ const services = [
     id: 'preventive_anti_aging',
   },
   {
-    img: LipsImg,
+    img: nonsurgicalImg,
     header: 'Non-Surgical Facelift',
     content:
-      "Whether you're looking to restore lost volume, balance asymmetry, or simply achieve a more youthful pout, lip fillers offer a customizable solution tailored to your unique features and preferences. Say goodbye to fine lines and hello to a plumper pout in just a 30-minute procedure.",
+      "Whether you desire plump lips or a sculpted jawline, Our non-surgical face lift treatments will help you achieve the aesthetic results you've always wanted without going under the knife.",
     id: 'non_surgical_facelift',
   },
   {
-    img: forheadImg,
+    img: LipsImg,
     header: 'Get Luscious Lips',
     content:
       'Whether you\'re looking to restore lost volume, balance asymmetry, or simply achieve a more youthful pout, lip fillers offer a customizable solution tailored to your unique features and preferences. Say goodbye to fine lines and hello to a plumper pout in just a 30-minute procedure.',

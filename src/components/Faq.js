@@ -64,7 +64,7 @@ const FaqContainer = () => {
       question:
         'What should I expect during a dermal filler treatment session?',
       answer:
-        'During the procedure, a fine needle or cannula is used to inject the filler into the target area. You may experience mild discomfort, but local anaesthesia or numbing cream is often applied to minimize any pain.',
+        'During the procedure, a fine needle or cannula is used to inject the filler into the target area. You may experience mild discomfort, but local anesthesia or numbing cream is often applied to minimize any pain.',
     },
     {
       question: 'Can dermal fillers be combined with other treatments?',
