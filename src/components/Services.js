@@ -10,30 +10,30 @@ import economicalImg from '../image/photos/economical.jpg';
 const services = [
   {
     img: rediscoverImg,
-    header: 'Rediscover your beauty',
+    header: 'Preventive Anti-Aging',
     content:
-      "Experience rejuvenation in various facial regions, where subtle enhancements can help you recapture your youthful glow. Our carefully administered treatments target specific areas, resulting in smoother, refreshed skin and a revitalized appearance. Whether it's lip augmentation or lines around the eyes, forehead creases, or crow's feet, our techniques provide a tailored touch to bring out your best self.",
-    id: 'rediscover_your_beauty',
+      "Enhance your natural beauty with preventive anti-aging treatments.  Say goodbye to wrinkles and hello to a more youthful and radiant appearance",
+    id: 'preventive_anti_aging',
   },
   {
     img: LipsImg,
-    header: 'Get Luscious Lips',
+    header: 'Non-Surgical Facelift',
     content:
       "Whether you're looking to restore lost volume, balance asymmetry, or simply achieve a more youthful pout, lip fillers offer a customizable solution tailored to your unique features and preferences. Say goodbye to fine lines and hello to a plumper pout in just a 30-minute procedure.",
-    id: 'get_luscious_lips',
+    id: 'non_surgical_facelift',
   },
   {
     img: forheadImg,
-    header: 'Treat your forehead wrinkles',
+    header: 'Get Luscious Lips',
     content:
-      'The premier injectable muscle relaxer gently diminishes facial wrinkles. With FDA approval dating back to 1989, supported by a 2016 clinical study, this treatment proves simple and effective for reducing forehead wrinkles.',
-    id: 'treat_your_forehead_wrinkles',
+      'Whether you\'re looking to restore lost volume, balance asymmetry, or simply achieve a more youthful pout, lip fillers offer a customizable solution tailored to your unique features and preferences. Say goodbye to fine lines and hello to a plumper pout in just a 30-minute procedure.',
+    id: 'get_luscious_lips',
   },
   {
     img: completelyImg,
     header: 'Completely Safe',
     content:
-      'Say goodbye to wrinkles with our safe, effective, and minimally invasive treatment administered by internationally certified technicians who have the experience to deliver wrinkle-free perfection.',
+      'At Novacutis Clinic, we give utmost importance to the safety of our clients. That\'s why we only use US FDA approved products, carefully administered by internationally certified and trained technicians.',
     id: 'completely_safe',
   },
   {

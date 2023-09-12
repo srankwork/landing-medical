@@ -31,7 +31,7 @@ const IndexPage = () => {
           rel="icon"
           href="https://www.novacutisclinics.com/assets/images/logo.png"
         />
-        <title>Botox</title>
+        <title>Dermal Fillers & Lip Fillers</title>
       </Helmet>
       <main className="w-full h-full">
         <div className=" bg-secondry h-10 w-full text-center flex  items-center text-white justify-around">
