@@ -2,10 +2,10 @@ import React from 'react';
 import ImageSlider from './ImageSlider';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import after1 from '../image/hair-transplate/photos/b&a1.2.png';
-import before1 from '../image/hair-transplate/photos/b&a1.1.png';
-import after2 from '../image/hair-transplate/photos/b&a2.2.jpg';
-import before2 from '../image/hair-transplate/photos/b&a2.1.jpg';
+import after1 from '../image/photos/b&a1.2.png';
+import before1 from '../image/photos/b&a1.1.png';
+import after2 from '../image/photos/b&a2.2.jpg';
+import before2 from '../image/photos/b&a2.1.jpg';
 
 const ResultContainer = () => {
   const [ref, inView] = useInView({

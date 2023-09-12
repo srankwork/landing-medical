@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import costImg from '../image/hair-transplate/photos/cost.jpg';
-import cuttingedgeImg from '../image/hair-transplate/photos/cuttingedge.png';
-import effectiveImg from '../image/hair-transplate/photos/effective.jpg';
-import quickImg from '../image/hair-transplate/photos/quick.jpg';
+import costImg from '../image/photos/cost.jpg';
+import cuttingedgeImg from '../image/photos/cuttingedge.png';
+import effectiveImg from '../image/photos/effective.jpg';
+import quickImg from '../image/photos/quick.jpg';
 
 const services = [
   {

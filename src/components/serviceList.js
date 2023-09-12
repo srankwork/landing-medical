@@ -1,10 +1,10 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import costImg from '../image/hair-transplate/Icons/cost.jpg';
-import cuttingedgeImg from '../image/hair-transplate/Icons/cuttingedge.png';
-import effectiveImg from '../image/hair-transplate/Icons/effective.jpeg';
-import quickImg from '../image/hair-transplate/Icons/quick.jpg';
+import costImg from '../image/Icons/cost.jpg';
+import cuttingedgeImg from '../image/Icons/cuttingedge.png';
+import effectiveImg from '../image/Icons/effective.jpeg';
+import quickImg from '../image/Icons/quick.jpg';
 
 const services = [
   {
