@@ -1,11 +1,11 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import bio_fue from '../image/hair-transplate/Icons/bio_fue.png';
-import fue from '../image/hair-transplate/Icons/FUE.jpeg';
-import prp from '../image/hair-transplate/Icons/PRP.png';
-import meso from '../image/hair-transplate/Icons/meso.jpg';
-import derma from '../image/hair-transplate/Icons/derma_pen.png';
+import bio_fue from '../image/Icons/bio_fue.png';
+import fue from '../image/Icons/FUE.jpeg';
+import prp from '../image/Icons/PRP.png';
+import meso from '../image/Icons/meso.jpg';
+import derma from '../image/Icons/derma_pen.png';
 import { withPrefix } from 'gatsby';
 
 const services = [

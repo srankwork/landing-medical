@@ -1,7 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import practo from '../image/hair-transplate/Icons/Practo.png';
+import practo from '../image/Icons/Practo.png';
 import { withPrefix } from 'gatsby';
 
 function replicateArray(arr, times) {

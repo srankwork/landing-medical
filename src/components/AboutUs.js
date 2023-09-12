@@ -1,7 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import video from '../image/hair-transplate/photos/about_us.mp4';
+import video from '../image/photos/about_us.mp4';
 import { withPrefix } from 'gatsby';
 
 const AboutUs = () => {

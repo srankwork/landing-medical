@@ -48,7 +48,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .hero-bg-image {
-  background-image: url('../image/hair-transplate/photos/hero.jpg');
+  background-image: url('../image/photos/hero.jpg');
   background-size: cover;
   background-position: center;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import whychooseus from '../image/hair-transplate/photos/whychooseus.jpeg';
+import whychooseus from '../image/photos/whychooseus.jpeg';
 import { withPrefix } from 'gatsby';
 
 const ServiceIntroduction = ({ changeServiceId }) => {

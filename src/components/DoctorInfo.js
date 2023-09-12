@@ -1,7 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import doctorImg from '../image/hair-transplate/photos/dr-prachi-patil.png';
+import doctorImg from '../image/photos/dr-prachi-patil.png';
 import { withPrefix } from 'gatsby';
 
 const DoctorSction = () => {

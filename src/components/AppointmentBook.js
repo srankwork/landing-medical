@@ -2,14 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { withPrefix } from 'gatsby';
 import { useInView } from 'react-intersection-observer';
-import stage1 from '../image/hair-transplate/Icons/Stage1.png';
-import stage2 from '../image/hair-transplate/Icons/Stage2.png';
-import stage3 from '../image/hair-transplate/Icons/Stage3.png';
-import stage4 from '../image/hair-transplate/Icons/Stage4.png';
-import stage5 from '../image/hair-transplate/Icons/Stage5.png';
-import stage6 from '../image/hair-transplate/Icons/Stage6.png';
-import stage7 from '../image/hair-transplate/Icons/Stage7.png';
-import stage8 from '../image/hair-transplate/Icons/Stage8.png';
+import stage1 from '../image/Icons/Stage1.png';
+import stage2 from '../image/Icons/Stage2.png';
+import stage3 from '../image/Icons/Stage3.png';
+import stage4 from '../image/Icons/Stage4.png';
+import stage5 from '../image/Icons/Stage5.png';
+import stage6 from '../image/Icons/Stage6.png';
+import stage7 from '../image/Icons/Stage7.png';
+import stage8 from '../image/Icons/Stage8.png';
 
 const radioImage = [
   { img: stage1, value: 1, number: 'I' },

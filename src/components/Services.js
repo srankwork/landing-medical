@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import enhance from '../image/hair-transplate/photos/Enhance.jpg';
-import solution from '../image/hair-transplate/photos/Ultimate solution.jpg';
-import advance from '../image/hair-transplate/photos/Advanced.jpg';
-import fue from '../image/hair-transplate/photos/FUE.jpg';
-import bio from '../image/hair-transplate/photos/BIO FUE.png';
-import complementary from '../image/hair-transplate/photos/Complementary.jpeg';
-import prp from '../image/hair-transplate/photos/PRP.jpg';
-import meso from '../image/hair-transplate/photos/meso.jpg';
-import derma from '../image/hair-transplate/photos/Derma.jpeg';
+import enhance from '../image/photos/Enhance.jpg';
+import solution from '../image/photos/Ultimate solution.jpg';
+import advance from '../image/photos/Advanced.jpg';
+import fue from '../image/photos/FUE.jpg';
+import bio from '../image/photos/BIO FUE.png';
+import complementary from '../image/photos/Complementary.jpeg';
+import prp from '../image/photos/PRP.jpg';
+import meso from '../image/photos/meso.jpg';
+import derma from '../image/photos/Derma.jpeg';
 import { withPrefix } from 'gatsby';
 
 const services = [
