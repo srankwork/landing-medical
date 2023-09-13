@@ -26,15 +26,14 @@ const HeroContainer = () => {
         <div className="block md:hidden h-full w-full opacity-50 transition duration-300 ease-in-out bg-overlay-bg absolute"></div>
         <div className="lg:w-1/2 p-8 order-2 lg:order-1 relative flex flex-col justify-between h-fit ">
           <p className="mt-8 md:mt-0 font-poppins text-base  md:text-base font-semibold leading-6 tracking-wider uppercase text-white md:text-primary text-center md:text-start mb-2">
-            Fine lines and wrinkles making you conscious of your age and
-            appearance?
+            Tired of looking in the mirror and feeling less than your best?
           </p>
           <h1 className="mt-20 md:mt-6 capitalize text-center md:text-start font-poppins text-4xl md:text-5xl font-semibold  leading-tight md:leading-snug  text-white md:text-header">
-            Feel confident and look youthful with the safest dermal filler
-            treatments.
+            It's time to take the first step towards a more youthful, confident
+            you.
           </h1>
           <p className="mt-20 md:mt-12 text-center md:text-start text-white md:text-lightblue font-poppins text-base md:text-xl  leading-snug font-medium">
-            Turn back time to the good old days with Novacutis Clinic
+            Embark on your uplifting journey with Novacutis Clinic
           </p>
           <button
             onClick={handleScrollClick}

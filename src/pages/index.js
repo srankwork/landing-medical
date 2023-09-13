@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Headers';
 import HeroContainer from '../components/HeroContainer';
 import ServiceIntroduction from '../components/ServiceIntroduction';
@@ -31,7 +31,7 @@ const IndexPage = () => {
           rel="icon"
           href="https://www.novacutisclinics.com/assets/images/logo.png"
         />
-        <title>Dermal Fillers & Lip Fillers</title>
+        <title>PDO Threads</title>
       </Helmet>
       <main className="w-full h-full">
         <div className=" bg-secondry h-10 w-full text-center flex  items-center text-white justify-around">
@@ -93,4 +93,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Dermal Fillers & Lip Fillers</title>;
+export const Head = () => <title>PDO Threads</title>;

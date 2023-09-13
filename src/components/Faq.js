@@ -26,50 +26,39 @@ const FaqItem = ({ question, answer }) => {
 const FaqContainer = () => {
   const faqData = [
     {
-      question: 'What are dermal fillers?',
+      question: 'Is PDO Thread Lift a painful procedure?',
       answer:
-        'Dermal fillers are injectable substances designed to add volume, smooth wrinkles, and rejuvenate the skin. They are commonly used to enhance facial features and restore a more youthful appearance.',
+        'Most patients report minimal discomfort during the procedure. Local anaesthesia is used to numb the treatment area for a more comfortable experience.',
     },
     {
-      question: 'How do dermal fillers work?',
+      question: 'How long does a PDO Thread Lift procedure take?',
       answer:
-        'Dermal fillers work by plumping and hydrating the skin. They are typically composed of hyaluronic acid or other biocompatible materials that naturally occur in the body.',
+        'The treatment typically takes around 30 to 60 minutes, making it a quick and convenient option for busy individuals.',
     },
     {
-      question: 'What concerns can dermal fillers address?',
+      question: 'What is the recovery time after a PDO Thread Lift?',
       answer:
-        'Dermal fillers can address a wide range of concerns, including lines and wrinkles, volume loss, lip enhancement, cheek augmentation, and under-eye hollows.',
+        'Recovery is usually minimal, with some mild swelling or bruising that typically subsides within a few days. Most patients can resume their daily activities almost immediately.',
     },
     {
-      question: 'Are dermal fillers safe?',
+      question: 'How long do the results of a PDO Thread Lift last?',
       answer:
-        'Yes, dermal fillers are generally safe when administered by a trained and qualified medical professional. They have a long history of use and are FDA-approved.',
+        'The immediate results are visible right after the treatment. Over the following months, as collagen production continues, the results improve and can last up to 12-24 months or longer, depending on individual factors.',
     },
     {
-      question: 'How long do dermal filler results last?',
+      question: 'Who is an ideal candidate for PDO Thread Lift?',
       answer:
-        'The duration of results can vary depending on the type of filler used, the treatment area, and individual factors. On average, results can last from 6 months to 2 years.',
+        'Ideal candidates are individuals with mild to moderate skin laxity who want to achieve a more lifted and youthful appearance without undergoing surgery.',
     },
     {
-      question: 'Is there downtime after dermal filler injections?',
+      question: 'Are PDO threads safe?',
       answer:
-        'Downtime is minimal for most patients. Some swelling or bruising may occur but typically resolves within a few days.',
+        'Yes, PDO threads have been used in the medical field for many years and are considered safe. They are biocompatible and fully absorbable by the body.',
     },
     {
-      question: 'Are dermal fillers reversible?',
+      question: 'Can PDO Thread Lift be combined with other treatments?',
       answer:
-        'Some dermal fillers, particularly those made of hyaluronic acid, are reversible using a specific enzyme. Your provider can discuss this option with you if needed.',
-    },
-    {
-      question:
-        'What should I expect during a dermal filler treatment session?',
-      answer:
-        'During the procedure, a fine needle or cannula is used to inject the filler into the target area. You may experience mild discomfort, but local anesthesia or numbing cream is often applied to minimize any pain.',
-    },
-    {
-      question: 'Can dermal fillers be combined with other treatments?',
-      answer:
-        'Yes, dermal fillers can be combined with other cosmetic treatments like Botox or PDO Thread Lifts to achieve a comprehensive facial rejuvenation.',
+        'Yes, PDO Thread Lift can be combined with other non-surgical treatments, such as dermal fillers or Botox, for a comprehensive facial rejuvenation approach.',
     },
   ];
   return (

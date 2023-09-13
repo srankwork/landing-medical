@@ -1,32 +1,31 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import forheadImg from '../image/Icons/forhead.png';
-import completelyImg from '../image/Icons/completely.jpg';
-import lipsImg from '../image/Icons/lips.png';
-import rediscImg from '../image/Icons/redisc.png';
-import economImg from '../image/Icons/econom.png';
+import minimallyImg from '../image/Icons/minimally.jpg';
+import personalisedImg from '../image/Icons/personalised.jpg';
+import ImmediatImg from '../image/Icons/Immediate.jpg';
+import safetyImg from '../image/Icons/safety.jpg';
 
 const services = [
   {
-    header: 'Preventive Anti-aging',
-    img: rediscImg,
-    disc: 'Boost your beauty naturally with proactive anti-aging magic.',
+    header: 'Personalised Care',
+    img: personalisedImg,
+    disc: 'Tailor-made for your beauty goals, ensuring you shine naturally!',
   },
   {
-    header: 'Non-surgical Facelift',
-    img: forheadImg,
-    disc: 'Discover your best aesthetic, minus the surgery.',
+    header: 'Minimally Invasive Excellence',
+    img: minimallyImg,
+    disc: 'Fet back to life while enjoying incredible results in no time.',
   },
   {
-    header: 'Get Luscious Lips',
-    img: lipsImg,
-    disc: 'Achieve youthful, balanced perfection and get a plumper pout in just 30 minutes.',
+    header: 'Immediate & Progressive Results',
+    img: ImmediatImg,
+    disc: 'A fresh and revitalised look that stands the test of time!',
   },
   {
-    header: 'Completely Safe & Natural Looking',
-    img: completelyImg,
-    disc: 'No need to break the bank for timeless beauty, experience a wallet-friendly transformation at Novacutis Clinic.',
+    header: 'Safety & Trust',
+    img: safetyImg,
+    disc: 'Giving you the peace of mind you deserve for your cosmetic journey.',
   },
 ];
 
@@ -44,10 +43,10 @@ export default function ServiceList() {
       className="mt-16 md:mt-24 px-4 md:w-3/4 justify-center m-auto"
     >
       <p className="font-poppins text-lg md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center">
-        Dermal Fillers
+        PDO Thread Lift
       </p>
       <h1 className="mt-4 font-poppins text-center text-2xl md:text-5xl font-semibold leading-none md:leading-snug  text-header">
-        Unveil a more youthful you!
+        Lift your aesthetic and your confidence!
       </h1>
 
       <div className="md:flex justify-between mt-16">

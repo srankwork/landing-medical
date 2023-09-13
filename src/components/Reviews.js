@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const review = [
   {
-    name: 'Bhaskar Anil',
+    name: 'bhaskar anil',
     review:
       'Such professionalism! So comfortable through the whole experience and the team was lovely! My experience with the doctor was great and she did a fantastic job! So pleased with the end result! My aftercare was second to none and well worth the money spent! Thank you all!!',
   },

@@ -1,34 +1,29 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import whychooseus from '../image/photos/whychoose.jpg';
+import whychooseus from '../image/photos/whychooseus.jpg';
 
 const ServiceIntroduction = ({ changeServiceId }) => {
   const serviceList = [
     {
-      header: 'Preventive Anti-Aging',
+      header: 'Personalised Care',
       child: [],
-      id: 'preventive_anti_aging',
+      id: 'personalised_care',
     },
     {
-      header: 'Non-surgical Facelift',
+      header: 'Minimally Invasive Excellence',
       child: [],
-      id: 'non_surgical_facelift',
+      id: 'minimally_rnvasive_rxcellence',
     },
     {
-      header: 'Get Luscious Lips',
+      header: 'Get Immediate & Progressive Results',
       child: [],
-      id: 'get_luscious_lips',
+      id: 'immediate_and_progressive_results',
     },
     {
-      header: 'Completely Safe & Natural Looking',
+      header: 'Safety & Trust',
       child: [],
-      id: 'completely_safe',
-    },
-    {
-      header: 'Economical Transformation',
-      child: [],
-      id: 'economical_transformation',
+      id: 'safety_and_trust',
     },
   ];
   const [ref, inView] = useInView({ triggerOnce: true });
@@ -61,7 +56,7 @@ const ServiceIntroduction = ({ changeServiceId }) => {
           }}
         ></div>
         <h1 className="capitalize text-2xl md:text-5xl font-semibold font-montserrat mt-4 md:mt-3 text-white font-poppins leading-tight tracking-tighter">
-          Smooth away wrinkles and embrace a more youthful you!
+          Elevate your beauty, naturally!
         </h1>
         <p className="mt-2 md:mt-5 text-info-color font-poppins text-base md:text-xl font-medium leading-tight md:tracking-tighter">
           At Novacutis Cosmetic Clinic, we offer the latest procedures to fight

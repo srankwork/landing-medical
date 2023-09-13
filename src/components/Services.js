@@ -1,47 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import rediscoverImg from '../image/photos/rediscover.png';
-import LipsImg from '../image/photos/lips.jpg';
-import completelyImg from '../image/photos/completely.jpg';
-import nonsurgicalImg from '../image/photos/non-surgical.jpg';
-import economicalImg from '../image/photos/economical.jpg';
+import personalisedImg from '../image/photos/personalised.jpg';
+import progressiveImg from '../image/photos/progressive.jpg';
+import safetyImg from '../image/photos/safety.jpg';
+import minimallyImg from '../image/photos/minimally.jpeg';
 
 const services = [
   {
-    img: rediscoverImg,
-    header: 'Preventive Anti-Aging',
+    img: personalisedImg,
+    header: 'Personalised Care',
     content:
-      "Enhance your natural beauty with preventive anti-aging treatments.  Say goodbye to wrinkles and hello to a more youthful and radiant appearance",
-    id: 'preventive_anti_aging',
+      "We recognize that each individual is unique, and their cosmetic goals are as distinct as their features. That's why we prioritise personalised care. Your PDO Thread Lift treatment will be carefully customised to your specific needs and goals. We work closely with you to ensure the results are not just noticeable but also natural-looking, enhancing your unique beauty.",
+    id: 'personalised_care',
   },
   {
-    img: nonsurgicalImg,
-    header: 'Non-Surgical Facelift',
+    img: minimallyImg,
+    header: 'Minimally Invasive Excellence',
     content:
-      "Whether you desire plump lips or a sculpted jawline, Our non-surgical face lift treatments will help you achieve the aesthetic results you've always wanted without going under the knife.",
-    id: 'non_surgical_facelift',
+      ' Unlike traditional surgical facelifts, our procedure offers the benefits of reduced downtime and discomfort. You can return to your daily activities with minimal disruption to your routine while enjoying remarkable improvements in your appearance.',
+    id: 'minimally_rnvasive_rxcellence',
   },
   {
-    img: LipsImg,
-    header: 'Get Luscious Lips',
+    img: progressiveImg,
+    header: 'Immediate and Progressive Results',
     content:
-      'Whether you\'re looking to restore lost volume, balance asymmetry, or simply achieve a more youthful pout, lip fillers offer a customizable solution tailored to your unique features and preferences. Say goodbye to fine lines and hello to a plumper pout in just a 30-minute procedure.',
-    id: 'get_luscious_lips',
+      "With a PDO Thread Lift at Novacutis Clinic, you'll experience immediate improvements in your facial contours and skin tightness. As the threads naturally dissolve over time, they stimulate collagen production, leading to further enhancements. This means your results will continue to improve, leaving you with a refreshed and rejuvenated appearance that lasts.",
+    id: 'immediate_and_progressive_results',
   },
   {
-    img: completelyImg,
-    header: 'Completely Safe',
+    img: safetyImg,
+    header: 'Safety and Trust',
     content:
-      'At Novacutis Clinic, we give utmost importance to the safety of our clients. That\'s why we only use US FDA approved products, carefully administered by internationally certified and trained technicians.',
-    id: 'completely_safe',
-  },
-  {
-    img: economicalImg,
-    header: 'Economical Transformation',
-    content:
-      'Experience a youthful transformation without worrying about a costly procedure. Novacutis Clinic offers the best anti-wrinkle treatments in Mumbai at a very affordable cost.',
-    id: 'economical_transformation',
+      "These threads are biocompatible, dissolvable, and have been used successfully in countless treatments worldwide. When you choose Novacutis Clinic, you're selecting a safe and proven solution for your cosmetic needs, backed by our unwavering commitment to your well-being.",
+    id: 'safety_and_trust',
   },
 ];
 
