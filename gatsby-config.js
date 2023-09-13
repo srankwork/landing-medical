@@ -2,9 +2,9 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: '/services/dermal',
+  pathPrefix: '/services/pdo-threads',
   siteMetadata: {
-    title: `Dermal Fillers & Lip Fillers`,
+    title: `pdo-threads`,
     siteUrl: `https://novacutisclinics.com`,
   },
   plugins: [
