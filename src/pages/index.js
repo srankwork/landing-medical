@@ -1,31 +1,10 @@
-import React, { useState } from 'react';
-import Header from '../components/Headers';
-import HeroContainer from '../components/HeroContainer';
-import ServiceIntroduction from '../components/ServiceIntroduction';
-import BookAppointment from '../components/AppointmentBook';
-import DoctorSction from '../components/DoctorInfo';
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import ResultContainer from '../components/Result';
-import ReviewContainer from '../components/Reviews';
-import AboutUs from '../components/AboutUs';
-import FaqContainer from '../components/Faq';
-import Services from '../components/Services';
-import ServiceList from '../components/serviceList';
-import Rating from '../components/Rating';
+import Header from '../components/Headers';
 
 const IndexPage = () => {
-  const [serviceId, setServiceId] = useState(null);
-
-  function changeServiceId(id) {
-    const container = document.getElementById('serviceContainer');
-    if (container) {
-      container.scrollIntoView({ behavior: 'smooth' });
-    }
-    setServiceId(id);
-  }
-
   return (
-    <>
+    <div className="w-screen overflow-hidden">
       <Helmet>
         <link
           rel="icon"
@@ -70,24 +49,19 @@ const IndexPage = () => {
           </span>
         </div>
         <Header />
-        <HeroContainer />
-        <Rating />
-        <Services serviceId={serviceId} />
-        <ServiceIntroduction changeServiceId={changeServiceId} />
-        <ResultContainer />
-        <DoctorSction />
-        <ServiceList />
-        <ReviewContainer />
-        <BookAppointment forModal={false} />
-        <AboutUs />
-        <FaqContainer />
-        <hr className="mt-16" />
-
-        <div className=" bg-primary h-10 w-full text-center flex flex-col text-white justify-center">
+        <div className="w-screen mt-20 overflow-hidden">
+          <h1 className=" text-6xl md:text-8xl  text-primary text-center font-bold">
+            Thank You
+          </h1>
+          <p className="text-center text-2xl font-semibold mt-8">
+            we will get back to you
+          </p>
+        </div>
+        <div className=" bg-primary h-10 w-full text-center flex flex-col text-white justify-center fixed bottom-0">
           <span>©2023</span>
         </div>
       </main>
-    </>
+    </div>
   );
 };
 
