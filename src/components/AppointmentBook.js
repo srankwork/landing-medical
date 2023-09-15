@@ -43,12 +43,12 @@ const BookAppointment = ({ forModal }) => {
     } else {
       setEmailError('');
     }
-    if (!service) {
-      setServiceError('Please select area');
-      isValid = false;
-    } else {
-      setServiceError('');
-    }
+    // if (!service) {
+    //   setServiceError('Please select area');
+    //   isValid = false;
+    // } else {
+    //   setServiceError('');
+    // }
 
     return isValid;
   };
