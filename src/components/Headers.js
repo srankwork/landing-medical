@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import AppoitmentModal from './AppointmentModal';
-import whatsapp from '../image/icons/whatsapp.png';
+import whatsapp from '../image/Icons/whatsapp.png';
 
 const Header = () => {
   const [showPopup, setShowPopup] = useState(false);
