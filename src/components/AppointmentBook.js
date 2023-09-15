@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import stage1 from '../image/Icons/Stage1.png';
@@ -26,6 +26,93 @@ const BookAppointment = ({ forModal }) => {
     triggerOnce: true,
   });
 
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [age, setAge] = useState('');
+  const [baldness, setBaldness] = useState('');
+  const [nameError, setNameError] = useState('');
+  const [ageError, setAgeError] = useState('');
+  const [baldnessError, setBaldnessError] = useState('');
+  const [phoneError, setPhoneError] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [formError, setFormError] = useState('');
+
+  const validateInput = () => {
+    let isValid = true;
+
+    if (!name.trim()) {
+      setNameError('Name is required');
+      isValid = false;
+    } else {
+      setNameError('');
+    }
+
+    if (!phone.trim()) {
+      setPhoneError('Phone is required');
+      isValid = false;
+    } else if (phone.trim().length < 10 || phone.trim().length >= 11) {
+      setPhoneError('Phone is invalid');
+      isValid = false;
+    } else {
+      setPhoneError('');
+    }
+
+    if (!email.trim() || !isValidEmail(email)) {
+      setEmailError('Valid email is required');
+      isValid = false;
+    } else {
+      setEmailError('');
+    }
+
+    if (!baldness) {
+      setBaldnessError('Please select grade');
+      isValid = false;
+    } else {
+      setBaldnessError('');
+    }
+
+    return isValid;
+  };
+
+  const isValidEmail = (email) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  };
+
+  const handleFindOutClick = () => {
+    if (validateInput()) {
+      var myHeaders = new Headers();
+      myHeaders.append(
+        'Content-Type',
+        'application/x-www-form-urlencoded; charset=UTF-8'
+      );
+
+      var raw = `xnQsjsdp=b25cb8f8ef33e0e98888bcba5fc285e2914f53ba89ae01046e1cc758c882cba3&zc_gad=&xmIwtLD=c029b288c892f1adde32678375ba81d2d973262c341e3ee2339b50dddb1f0add&actionType=TGVhZHM=&First%20Name=${
+        name.split(' ').length ? name.split(' ')[0] : name
+      }&Last%20Name=${
+        name.split(' ').length >= 2 ? name.split(' ')[1] : ''
+      }&Mobile=${phone}&LEADCF1=${baldness}&Email=${email}&returnURL=https://www.novacutisclinics.com/services/thankyou/`;
+
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow',
+      };
+      console.log(raw);
+      fetch('https://crm.zoho.in/crm/WebToLeadForm', requestOptions)
+        .then((response) => response.text())
+        .then((result) => {
+          window.location.assign(
+            'https://www.novacutisclinics.com/services/thankyou'
+          );
+        })
+        .catch((error) => setFormError('Please try again'));
+    } else {
+    }
+  };
+
   return (
     <motion.div
       ref={ref}
@@ -46,42 +133,79 @@ const BookAppointment = ({ forModal }) => {
 
       <div className="md:flex md:space-x-4 mt-6 md:mt-14">
         <div className="md:w-3/4">
+          {formError && (
+            <div className="text-red-500 mt-1 text-center mb-2">
+              {formError}
+            </div>
+          )}
+
           <form>
             <div className="md:flex md:space-x-4  mb-0 md:mb-8">
               <div className="mt-2 md:w-1/2">
                 <input
                   type="text"
-                  className="border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder"
+                  className={`border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder ${
+                    nameError ? 'border-red-500' : ''
+                  }`}
                   placeholder="NAME"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
+                {nameError && (
+                  <div className="text-red-500 mt-1">{nameError}</div>
+                )}
               </div>
               <div className="mt-2 md:w-1/2">
                 <input
                   type="number"
-                  className="border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder"
+                  className={`border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder ${
+                    phoneError ? 'border-red-500' : ''
+                  }`}
                   placeholder="PHONE"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                 />
+                {phoneError && (
+                  <div className="text-red-500 mt-1">{phoneError}</div>
+                )}
               </div>
             </div>
             <div className="mb-4 md:flex md:space-x-4">
               <div className="mt-2 md:w-1/2">
                 <input
                   type="email"
-                  className="border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder"
+                  className={`border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder ${
+                    emailError ? 'border-red-500' : ''
+                  }`}
                   placeholder="YOUR EMAIL"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
+                {emailError && (
+                  <div className="text-red-500 mt-1">{emailError}</div>
+                )}
               </div>
               <div className="mt-2 md:w-1/2">
                 <input
                   type="number"
                   className="border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder"
                   placeholder="YOUR AGE"
+                  value={age}
+                  onChange={(e) => setAge(e.target.value)}
                 />
+                {ageError && (
+                  <div className="text-red-500 mt-1">{emailError}</div>
+                )}
               </div>
             </div>
             <p className="text-center text-primary font-semibold mt-8 mb-2">
               Grade of Baldness:
             </p>
+            {baldnessError && (
+              <div className="text-red-500 mt-1 text-center">
+                {baldnessError}
+              </div>
+            )}
             <div className="flex flex-wrap m-auto justify-center">
               {[...radioImage.slice(0, 4)].map((e) => (
                 <div
@@ -96,6 +220,7 @@ const BookAppointment = ({ forModal }) => {
                   <input
                     type="radio"
                     value={e.value}
+                    onChange={() => setBaldness(e.value)}
                     className="form-radio text-indigo-600"
                     name="radio-group"
                   />
@@ -117,6 +242,7 @@ const BookAppointment = ({ forModal }) => {
                   <input
                     type="radio"
                     value={e.value}
+                    onChange={() => setBaldness(e.value)}
                     className="form-radio text-indigo-600"
                     name="radio-group"
                   />
@@ -138,10 +264,11 @@ const BookAppointment = ({ forModal }) => {
               Book Your Appointment
             </h1>
           </div>
-          <div className="w-full bg-primary py-2 px-6 rounded-sm transition-all duration-500 font-semibold text-lg text-center">
-            <a href="#CallApi" className="text-white">
-              Find Out Now!
-            </a>
+          <div
+            className="w-full bg-primary py-2 px-6 rounded-sm transition-all duration-500 font-semibold text-lg text-center cursor-pointer text-white"
+            onClick={handleFindOutClick}
+          >
+            Find Out Now!
           </div>
         </div>
       </div>
