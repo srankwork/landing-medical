@@ -58,7 +58,7 @@ const BookAppointment = ({ forModal }) => {
         'application/x-www-form-urlencoded; charset=UTF-8'
       );
 
-      var raw = `xnQsjsdp=b25cb8f8ef33e0e98888bcba5fc285e2914f53ba89ae01046e1cc758c882cba3&zc_gad=&xmIwtLD=c029b288c892f1adde32678375ba81d276d420a0189ead5f9240cc6b65bc8f4f&actionType=TGVhZHM=&First%20Name=${name}&Last%20Name=&Mobile=${phone}&Email=${email}`;
+      var raw = `xnQsjsdp=b25cb8f8ef33e0e98888bcba5fc285e2914f53ba89ae01046e1cc758c882cba3&zc_gad=&xmIwtLD=c029b288c892f1adde32678375ba81d276d420a0189ead5f9240cc6b65bc8f4f&actionType=TGVhZHM=&First%20Name=${name.split(' ').length? name.split(' ')[0] : name}&Last%20Name=${name.split(' ').length >= 2? name.split(' ')[1] : ''}&Mobile=${phone}&Email=${email}&returnURL=https://www.novacutisclinics.com/services/thankyou/`;
 
       var requestOptions = {
         method: 'POST',
