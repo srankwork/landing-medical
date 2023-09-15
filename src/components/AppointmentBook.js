@@ -71,6 +71,13 @@ const BookAppointment = ({ forModal }) => {
     } else {
       setBaldnessError('');
     }
+    if (!age) {
+      setAgeError('Valid age is required');
+      isValid = false;
+    } else {
+      setAgeError('');
+    }
+    
 
     return isValid;
   };
@@ -92,7 +99,7 @@ const BookAppointment = ({ forModal }) => {
         name.split(' ').length ? name.split(' ')[0] : name
       }&Last%20Name=${
         name.split(' ').length >= 2 ? name.split(' ')[1] : ''
-      }&Mobile=${phone}&LEADCF1=${baldness}&Email=${email}&returnURL=https://www.novacutisclinics.com/services/thankyou/`;
+      }&Description=${age}&Mobile=${phone}&LEADCF1=${baldness}&Email=${email}&returnURL=https://www.novacutisclinics.com/services/thankyou/`;
 
       var requestOptions = {
         method: 'POST',
@@ -194,7 +201,7 @@ const BookAppointment = ({ forModal }) => {
                   onChange={(e) => setAge(e.target.value)}
                 />
                 {ageError && (
-                  <div className="text-red-500 mt-1">{emailError}</div>
+                  <div className="text-red-500 mt-1">{ageError}</div>
                 )}
               </div>
             </div>
