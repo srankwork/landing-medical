@@ -83,6 +83,11 @@ const IndexPage = () => {
         <FaqContainer />
         <hr className="mt-16" />
 
+        <script
+          id="wf_anal"
+          src="https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=c029b288c892f1adde32678375ba81d28c3f44139f4087ba9bc5da6710ecbb3egidb25cb8f8ef33e0e98888bcba5fc285e2914f53ba89ae01046e1cc758c882cba3gid534cb20477b1d28b5f45f7cc241888c5gid4ee3a7e9ace6ab1be7c541b329164307&tw=096a715cbfc30dc79d6dc215bf71c5b4284d938378e51186a6daa9337f7519a8"
+        ></script>
+        
         <div className=" bg-primary h-10 w-full text-center flex flex-col text-white justify-center">
           <span>©2023</span>
         </div>
