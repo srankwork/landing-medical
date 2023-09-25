@@ -189,7 +189,7 @@ const BookAppointment = ({ forModal }) => {
               height='auto'
             />
             <h1 className='text-2xl md:text-2xl font-poppins font-semibold leading-tight tracking-tight text-header text-center mb-6 w-4/6'>
-              Book Your Appointment
+              Book Your Consultation
             </h1>
           </div>
           <div

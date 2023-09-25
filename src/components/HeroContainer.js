@@ -39,7 +39,7 @@ const HeroContainer = () => {
             onClick={handleScrollClick}
             className="w-max m-auto md:m-0 mt-6 md:mt-4 flex items-center md:border-2 md:border-primary text-white md:text-primary bg-primary md:bg-transparent text-base md:text-xl font-semibold py-2 px-4 md:px-8 rounded-sm"
           >
-            Book Appointment
+            Book Consultation
           </button>
         </div>
 
