@@ -6,8 +6,6 @@ import after1 from '../image/photos/b_a1.2.jpg';
 import before1 from '../image/photos/b_a1.1.jpg';
 import after2 from '../image/photos/b_a2.2.jpg';
 import before2 from '../image/photos/b_a2.1.jpg';
-import after3 from '../image/photos/b_a3.2.jpg';
-import before3 from '../image/photos/b_a3.1.jpg';
 import after4 from '../image/photos/b_a4.2.jpg';
 import before4 from '../image/photos/b_a4.1.jpg';
 
@@ -36,19 +34,21 @@ const ResultContainer = () => {
       </motion.h1>
       <div className="mt-12 md:flex px-4 justify-around w-screen overflow-hidden">
         <motion.div
-          initial={{ x: '-25%', opacity: 0 }}
-          animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <ImageSlider oldImage={before1} newImage={after1} />
-        </motion.div>
-        <motion.div
           initial={{ x: '25%', opacity: 0 }}
           animate={{ x: inView ? 0 : '25%', opacity: inView ? 1 : 0 }}
           transition={{ duration: 0.5 }}
           className="mt-6 md:mt-0"
         >
           <ImageSlider oldImage={before2} newImage={after2} />
+        </motion.div>
+
+        <motion.div
+        className='mt-8 md:mt-0'
+          initial={{ x: '-25%', opacity: 0 }}
+          animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <ImageSlider oldImage={before4} newImage={after4} />
         </motion.div>
       </div>
       <div className="mt-8 flex md:hidden justify-around w-screen overflow-hidden px-4">
@@ -57,7 +57,7 @@ const ResultContainer = () => {
           animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
           transition={{ duration: 0.5 }}
         >
-          <ImageSlider oldImage={before4} newImage={after4} />
+          <ImageSlider oldImage={before1} newImage={after1} />
         </motion.div>
       </div>
     </div>
