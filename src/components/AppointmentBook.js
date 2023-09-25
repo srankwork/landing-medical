@@ -101,10 +101,10 @@ const BookAppointment = ({ forModal }) => {
       } container m-auto`}
       id='appointmentForm'
     >
-      <p className='font-poppins text-xl md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center'>
+      {/* <p className='font-poppins text-xl md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center'>
         Curious about how much it will cost you?
-      </p>
-      <h1 className='mt-6 font-poppins text-center text-lg md:text-3xl font-semibold leading-none md:leading-snug  text-header'>
+      </p> */}
+      <h1 className='font-poppins text-center text-lg md:text-3xl font-semibold leading-none md:leading-snug  text-header'>
         Experience the confidence of flawless skin with Novacutis Clinic
       </h1>
 
@@ -189,14 +189,14 @@ const BookAppointment = ({ forModal }) => {
               height='auto'
             />
             <h1 className='text-2xl md:text-2xl font-poppins font-semibold leading-tight tracking-tight text-header text-center mb-6 w-4/6'>
-              Book Your Appointment
+              Book Your Consultation
             </h1>
           </div>
           <div
             className='w-full bg-primary py-2 px-6 rounded-sm transition-all duration-500 font-semibold text-lg text-center cursor-pointer text-white'
             onClick={handleFindOutClick}
           >
-            Find Out Now!
+            Book Consultation
           </div>
         </div>
       </div>
