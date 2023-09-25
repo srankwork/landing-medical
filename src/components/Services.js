@@ -36,7 +36,7 @@ const services = [
     id: 'cutting-edge_technology',
   },
 ];
-export default function Services({serviceId}) {
+export default function Services({ serviceId }) {
   const [counter, setCounter] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
   const { ref, inView } = useInView({
@@ -45,9 +45,9 @@ export default function Services({serviceId}) {
 
   useEffect(() => {
     if (serviceId) {
-     const index =  services.findIndex((e) => e.id == serviceId);
-      if(index != -1){
-        setCounter(index)
+      const index = services.findIndex((e) => e.id == serviceId);
+      if (index != -1) {
+        setCounter(index);
       }
     }
 
@@ -220,13 +220,15 @@ export default function Services({serviceId}) {
             />
           </svg>
         </div>
-        <img
-          className="md:h-96"
-          src={services[counter]['img']}
-          alt="our services"
-          width="auto"
-          height="auto"
-        />
+        <div className={`${services[counter]['id'] =='cutting-edge_technology'? ' mx-12':''}`}>
+          <img
+            className="md:h-96"
+            src={services[counter]['img']}
+            alt="our services"
+            width="auto"
+            height="auto"
+          />
+        </div>
       </motion.div>
     </div>
   );
