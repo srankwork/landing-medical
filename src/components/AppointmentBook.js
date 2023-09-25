@@ -104,7 +104,7 @@ const BookAppointment = ({ forModal }) => {
       {/* <p className='font-poppins text-xl md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center'>
         Curious about how much it will cost you?
       </p> */}
-      <h1 className='mt-6 font-poppins text-center text-lg md:text-3xl font-semibold leading-none md:leading-snug  text-header'>
+      <h1 className='font-poppins text-center text-lg md:text-3xl font-semibold leading-none md:leading-snug  text-header'>
         Experience the confidence of flawless skin with Novacutis Clinic
       </h1>
 
