@@ -26,7 +26,7 @@ const Header = () => {
         onClick={handleScrollClick}
       >
         <p className=" bg-primary rounded px-4 py-1 text-white">
-          Book Appointment
+          Book Consultation
         </p>
       </div>
       <div className="fixed bottom-4 right-2 z-40">

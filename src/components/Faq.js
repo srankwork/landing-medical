@@ -58,7 +58,7 @@ const FaqContainer = () => {
         'While allergic reactions to cosmetic injectables are rare, they can occur. Be sure to inform your provider of any allergies or previous allergic reactions to similar products.',
     },
     {
-      question: 'How should I prepare for my appointment?',
+      question: 'How should I prepare for my Consultation?',
       answer:
         "There are typically no specific pre-treatment preparations needed. However, it's advisable to inform your provider about any medications, supplements, or medical conditions you have.",
     },
