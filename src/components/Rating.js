@@ -57,13 +57,13 @@ const Rating = () => {
                 />
                 <div className="ml-4 space-y-1 flex flex-col">
                   <span className=" text-xl md:text-2xl flex items-center">
-                    <div class="flex">
-                      <div class="star star-filled"></div>
-                      <div class="star star-filled"></div>
-                      <div class="star star-filled"></div>
-                      <div class="star star-filled"></div>
+                    <div className="flex">
+                      <div className="star star-filled"></div>
+                      <div className="star star-filled"></div>
+                      <div className="star star-filled"></div>
+                      <div className="star star-filled"></div>
                       <div
-                        class={`star ${
+                        className={`star ${
                           e.star == 5 ? 'star-filled' : 'star-half-filled'
                         }`}
                       ></div>
@@ -112,13 +112,13 @@ const Rating = () => {
                 />
                 <div className="ml-4 space-y-1 flex flex-col">
                   <span className=" text-xl md:text-2xl flex items-center">
-                    <div class="flex">
-                      <div class="star star-filled"></div>
-                      <div class="star star-filled"></div>
-                      <div class="star star-filled"></div>
-                      <div class="star star-filled"></div>
+                    <div className="flex">
+                      <div className="star star-filled"></div>
+                      <div className="star star-filled"></div>
+                      <div className="star star-filled"></div>
+                      <div className="star star-filled"></div>
                       <div
-                        class={`star ${
+                        className={`star ${
                           e.star == 5 ? 'star-filled' : 'star-half-filled'
                         }`}
                       ></div>
