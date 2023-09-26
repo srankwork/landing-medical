@@ -7,6 +7,19 @@ const BookAppointment = ({ forModal }) => {
     triggerOnce: true,
   });
 
+  const options = [
+    'cheeks',
+    'lips',
+    'chin',
+    'jaw',
+    'nose',
+    'nasolabial folds',
+    'forehead',
+    'others',
+  ];
+
+  const [openOption, setOpenOption] = useState(false);
+
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
@@ -90,6 +103,11 @@ const BookAppointment = ({ forModal }) => {
     }
   };
 
+  function optionOperation(value) {
+    setOpenOption(!openOption);
+    setService(value);
+  }
+
   return (
     <motion.div
       ref={ref}
@@ -104,7 +122,7 @@ const BookAppointment = ({ forModal }) => {
       {/* <p className='font-poppins text-xl md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center'>
         Curious about how much it will cost you?
       </p> */}
-      <h1 className="font-poppins text-center text-lg md:text-3xl font-semibold leading-none md:leading-snug text-header">
+      <h1 className="font-poppins text-center text-lg md:text-3xl font-semibold leading-none md:leading-snug  text-header">
         Experience the confidence of flawless skin with Novacutis Clinic
       </h1>
 
@@ -167,11 +185,26 @@ const BookAppointment = ({ forModal }) => {
               <div className="mt-2 md:w-1/2">
                 <input
                   type="text"
-                  className="border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder"
+                  className="border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder cursor-pointer"
                   placeholder="AREA"
                   value={service}
-                  onChange={(e) => setService(e.target.value)}
+                  readOnly
+                  onClick={() => setOpenOption(!openOption)}
                 />
+                {openOption && (
+                  <div className="absolute bg-white h-[200px] mt-2  md:w-[400px] overflow-auto">
+                    {options.map((e) => (
+                      <input
+                        type="text"
+                        className="px-2 border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 cursor-pointer"
+                        value={e}
+                        readOnly
+                        key={e}
+                        onClick={() => optionOperation(e)}
+                      />
+                    ))}
+                  </div>
+                )}
                 {serviceError && (
                   <div className="text-red-500 mt-1">{serviceError}</div>
                 )}
