@@ -4,8 +4,25 @@ import { useInView } from 'react-intersection-observer';
 
 const BookAppointment = ({ forModal }) => {
   const [ref, inView] = useInView({
-    triggerOnce: true
+    triggerOnce: true,
   });
+
+  const options = [
+    'Forehead',
+    'Eyebrows',
+    'Frown lines',
+    'Bunny lines',
+    'Under eye',
+    'Crows feet',
+    'Gummy smile',
+    'Lip lines',
+    'Jaws',
+    'Chin',
+    'Neck',
+    'Other',
+  ];
+
+  const [openOption, setOpenOption] = useState(false);
 
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -66,7 +83,7 @@ const BookAppointment = ({ forModal }) => {
         'application/x-www-form-urlencoded; charset=UTF-8'
       );
 
-      var raw = `xnQsjsdp=b25cb8f8ef33e0e98888bcba5fc285e2914f53ba89ae01046e1cc758c882cba3&zc_gad=&xmIwtLD=c029b288c892f1adde32678375ba81d28c3f44139f4087ba9bc5da6710ecbb3e&actionType=TGVhZHM=&First%20Name=${
+      var raw = `xnQsjsdp=b25cb8f8ef33e0e98888bcba5fc285e2914f53ba89ae01046e1cc758c882cba3&zc_gad=&xmIwtLD=c029b288c892f1adde32678375ba81d2eb1cbeeb44d497b0a19b84e8e87bb44f&actionType=TGVhZHM=&First%20Name=${
         name.split(' ').length ? name.split(' ')[0] : name
       }&Last%20Name=${
         name.split(' ').length >= 2 ? name.split(' ')[1] : ''
@@ -76,7 +93,7 @@ const BookAppointment = ({ forModal }) => {
         method: 'POST',
         headers: myHeaders,
         body: raw,
-        redirect: 'follow'
+        redirect: 'follow',
       };
 
       fetch('https://crm.zoho.in/crm/WebToLeadForm', requestOptions)
@@ -90,6 +107,11 @@ const BookAppointment = ({ forModal }) => {
     }
   };
 
+  function optionOperation(value) {
+    setOpenOption(!openOption);
+    setService(value);
+  }
+
   return (
     <motion.div
       ref={ref}
@@ -99,104 +121,119 @@ const BookAppointment = ({ forModal }) => {
       className={`px-4 md:px-10 ${
         forModal ? '' : 'pt-14 md:pt-28'
       } container m-auto`}
-      id='appointmentForm'
+      id="appointmentForm"
     >
       {/* <p className='font-poppins text-xl md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center'>
         Curious about how much it will cost you?
       </p> */}
-      <h1 className='font-poppins text-center text-lg md:text-3xl font-semibold leading-none md:leading-snug  text-header'>
+      <h1 className="font-poppins text-center text-lg md:text-3xl font-semibold leading-none md:leading-snug  text-header">
         Experience the confidence of flawless skin with Novacutis Clinic
       </h1>
 
-      <div className='md:flex md:space-x-4 mt-6 md:mt-14'>
-        <div className='md:w-3/4'>
+      <div className="md:flex md:space-x-4 mt-6 md:mt-14">
+        <div className="md:w-3/4">
           {formError && (
-            <div className='text-red-500 mt-1 text-center mb-2'>
+            <div className="text-red-500 mt-1 text-center mb-2">
               {formError}
             </div>
           )}
 
           <form>
-            <div className='md:flex md:space-x-4  mb-0 md:mb-8'>
-              <div className='mt-2 md:w-1/2'>
+            <div className="md:flex md:space-x-4  mb-0 md:mb-8">
+              <div className="mt-2 md:w-1/2">
                 <input
-                  type='text'
+                  type="text"
                   className={`border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder ${
                     nameError ? 'border-red-500' : ''
                   }`}
-                  placeholder='NAME'
+                  placeholder="NAME"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
                 {nameError && (
-                  <div className='text-red-500 mt-1'>{nameError}</div>
+                  <div className="text-red-500 mt-1">{nameError}</div>
                 )}
               </div>
 
               {/* Phone input */}
-              <div className='mt-2 md:w-1/2'>
+              <div className="mt-2 md:w-1/2">
                 <input
-                  type='number'
+                  type="number"
                   className={`border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder ${
                     phoneError ? 'border-red-500' : ''
                   }`}
-                  placeholder='PHONE'
+                  placeholder="PHONE"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
                 {phoneError && (
-                  <div className='text-red-500 mt-1'>{phoneError}</div>
+                  <div className="text-red-500 mt-1">{phoneError}</div>
                 )}
               </div>
             </div>
-            <div className='mb-4 md:flex md:space-x-4'>
-              <div className='mt-2 md:w-1/2'>
+            <div className="mb-4 md:flex md:space-x-4">
+              <div className="mt-2 md:w-1/2">
                 <input
-                  type='email'
+                  type="email"
                   className={`border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder ${
                     emailError ? 'border-red-500' : ''
                   }`}
-                  placeholder='YOUR EMAIL'
+                  placeholder="YOUR EMAIL"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 {emailError && (
-                  <div className='text-red-500 mt-1'>{emailError}</div>
+                  <div className="text-red-500 mt-1">{emailError}</div>
                 )}
               </div>
-              <div className='mt-2 md:w-1/2'>
+              <div className="mt-2 md:w-1/2">
                 <input
-                  type='text'
-                  className='border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder'
-                  placeholder='AREA'
+                  type="text"
+                  className="border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder cursor-pointer"
+                  placeholder="AREA OF UNWANTED HAIR:"
                   value={service}
-                  onChange={(e) => setService(e.target.value)}
+                  readOnly
+                  onClick={() => setOpenOption(!openOption)}
                 />
+                {openOption && (
+                  <div className="absolute bg-white h-[200px] mt-2  md:w-[400px] overflow-auto">
+                    {options.map((e) => (
+                      <input
+                        type="text"
+                        className="px-2 border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 cursor-pointer"
+                        value={e}
+                        readOnly
+                        key={e}
+                        onClick={() => optionOperation(e)}
+                      />
+                    ))}
+                  </div>
+                )}
                 {serviceError && (
-                  <div className='text-red-500 mt-1'>{serviceError}</div>
+                  <div className="text-red-500 mt-1">{serviceError}</div>
                 )}
               </div>
             </div>
           </form>
         </div>
-        <div className='md:w-1/4 mt-12 md:mt-0 items-center flex flex-col justify-center'>
-          <div className='hidden md:flex  justify-center items-center'>
+        <div className="md:w-1/4 mt-12 md:mt-0 items-center flex flex-col justify-center">
+          <div className="hidden md:flex  justify-center items-center">
             <img
-              src='https://www.novacutisclinics.com/assets/images/logo.png'
-              className=' h-14 md:h-16 mr-2'
-              alt='logo'
-              width='auto'
-              height='auto'
+              src="https://www.novacutisclinics.com/assets/images/logo.png"
+              className=" h-14 md:h-16 mr-2"
+              alt="logo"
+              width="auto"
+              height="auto"
             />
-            <h1 className='text-2xl md:text-2xl font-poppins font-semibold leading-tight tracking-tight text-header text-center mb-6 w-4/6'>
+            <h1 className="text-2xl md:text-2xl font-poppins font-semibold leading-tight tracking-tight text-header text-center mb-6 w-4/6">
               Book Your Consultation
             </h1>
           </div>
           <div
-            className='w-full bg-primary py-2 px-6 rounded-sm transition-all duration-500 font-semibold text-lg text-center cursor-pointer text-white'
+            className="w-full bg-primary py-2 px-6 rounded-sm transition-all duration-500 font-semibold text-lg text-center cursor-pointer text-white"
             onClick={handleFindOutClick}
           >
-            Book Consulation
+            Book Consultation
           </div>
         </div>
       </div>
