@@ -128,7 +128,7 @@ const Rating = () => {
                     </span>
                   </span>
                   <p className="font-normal text-sm md:text-lg text-center text-header">
-                    {e.review} Review
+                    {e.review} Reviews
                   </p>
                 </div>
               </div>
