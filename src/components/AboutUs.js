@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import video from '../image/photos/about_us.mp4';
 
 const AboutUs = () => {
+  const videoRef = useRef(null);
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    if (video) {
+      video.addEventListener('loadedmetadata', () => {
+        video.currentTime = 1;
+      });
+    }
+  }, []);
 
   return (
     <motion.div
@@ -20,7 +31,7 @@ const AboutUs = () => {
         Our Space
       </h1>
       <div className="mt-8 md:mt-12 flex items-center justify-center">
-        <video controls className="rounded-sm">
+        <video ref={videoRef} controls className="rounded-sm">
           <source src={video} type="video/mp4" />
         </video>
       </div>

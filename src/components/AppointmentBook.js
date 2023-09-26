@@ -7,6 +7,20 @@ const BookAppointment = ({ forModal }) => {
     triggerOnce: true,
   });
 
+  const options = [
+    'forehead',
+    'frown lines',
+    'cheeks',
+    'lips',
+    'nasolabial folds',
+    'under eyes',
+    'jaws',
+    'neck',
+    'other',
+  ];
+
+  const [openOption, setOpenOption] = useState(false);
+
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
@@ -90,6 +104,11 @@ const BookAppointment = ({ forModal }) => {
     }
   };
 
+  function optionOperation(value) {
+    setOpenOption(!openOption);
+    setService(value);
+  }
+
   return (
     <motion.div
       ref={ref}
@@ -167,11 +186,26 @@ const BookAppointment = ({ forModal }) => {
               <div className="mt-2 md:w-1/2">
                 <input
                   type="text"
-                  className="border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder"
+                  className="border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder cursor-pointer"
                   placeholder="AREA OF UNWANTED HAIR:"
                   value={service}
-                  onChange={(e) => setService(e.target.value)}
+                  readOnly
+                  onClick={() => setOpenOption(!openOption)}
                 />
+                {openOption && (
+                  <div className="absolute bg-white h-[200px] mt-2  md:w-[400px] overflow-auto">
+                    {options.map((e) => (
+                      <input
+                        type="text"
+                        className="px-2 border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 cursor-pointer"
+                        value={e}
+                        readOnly
+                        key={e}
+                        onClick={() => optionOperation(e)}
+                      />
+                    ))}
+                  </div>
+                )}
                 {serviceError && (
                   <div className="text-red-500 mt-1">{serviceError}</div>
                 )}
