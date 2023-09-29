@@ -8,15 +8,15 @@ const BookAppointment = ({ forModal }) => {
   });
 
   const options = [
-    'forehead',
-    'frown lines',
-    'cheeks',
-    'lips',
-    'nasolabial folds',
-    'under eyes',
-    'jaws',
-    'neck',
-    'other',
+    'Forehead',
+    'Frown Lines',
+    'Cheeks',
+    'Lips',
+    'Nasolabial Folds',
+    'Under Eyes',
+    'Jaws',
+    'Neck',
+    'Other',
   ];
 
   const [openOption, setOpenOption] = useState(false);
@@ -187,7 +187,7 @@ const BookAppointment = ({ forModal }) => {
                 <input
                   type="text"
                   className="border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder cursor-pointer"
-                  placeholder="AREA OF UNWANTED HAIR:"
+                  placeholder="AREA"
                   value={service}
                   readOnly
                   onClick={() => setOpenOption(!openOption)}
