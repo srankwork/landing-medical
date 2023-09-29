@@ -4,13 +4,13 @@ import Header from '../components/Headers';
 
 const IndexPage = () => {
   return (
-    <div className="w-screen overflow-hidden">
+    <div className="w-screen overflow-hidden h-screen">
       <Helmet>
         <link
           rel="icon"
           href="https://www.novacutisclinics.com/assets/images/logo.png"
         />
-        <title>PDO Threads</title>
+        <title>Thank You</title>
       </Helmet>
       <main className="w-full h-full">
         <div className=" bg-secondry h-10 w-full text-center flex  items-center text-white justify-around">
@@ -49,15 +49,8 @@ const IndexPage = () => {
           </span>
         </div>
         <Header />
-        <div className="w-screen mt-20 overflow-hidden">
-          <h1 className=" text-6xl md:text-8xl  text-primary text-center font-bold">
-            Thank You
-          </h1>
-          <p className="text-center text-2xl font-semibold mt-8">
-            we will get back to you
-          </p>
-        </div>
-        <div className=" bg-primary h-10 w-full text-center flex flex-col text-white justify-center fixed bottom-0">
+        <iframe className='w-[100%] h-[80%] overflow-hidden' src='https://novacutis.zohobookings.in/portal-embed#/customer/drprachi' frameborder='0' allowfullscreen='' > </iframe>
+        <div className="bg-primary h-10 w-full text-center flex flex-col text-white justify-center fixed bottom-0">
           <span>©2023</span>
         </div>
       </main>
@@ -67,4 +60,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>PDO Threads</title>;
+export const Head = () => <title>Thank You</title>;

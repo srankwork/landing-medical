@@ -6,15 +6,7 @@ import whatsapp from '../image/photos/whatsapp.png';
 const Header = () => {
   return (
     <>
-      <div
-        className="fixed rotate-90 top-1/2 right-1 cursor-pointer origin-right  mr-4 mt-4 z-40"
-        role="button"
-        tabIndex={0}
-      >
-        <p className=" bg-primary rounded px-4 py-1 text-white">
-          Book Appointment
-        </p>
-      </div>
+    
       <div className="fixed bottom-4 right-2 z-40">
         <a
           href="https://wa.me/+917208330809"
