@@ -8,14 +8,14 @@ const BookAppointment = ({ forModal }) => {
   });
 
   const options = [
-    'cheeks',
-    'lips',
-    'chin',
-    'jaw',
-    'nose',
-    'nasolabial folds',
-    'forehead',
-    'others',
+    'Cheeks',
+    'Lips',
+    'Chin',
+    'Jaw',
+    'Nose',
+    'Nasolabial Folds',
+    'Forehead',
+    'Others',
   ];
 
   const [openOption, setOpenOption] = useState(false);
