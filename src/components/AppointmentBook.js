@@ -8,12 +8,12 @@ const BookAppointment = ({ forModal }) => {
   });
 
   const options = [
-    'legs',
-    'armpit',
-    'upper lip',
-    'chin',
-    'bikini line',
-    'others',
+    'Legs',
+    'Armpit',
+    'Upper Lip',
+    'Chin',
+    'Bikini Line',
+    'Others',
   ];
 
   const [openOption, setOpenOption] = useState(false);
