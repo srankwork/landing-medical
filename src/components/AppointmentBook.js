@@ -190,7 +190,7 @@ const BookAppointment = ({ forModal }) => {
                 <input
                   type="text"
                   className="border-b-2 border-border border-opacity-40 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder cursor-pointer"
-                  placeholder="AREA OF UNWANTED HAIR:"
+                  placeholder="AREA"
                   value={service}
                   readOnly
                   onClick={() => setOpenOption(!openOption)}
