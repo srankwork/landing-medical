@@ -2,9 +2,9 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: '/services/pdo-threads',
+  pathPrefix: '/services/thankyou',
   siteMetadata: {
-    title: `pdo-threads`,
+    title: `Thank You`,
     siteUrl: `https://novacutisclinics.com`,
   },
   plugins: [
@@ -17,6 +17,12 @@ module.exports = {
       },
       pluginConfig: {
         head: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: '1195675271822794',
       },
     },
   ],
