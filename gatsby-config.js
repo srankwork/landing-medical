@@ -2,9 +2,9 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: '/services/laser-hair-removal',
+  pathPrefix: '/services/hair-transplant',
   siteMetadata: {
-    title: `Laser Hair Removal`,
+    title: `Hair Transplant`,
     siteUrl: `https://novacutisclinics.com`,
   },
   plugins: [
