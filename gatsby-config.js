@@ -2,9 +2,9 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: '/services/hair-transplant',
+  pathPrefix: '/services/laser-hair-removal',
   siteMetadata: {
-    title: `Hair Transplant`,
+    title: `Laser Hair Removal`,
     siteUrl: `https://novacutisclinics.com`,
   },
   plugins: [
@@ -17,6 +17,12 @@ module.exports = {
       },
       pluginConfig: {
         head: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: '1195675271822794',
       },
     },
   ],
