@@ -49,7 +49,7 @@ const IndexPage = () => {
           </span>
         </div>
         <Header />
-        <div className="w-screen mt-5 overflow-hidden">
+        <div className="w-screen mt-16 md:mt-5 overflow-hidden">
           <h1 className=" text-6xl md:text-8xl  text-primary text-center font-bold">
             Thank You
           </h1>
@@ -58,7 +58,7 @@ const IndexPage = () => {
           </p>
         </div>
         <iframe
-          className="w-[100%] h-[50%] overflow-hidden mt-10"
+          className="w-[100%] h-[50%] overflow-hidden mt-28"
           src="https://novacutis.zohobookings.in/portal-embed#/customer/drprachi"
           frameborder="0"
           allowfullscreen=""
