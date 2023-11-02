@@ -99,7 +99,7 @@ const BookAppointment = ({ forModal }) => {
         name.split(' ').length ? name.split(' ')[0] : name
       }&Last%20Name=${
         name.split(' ').length >= 2 ? name.split(' ')[1] : ''
-      }&Description=${age}&Mobile=${phone}&LEADCF1=${baldness}&Email=${email}&returnURL=https://www.novacutisclinics.com/services/thankyou/`;
+      }&Description=${age}&Mobile=${phone}&LEADCF1=${baldness}&Email=${email}&returnURL=https://www.novacutisclinics.com/services/thankyou/hair-transplant/index.html`;
 
       var requestOptions = {
         method: 'POST',
@@ -112,7 +112,7 @@ const BookAppointment = ({ forModal }) => {
         .then((response) => response.text())
         .then((result) => {
           window.location.assign(
-            'https://www.novacutisclinics.com/services/thankyou'
+            'https://www.novacutisclinics.com/services/thankyou/hair-transplant/index.html'
           );
         })
         .catch((error) => setFormError('Please try again'));
