@@ -83,7 +83,7 @@ const BookAppointment = ({ forModal }) => {
         name.split(' ').length ? name.split(' ')[0] : name
       }&Last%20Name=${
         name.split(' ').length >= 2 ? name.split(' ')[1] : ''
-      }&Mobile=${phone}&Email=${email}&LEADCF1=${service}&returnURL=https://www.novacutisclinics.com/services/thankyou/`;
+      }&Mobile=${phone}&Email=${email}&LEADCF1=${service}&returnURL=https://www.novacutisclinics.com/services/thankyou/dermal/index.html`;
 
       var requestOptions = {
         method: 'POST',
@@ -96,7 +96,7 @@ const BookAppointment = ({ forModal }) => {
         .then((response) => response.text())
         .then((result) => {
           window.location.assign(
-            'https://www.novacutisclinics.com/services/thankyou'
+            'https://www.novacutisclinics.com/services/thankyou/dermal/index.html'
           );
         })
         .catch((error) => setFormError('Please try again'));
