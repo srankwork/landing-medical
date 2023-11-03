@@ -2,9 +2,9 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: '/services/botox',
+  pathPrefix: '/services/anti-aging',
   siteMetadata: {
-    title: `Botox`,
+    title: `anti-aging`,
     siteUrl: `https://novacutisclinics.com`,
   },
   plugins: [

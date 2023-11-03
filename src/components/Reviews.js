@@ -5,12 +5,12 @@ import { motion } from 'framer-motion';
 const review = [
   {
     review:
-      "I came here for my first botox treatment. Staff is very professional. They handle each and every client very well. Actually I was very nervous and wasn't sure about the treatment. Thanks to Doc Prachi and their assistants, they gave me a detailed walkthrough about the procedure and all the precautions they take at every step. Even after the treatment, I received a couple of calls from the clinic to ask how I was doing. Overall it was such a warming experience Thank you Doc Prachi, you are a true blessing ❤",
+      "I came here for my first anti-aging treatment. Staff is very professional. They handle each and every client very well. Actually I was very nervous and wasn't sure about the treatment. Thanks to Doc Prachi and their assistants, they gave me a detailed walkthrough about the procedure and all the precautions they take at every step. Even after the treatment, I received a couple of calls from the clinic to ask how I was doing. Overall it was such a warming experience Thank you Doc Prachi, you are a true blessing ❤",
     name: 'Monu Gayamukhe',
   },
   {
     review:
-      'Dr. Prachi  is very sweet and honest and her staff are very cooperative. I am always comfortable and safe for any treatment from her clinic. Trust me, it really works, since Dr. Prachi is an expert in her field. I have personally taken Lazer, coolsculpting, facial botox and results have dramatically changed my look.',
+      'Dr. Prachi  is very sweet and honest and her staff are very cooperative. I am always comfortable and safe for any treatment from her clinic. Trust me, it really works, since Dr. Prachi is an expert in her field. I have personally taken Lazer, coolsculpting, facial anti-aging and results have dramatically changed my look.',
     name: 'Yogavarsha V',
   },
   {
@@ -25,7 +25,7 @@ const review = [
   },
   {
     review:
-      "I visited the Novacutis clinic for Anti-ageing treatment after consulting the doctor who said cosmetic injectables will be the best for me. I had an amazing experience with the prime muscle relaxer at novacutis clinic thanks to their exceptional doctor. From the moment I stepped into the clinic, the staff was friendly and welcoming. The doctor's expertise and precision during the procedure were impressive, and the results were fantastic! The clinic is clean and modern, creating a comfortable atmosphere. I highly recommend the clinic for Botox treatments, especially with their skilled and talented doctor. You won't be disappointed!",
+      "I visited the Novacutis clinic for Anti-ageing treatment after consulting the doctor who said cosmetic injectables will be the best for me. I had an amazing experience with the prime muscle relaxer at novacutis clinic thanks to their exceptional doctor. From the moment I stepped into the clinic, the staff was friendly and welcoming. The doctor's expertise and precision during the procedure were impressive, and the results were fantastic! The clinic is clean and modern, creating a comfortable atmosphere. I highly recommend the clinic for anti-aging treatments, especially with their skilled and talented doctor. You won't be disappointed!",
     name: 'Jayesh Yadav',
   },
   {

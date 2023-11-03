@@ -31,7 +31,7 @@ const IndexPage = () => {
           rel="icon"
           href="https://www.novacutisclinics.com/assets/images/logo.png"
         />
-        <title>Botox</title>
+        <title>Anti-aging</title>
       </Helmet>
       <main className="w-full h-full">
         <div className=" bg-secondry h-10 w-full text-center flex  items-center text-white justify-around">
@@ -98,4 +98,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Botox</title>;
+export const Head = () => <title>Anti-aging</title>;
