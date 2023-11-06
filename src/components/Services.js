@@ -9,7 +9,6 @@ import bio from '../image/photos/BIO FUE.png';
 import complementary from '../image/photos/Complementary.jpeg';
 import prp from '../image/photos/PRP.jpg';
 import meso from '../image/photos/meso.jpg';
-import derma from '../image/photos/Derma.jpeg';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 const services = [
@@ -32,7 +31,7 @@ const services = [
     id: 'advance_techniques',
     header: 'Advanced Techniques',
     content:
-      'Novacutis Clinic by Dr. Prachi offers a wide range of advanced techniques to battle hair loss like mesotherapy, PRP treatment for hair, 2nd gen FUE and 3rd gen BIO FUE to name a few. Follicular Unit Extraction (FUE) is the industry standard technique used around the world. BIO FUE is a more efficient and advanced technique for hair transplant.',
+      'Novacutis Clinic by Dr. Prachi offers a wide range of advanced techniques to battle hair loss like mesotherapy, Hair Rejuvenating Therapy for hair, 2nd gen FUE and 3rd gen BIO FUE to name a few. Follicular Unit Extraction (FUE) is the industry standard technique used around the world. BIO FUE is a more efficient and advanced technique for hair transplant.',
   },
   {
     img: fue,
@@ -53,14 +52,14 @@ const services = [
     header: 'Complementing Haircare Therapy',
     id: 'complementing_haircare_therapy',
     content:
-      'In addition to our advanced hair transplant techniques, we offer a range of effective services that work in harmony to maximise your hair transplant results. Platelet-Rich Plasma (PRP) therapy, DermaPen treatment, and Hair Mesotherapy are all powerful methods that stimulate hair growth, enhance blood circulation, and promote overall hair health. When combined with our cutting-edge hair transplant procedures, these services create a synergy that ensures you achieve the most natural-looking and long-lasting results possible',
+      'In addition to our advanced hair transplant techniques, we offer a range of effective services that work in harmony to maximise your hair transplant results. Hair Rejuvenating Therapy, DermaPen treatment, and Hair Mesotherapy are all powerful methods that stimulate hair growth, enhance blood circulation, and promote overall hair health. When combined with our cutting-edge hair transplant procedures, these services create a synergy that ensures you achieve the most natural-looking and long-lasting results possible',
   },
   {
     img: prp,
-    header: 'PRP Therapy',
-    id: 'prp_therapy',
+    header: 'Hair Rejuvenating Therapy',
+    id: 'hair_rejuvenating_therapy',
     content:
-      'Platelet-Rich Plasma(PRP) involves harnessing the regenerative potential of your own blood, concentrating growth factors, and injecting them into the scalp. This holistic approach stimulates dormant hair follicles, promoting hair growth and thickness. The procedure is virtually painless and requires no downtime, making it an excellent complement to hair transplant techniques like FUE and BIO FUE.',
+      'Hair Rejuvenating Therapy involves harnessing the regenerative potential of your own blood, concentrating growth factors, and injecting them into the scalp. This holistic approach stimulates dormant hair follicles, promoting hair growth and thickness. The procedure is virtually painless and requires no downtime, making it an excellent complement to hair transplant techniques like FUE and BIO FUE.',
   },
   {
     img: meso,
@@ -68,14 +67,7 @@ const services = [
     id: 'mesotherapy',
     content:
       'This non-invasive technique involves micro-injections of a specialized cocktail of vitamins, minerals, and growth factors directly into the scalp. These essential nutrients rejuvenate hair follicles, stimulate hair growth, and improve overall hair quality. Hair Meso Therapy is a gentle yet powerful solution that enhances blood circulation and nourishes your scalp, leading to healthier and more vibrant hair. With minimal discomfort and no downtime, you can achieve a revitalized head of hair that boosts your confidence.',
-  },
-  {
-    img: derma,
-    header: 'Derma Pen',
-    id: 'derma_pen_therapy',
-    content:
-      'This cutting-edge method involves micro-needling the scalp with precision, stimulating collagen production and enhancing blood circulation. By creating tiny channels, the Derma Pen promotes the absorption of hair growth serums and encourages dormant hair follicles to awaken. With this minimally invasive procedure, you can experience improved hair density, thickness, and overall quality.',
-  },
+  }
 ];
 
 export default function Services({ serviceId }) {

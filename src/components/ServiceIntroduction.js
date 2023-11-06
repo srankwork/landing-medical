@@ -23,9 +23,9 @@ const ServiceIntroduction = ({ changeServiceId }) => {
       header: 'Complementing Haircare Therapy',
       id: 'complementing_haircare_therapy',
       child: [
-        { name: 'PRP Therapy', id: 'prp_therapy' },
+        { name: 'Hair Rejuvenating Therapy', id: 'hair_rejuvenating_therapy' },
         { name: 'Mesotherapy', id: 'mesotherapy' },
-        { name: 'Derma Pen Therapy', id: 'derma_pen_therapy' },
+        { name: 'Natural Hair Growth Treatment', id: '#' },
       ],
     },
   ];

@@ -19,7 +19,7 @@ const services = [
     disc: 'Experience the future of hair restoration with BIO FUE, a breakthrough blend of science and artistry.',
   },
   {
-    header: 'PRP Therapy',
+    header: 'Hair Rejuvenating Therapy',
     img: prp,
     disc: 'The all-natural secret to healthier, thicker and luscious locks.',
   },
@@ -29,7 +29,7 @@ const services = [
     disc: 'Our advanced treatment delivers essential nutrients directly to your scalp, promoting natural regrowth.',
   },
   {
-    header: 'Derma Pen Therapy',
+    header: 'Natural Hair Growth Treatment',
     img: derma,
     disc: 'This cutting-edge treatment stimulates natural hair growth and improves thickness.',
   },

@@ -59,7 +59,7 @@ const FaqContainer = () => {
     {
       question: 'Is there any non-surgical alternative to hair transplant?',
       answer:
-        'Yes, non-surgical options include Mesotherapy, Derma Pen Therapy and platelet-rich plasma (PRP) treatments.',
+        'Yes, non-surgical options include Mesotherapy,  Natural Hair Growth Treatment and Hair Rejuvenating Therapy treatments.',
     },
     // Add more FAQ items here
   ];
