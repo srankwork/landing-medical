@@ -18,9 +18,8 @@ const Header = () => {
           setShowPopup(false);
         }}
       />
-      <div
+      <button
         className="fixed rotate-90 top-1/2 right-1 cursor-pointer origin-right  mr-4 mt-4 z-40"
-        role="button"
         tabIndex={0}
         onKeyDown={handleScrollClick}
         onClick={handleScrollClick}
@@ -28,7 +27,7 @@ const Header = () => {
         <p className=" bg-primary rounded px-4 py-1 text-white">
           Book Consultation
         </p>
-      </div>
+      </button>
       <div className="fixed bottom-4 right-2 z-40">
         <a
           href="https://wa.me/+917208330809"

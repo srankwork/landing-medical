@@ -226,12 +226,12 @@ const BookAppointment = ({ forModal }) => {
               Book Your Consultation
             </h1>
           </div>
-          <div
-            className="w-full bg-primary py-2 px-6 rounded-sm transition-all duration-500 font-semibold text-lg text-center cursor-pointer text-white"
+          <button
             onClick={handleFindOutClick}
+            className="w-full bg-primary py-2 px-6 rounded-sm transition-all duration-500 font-semibold text-lg text-center cursor-pointer text-white"
           >
             Book Consultation
-          </div>
+          </button>
         </div>
       </div>
     </motion.div>
