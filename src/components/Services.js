@@ -13,7 +13,7 @@ const services = [
     img: personalisedImg,
     header: 'Personalised Care',
     content:
-      "We recognize that each individual is unique, and their cosmetic goals are as distinct as their features. That's why we prioritise personalised care. Your PDO Thread Lift treatment will be carefully customised to your specific needs and goals. We work closely with you to ensure the results are not just noticeable but also natural-looking, enhancing your unique beauty.",
+      "We recognize that each individual is unique, and their cosmetic goals are as distinct as their features. That's why we prioritise personalised care. Your Thread Lift treatment will be carefully customised to your specific needs and goals. We work closely with you to ensure the results are not just noticeable but also natural-looking, enhancing your unique beauty.",
     id: 'personalised_care',
   },
   {
@@ -27,7 +27,7 @@ const services = [
     img: progressiveImg,
     header: 'Immediate and Progressive Results',
     content:
-      "With a PDO Thread Lift at Novacutis Clinic, you'll experience immediate improvements in your facial contours and skin tightness. As the threads naturally dissolve over time, they stimulate collagen production, leading to further enhancements. This means your results will continue to improve, leaving you with a refreshed and rejuvenated appearance that lasts.",
+      "With a Thread Lift at Novacutis Clinic, you'll experience immediate improvements in your facial contours and skin tightness. As the threads naturally dissolve over time, they stimulate collagen production, leading to further enhancements. This means your results will continue to improve, leaving you with a refreshed and rejuvenated appearance that lasts.",
     id: 'immediate_and_progressive_results',
   },
   {

@@ -26,39 +26,39 @@ const FaqItem = ({ question, answer }) => {
 const FaqContainer = () => {
   const faqData = [
     {
-      question: 'Is PDO Thread Lift a painful procedure?',
+      question: 'Is Thread Lift a painful procedure?',
       answer:
         'Most patients report minimal discomfort during the procedure. Local anaesthesia is used to numb the treatment area for a more comfortable experience.',
     },
     {
-      question: 'How long does a PDO Thread Lift procedure take?',
+      question: 'How long does a Thread Lift procedure take?',
       answer:
         'The treatment typically takes around 30 to 60 minutes, making it a quick and convenient option for busy individuals.',
     },
     {
-      question: 'What is the recovery time after a PDO Thread Lift?',
+      question: 'What is the recovery time after a Thread Lift?',
       answer:
         'Recovery is usually minimal, with some mild swelling or bruising that typically subsides within a few days. Most patients can resume their daily activities almost immediately.',
     },
     {
-      question: 'How long do the results of a PDO Thread Lift last?',
+      question: 'How long do the results of a Thread Lift last?',
       answer:
         'The immediate results are visible right after the treatment. Over the following months, as collagen production continues, the results improve and can last up to 12-24 months or longer, depending on individual factors.',
     },
     {
-      question: 'Who is an ideal candidate for PDO Thread Lift?',
+      question: 'Who is an ideal candidate for Thread Lift?',
       answer:
         'Ideal candidates are individuals with mild to moderate skin laxity who want to achieve a more lifted and youthful appearance without undergoing surgery.',
     },
     {
-      question: 'Are PDO threads safe?',
+      question: 'Are threads safe?',
       answer:
-        'Yes, PDO threads have been used in the medical field for many years and are considered safe. They are biocompatible and fully absorbable by the body.',
+        'Yes, threads have been used in the medical field for many years and are considered safe. They are biocompatible and fully absorbable by the body.',
     },
     {
-      question: 'Can PDO Thread Lift be combined with other treatments?',
+      question: 'Can Thread Lift be combined with other treatments?',
       answer:
-        'Yes, PDO Thread Lift can be combined with other non-surgical treatments, such as dermal fillers or Botox, for a comprehensive facial rejuvenation approach.',
+        'Yes, Thread Lift can be combined with other non-surgical treatments, such as dermal fillers or Botox, for a comprehensive facial rejuvenation approach.',
     },
   ];
   return (

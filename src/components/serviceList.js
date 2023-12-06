@@ -43,7 +43,7 @@ export default function ServiceList() {
       className="mt-16 md:mt-24 px-4 md:w-3/4 justify-center m-auto"
     >
       <p className="font-poppins text-lg md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center">
-        PDO Thread Lift
+        Thread Lift
       </p>
       <h1 className="mt-4 font-poppins text-center text-2xl md:text-5xl font-semibold leading-none md:leading-snug  text-header">
         Lift your aesthetic and your confidence!

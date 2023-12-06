@@ -2,9 +2,9 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: '/services/pdo-threads',
+  pathPrefix: '/services/threads',
   siteMetadata: {
-    title: `pdo-threads`,
+    title: `threads`,
     siteUrl: `https://novacutisclinics.com`,
   },
   plugins: [
