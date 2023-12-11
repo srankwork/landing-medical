@@ -1,18 +1,12 @@
 import React, { useState } from 'react';
-import AppoitmentModal from './AppointmentModal';
-import hero from '../image/photos/hero.jpg';
+import hero from '../image/photos/bg-1.png';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
 const HeroContainer = () => {
-  const [showPopup, setShowPopup] = useState(false);
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
-
-  const handleScrollClick = () => {
-    setShowPopup(true);
-  };
 
   return (
     <>
@@ -21,33 +15,25 @@ const HeroContainer = () => {
         initial={{ x: 0, opacity: 0 }}
         animate={{ x: 0, opacity: inView ? 1 : 0 }}
         transition={{ duration: 0.3 }}
-        className="bg-background lg:flex lg:justify-around lg:items-center hero-bg-image md:bg-none relative pb-12 md:pb-0 "
+        className="hero-bg-image h-[80vh] flex flex-col justify-center"
       >
-        <div className="block md:hidden h-full w-full opacity-50 transition duration-300 ease-in-out bg-overlay-bg absolute"></div>
-        <div className="lg:w-1/2 p-8 order-2 lg:order-1 relative flex flex-col justify-between h-fit ">
-          <p className="mt-8 md:mt-0 font-poppins text-base  md:text-base font-semibold leading-6 tracking-wider uppercase text-white md:text-primary text-center md:text-start mb-2">
-            Tired of looking in the mirror and feeling less than your best?
+        <div className="flex flex-col justify-between h-fit items-center p-14">
+          <p className="text-secondary capitalize text-center font-poppins text-5xl font-semibold leading-tight">
+            Revolutionize Education at your School with Rangeet{' '}
           </p>
-          <h1 className="mt-20 md:mt-6 capitalize text-center md:text-start font-poppins text-4xl md:text-5xl font-semibold  leading-tight md:leading-snug  text-white md:text-header">
-            It's time to take the first step towards a more youthful, confident
-            you.
+          <h1 className="mt-20 capitalize text-center md:text-start font-poppins text-2xl font-semibold  leading-tight md:leading-snug  text-black">
+            Improve Student Engagement with Play Based Curriculum
           </h1>
-          <p className="mt-20 md:mt-12 text-center md:text-start text-white md:text-lightblue font-poppins text-base md:text-xl  leading-snug font-medium">
-            Embark on your uplifting journey with Novacutis Clinic
+          <p className="mt-16 capitalize text-center md:text-start font-poppins text-2xl font-semibold  leading-tight md:leading-snug  text-blackm">
+            Shape the future with RANGEET
           </p>
-          <button
-            onClick={handleScrollClick}
-            className="w-max m-auto md:m-0 mt-6 md:mt-4 flex items-center md:border-2 md:border-primary text-white md:text-primary bg-primary md:bg-transparent text-base md:text-xl font-semibold py-2 px-4 md:px-8 rounded-sm"
-          >
-            Book Consultation
-          </button>
-        </div>
-
-        <div className="hidden md:flex  order-1 lg:order-2 h-max w-1/2">
-          <img src={hero} alt="hero image" className="h-full w-full" />
+          <div className="mt-8 ml-4 bg-secondry py-2 px-4 rounded-sm transition-all duration-500 font-semibold">
+            <a href="tel:+919152128731" className="text-white ">
+              Learn More
+            </a>
+          </div>
         </div>
       </motion.div>
-      <AppoitmentModal show={showPopup} onClose={() => setShowPopup(false)} />
     </>
   );
 };

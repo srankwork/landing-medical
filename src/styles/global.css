@@ -48,7 +48,13 @@ a:active {
 }
 
 .hero-bg-image {
-  background-image: url('../image/photos/hero.jpg');
+  background-image: url('../image/photos/bg-1.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-bg-2 {
+  background-image: url('../image/photos/bg-2.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -63,7 +69,7 @@ a:active {
 }
 
 .animate-rotate {
-  animation: rotate 150s linear infinite;
+  animation: rotate 350s linear infinite;
 }
 
 /* Define star styles */

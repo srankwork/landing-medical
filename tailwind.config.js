@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        primary: '#08589F',
-        secondry: '#9ECA3D',
+        primary: '#ac81b7',
+        secondry: '#95b3b3',
         background: '#E5EDF4',
         'overlay-bg': '#060402',
       },
@@ -23,8 +23,8 @@ module.exports = {
         118: '1.18',
       },
       textColor: {
-        primary: '#08589F',
-        secondry: '#9ECA3D',
+        primary: '#ac81b7',
+        secondry: '#95b3b3',
         'info-color': '#B1C8DC',
         lightblue: '#4D83B2',
         header: '#4F4F4F',

@@ -1,11 +1,10 @@
 import React from 'react';
-import ImageSlider from './ImageSlider';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import after1 from '../image/photos/b_a1.2.png';
-import before1 from '../image/photos/b_a1.1.png';
-import after2 from '../image/photos/b_a2.2.jpg';
-import before2 from '../image/photos/b_a2.1.jpg';
+import impact1 from '../image/photos/impact1.jpg';
+import impact2 from '../image/photos/impact2.jpg';
+import impact3 from '../image/photos/impact3.jpg';
+import impact4 from '../image/photos/impact4.jpg';
 
 const ResultContainer = () => {
   const [ref, inView] = useInView({
@@ -13,39 +12,27 @@ const ResultContainer = () => {
   });
 
   return (
-    <div ref={ref} className="mt-10 md:mt-20">
+    <div ref={ref} className="mt-10 md:mt-20 overflow-hidden hero-bg-2 pt-24 pb-24">
       <motion.p
         initial={{ x: '-25%', opacity: 0 }}
         animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
         transition={{ duration: 0.5 }}
-        className="font-poppins text-lg md:text-2xl font-semibold leading-6 tracking-wider uppercase text-primary text-center"
+        className="font-poppins text-4xl  font-semibold leading-6 tracking-wider uppercase text-black text-center"
       >
-        Remarkable Results
+        Our Impact
       </motion.p>
-      <motion.h1
-        initial={{ x: '-25%', opacity: 0 }}
-        animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
-        transition={{ duration: 0.5 }}
-        className=" capitalize mt-4 font-poppins text-3xl md:text-6xl font-semibold leading-tight tracking-tighter text-header text-center"
-      >
-        Transforming Dreams into Reality
-      </motion.h1>
       <div className="mt-12 md:flex px-4 justify-around w-screen overflow-hidden">
         <motion.div
           initial={{ x: '-25%', opacity: 0 }}
           animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
           transition={{ duration: 0.5 }}
         >
-          <ImageSlider oldImage={before1} newImage={after1} />
-        </motion.div>
-        <motion.div
-          initial={{ x: '25%', opacity: 0 }}
-          animate={{ x: inView ? 0 : '25%', opacity: inView ? 1 : 0 }}
-          transition={{ duration: 0.5 }}
-          className="mt-6 md:mt-0"
-        >
-          <ImageSlider oldImage={before2} newImage={after2} />
-        </motion.div>
+            <img src={impact1} className="h-[100%] w-[300px]" alt="logo" />
+         </motion.div>
+            <img src={impact2} className="h-[100%] w-[300px]" alt="logo" />
+            <img src={impact3} className="h-[100%] w-[300px]" alt="logo" />
+            <img src={impact4} className="h-[100%] w-[300px]" alt="logo" />
+          
       </div>
     </div>
   );

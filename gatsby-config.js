@@ -2,10 +2,10 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: '/services/threads',
+  pathPrefix: '/landing/',
   siteMetadata: {
-    title: `threads`,
-    siteUrl: `https://novacutisclinics.com`,
+    title: `Rangeet`,
+    siteUrl: `https://rangeet.com/`,
   },
   plugins: [
     'gatsby-plugin-postcss',

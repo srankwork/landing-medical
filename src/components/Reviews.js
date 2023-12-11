@@ -33,7 +33,7 @@ const Testimonial = ({ review, userName, reviewCount }) => {
   return (
     <div className="md:flex items-center justify-center">
       <div className="w-full md:w-2/3 px-4 mt-4 md:mt-0 flex flex-col justify-between">
-        <p className="text-white font-poppins text-sm md:text-lg font-medium leading-snug tracking-tight h-[200px]">
+        <p className="text-white font-poppins text-sm md:text-lg font-medium leading-snug tracking-tight h-[150px]">
           {review}
         </p>
         <p className="capitalize mt-4 md:mt-6 text-black-600 font-semibold md:font-bold text-center text-header">
@@ -90,7 +90,7 @@ const ReviewContainer = () => {
       className="mt-12 md:mt-24 pt-14 md:pt-14 pb-14 bg-secondry select-none"
     >
       <h1 className=" text-center font-poppins text-3xl md:text-5xl font-semibold leading-tight tracking-tighter text-header">
-        Client Testimonials
+        Testimonials
       </h1>
 
       <div className="mt-8 md:mt-10">
