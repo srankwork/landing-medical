@@ -36,7 +36,7 @@ export default function VideoSteps() {
     <>
       <div
         ref={ref}
-        className="mt-36 px-4 md:px-0 md:w-4/5 justify-center m-auto select-none"
+        className="mt-32 px-4 md:px-0 md:w-4/5 justify-center m-auto select-none"
         id="serviceContainer"
       >
         {/* header */}
@@ -62,7 +62,7 @@ export default function VideoSteps() {
 
             <div className="space-x-4 hidden md:flex">
               <div
-                className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-primary flex items-center justify-center cursor-pointer"
+                className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-background flex items-center justify-center cursor-pointer"
                 onClick={() => {
                   counter == 0
                     ? setCounter(services.length - 1)
@@ -85,7 +85,7 @@ export default function VideoSteps() {
                 </svg>
               </div>
               <div
-                className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-primary flex items-center justify-center cursor-pointer"
+                className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-background flex items-center justify-center cursor-pointer"
                 onClick={() => {
                   counter == services.length - 1
                     ? setCounter(0)

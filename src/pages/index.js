@@ -59,10 +59,9 @@ const IndexPage = () => {
         <Header />
         <HeroContainer />
         <Rating />
-        <ServiceList />
-        <VideoSteps />
-        <ResultContainer />
         <Services />
+        <ResultContainer />
+        <VideoSteps />
         {/* <ServiceIntroduction changeServiceId={changeServiceId} /> */}
         {/* <DoctorSction /> */}
         <ReviewContainer />
