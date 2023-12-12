@@ -28,7 +28,7 @@ const Rating = () => {
         transition={{ duration: 0.5 }}
         className="flex flex-col mt-10"
       >
-        <h1 className="text-secondary uppercase text-center font-poppins text-4xl font-semibold leading-normal">
+        <h1 className="text-secondary uppercase text-center font-poppins text-2xl md:text-4xl font-semibold leading-normal">
           Trusted by
         </h1>
 
@@ -49,14 +49,14 @@ const Rating = () => {
                   img: oupLogo,
                 },
               ],
-              40
+              30
             ).map((e, index) => (
               <div
                 key={`rating-${index}`}
                 className="flex items-center justify-center md:justify-start mr-24"
                 style={{ width: '200px' }}
               >
-                <img src={e.img} className="h-[80px] w-[200px]" alt="logo" />
+                <img src={e.img} className="h-[40px] md:h-[80px] w-[200px]" alt="logo" />
               </div>
             ))}
           </div>

@@ -11,12 +11,12 @@ const Header = () => {
           <img
             src={logo}
             alt="Logo"
-            className="h-16 md:h-20"
+            className="h-10"
             width="auto"
             height="auto"
           />
 
-          <div className="bg-secondry py-2 px-4 md:px-6 rounded-sm transition-all duration-500 font-semibold md:text-lg">
+          <div className=" bg-background py-2 px-4 md:px-6 rounded-2xl transition-all duration-500 font-semibold text-sm md:text-lg">
             <a href="tel:+919152128731" className="text-white ">
               Call Us
             </a>

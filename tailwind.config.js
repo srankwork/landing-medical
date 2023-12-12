@@ -9,7 +9,7 @@ module.exports = {
       backgroundColor: {
         primary: '#ac81b7',
         secondry: '#95b3b3',
-        background: '#E5EDF4',
+        background: '#28336e',
         'overlay-bg': '#060402',
       },
       borderColor: {
