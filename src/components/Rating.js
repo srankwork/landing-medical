@@ -28,7 +28,7 @@ const Rating = () => {
         transition={{ duration: 0.5 }}
         className="flex flex-col mt-10"
       >
-        <h1 className="text-secondary uppercase text-center font-poppins text-2xl md:text-4xl font-semibold leading-normal">
+        <h1 className="text-center  text-3xl md:text-5xl font-semibold leading-tight tracking-tighter text-primary">
           Trusted by
         </h1>
 

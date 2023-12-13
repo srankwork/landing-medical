@@ -4,47 +4,71 @@ import { motion } from 'framer-motion';
 
 const review = [
   {
-    name: 'bhaskar anil',
+    name: 'Brookings Institution',
+    professional: 'Digital Tools for Real-Time Data Collection in Education',
     review:
-      'Such professionalism! So comfortable through the whole experience and the team was lovely! My experience with the doctor was great and she did a fantastic job! So pleased with the end result! My aftercare was second to none and well worth the money spent! Thank you all!!',
+      '“With the global education crisis and compounding challenges of COVID-19, it is now more critical than ever to make data-informed decisions toward achieving a range of equitable learning outcomes. Real-time data can help instructors, administrators, and even parents ensure that classrooms and learning spaces are managed adaptively to best serve learners. To accomplish this, it is necessary for data to be collected and presented: at the right time, with sufficient frequency, and to the right people in a way that is understandable and actionable.”',
   },
   {
-    name: 'Yogavarsha V',
+    name: 'Dhruv Jayal',
+    professional: 'Manager IT, Aasraa Trust, India',
     review:
-      'Dr. Prachi is very sweet and honest and her staff are very cooperative. I am always comfortable and safe for any treatment from her clinic. Trust me, it really works, since Dr. Prachi is an expert in her field. I have personally taken Lazer, coolsculpting, facial botox and results have dramatically changed my look.',
+      '“Running a program across various centres located in different geographical areas can prove to be quite a challenge. Rangeet organises all of their content and modules in one very easy to use application. The detailed summary of assessments as well as student feedback makes it very easy for us to monitor their progress and study the impact of the project on our children.”',
   },
   {
-    name: 'Nisha Gupta',
+    name: 'Dilruba Khatun',
+    professional:
+      'Head Teacher, Dhadhash Govt Primary School, Rajshahi, Bangladesh',
     review:
-      "I love the way every patient is treated and greeted. Every time I visit, it's a great experience. Special care is taken during each and every treatment as per your skin type. The doctor and staff are very much cooperative when it comes to understanding your needs of treatment and while the treatment is going on. Thanks for such a lovely experience.",
+      '“Rangeet was an excellent experience for me, helpful to bring positive change to teachers, students and society. I have been able to teach students not to discriminate owing to race, religion and colour. Rangeet empowers children to influence their families and in this way, they will play a positive role in changing all society.”',
   },
   {
-    name: 'Monica Damania',
+    name: 'Elias Blinkoff',
+    professional:
+      'Graduate Student, Department of Psychology, Temple University, USA',
     review:
-      'Dr. Prachi is a very talented and smart skin specialist and she knows her job well. I love visiting her for treatments and the best part is her nature and staff is also very good and attentive.',
+      '“Rangeet is a remarkable educational program. Its evidence-inspired approach helps children become kinder to themselves, society, and the world. Rangeet is also notable for its use of educational technology. By consulting the Rangeet app, teachers receive an array of instructional resources to promote student learning via hands-on activities. Lastly, Rangeet shows an impressive level of adaptability through its implementation across languages and cultures.”',
   },
   {
-    name: 'Jayesh Yadav',
+    name: 'Seema Venugopal',
+    professional: 'Principal, Global Public School, Kochi, India',
     review:
-      "I visited the Novacutis clinic for Anti-ageing treatment after consulting the doctor who said cosmetic injectables will be the best for me. I had an amazing experience with the prime muscle relaxer at novacutis clinic thanks to their exceptional doctor. From the moment I stepped into the clinic, the staff was friendly and welcoming. The doctor's expertise and precision during the procedure were impressive and the results were fantastic! The clinic is clean and modern, creating a comfortable atmosphere. I highly recommend the clinic for Botox treatments, especially with their skilled and talented doctor. You won't be disappointed!",
+      '“Rangeet provides different tools that help to effectively communicate with the students and understand things from their perspective. Through some music, fun-filled activities, roleplays, etc. it is easy to reach out to every kid in the classroom. It helps to inculcate values like how to be a good citizen and also creates awareness about rights and values. Positive values such as empathy, equality, diversity, inclusiveness, etc. are nurtured in the kids which will help them to overcome and break down the barriers of gender stereotyping, discrimination, etc. The detailed and well-structured lesson plans are easy to implement. Hats off to the Rangeet Team. You are making a difference!”',
+  },
+  {
+    name: 'Kreeanne Rabadi',
+    professional: 'Regional Director West, CRY – Child Rights and You, India',
+    review:
+      '“Rangeet provides teachers with a truly joyful and engaging way of working with children. With lessons focused on mindfulness, empathy, anti-bullying, gender equity and building an appreciation for nature – it enables children to face the world with confidence and to make better choices, especially in these challenging times. Our teachers and children have thoroughly enjoyed the teaching learning process through this easy and interactive app, which importantly includes impact measurement.”',
+  },
+  {
+    name: 'Laxmi Munda',
+    professional: 'Teacher, Government Middle School Bariatu, Ranchi, India',
+    review:
+      '“I have a lot of experience as a teacher. When Rangeet was introduced to me, I found a lot of solutions to my problems from it. I would like to thank Rangeet and apply the solutions it offers in my family, my class and society.”',
+  },
+  {
+    name: 'Neelu Khanna',
+    professional: 'Trustee Aasraa Trust, Dehradun, India',
+    review:
+      '“At Aasraa Trust we implemented Rangeet in 6 government schools that we partner at with the Government of Uttarakhand, impacting 315 children. This is an exemplary learning system imparting life skills and values, with a logically designed curriculum, teaching plans and assessments making it a veritable storehouse for educationists. And all this with a user-friendly app! The coaching and mentoring support given by the team at Rangeet is in depth and available 24 x 7.”',
   },
 ];
-const Testimonial = ({ review, userName, reviewCount }) => {
+const Testimonial = ({ review, userName, professional }) => {
   return (
     <div className="md:flex items-center justify-center">
-      <div className="w-full md:w-2/3 px-4 mt-4 md:mt-0 flex flex-col justify-between">
-        <p className="text-white font-poppins text-sm md:text-lg font-medium leading-snug tracking-tight h-[150px]">
-          {review}
-        </p>
-        <p className="capitalize mt-4 md:mt-6 text-black-600 font-semibold md:font-bold text-center text-header">
-          {userName}
-        </p>
-        <div className="flex items-center justify-center mt-2">
-          <span className=" text-white  md:text-2xl mr-2 md:mr-3">★★★★★</span>{' '}
-          <span className="font-semibold text-sm md:text-2xl text-header tracking-wide">
-            {/* ({reviewCount}) */}
+      <div className="w-[80vw] border-[1px] border-solid border-black rounded-xl p-[40px]">
+        <div>
+          <p className="capitalize text-lg font-semibold text-[#212529]">
+            {userName}
+          </p>
+          <span className="capitalize text-base font-medium text-[#212529]">
+            {professional}
           </span>
         </div>
+        <p className="text-[#212529] mt-12  font-normal text-lg leading-snug tracking-tight h-[150px]">
+          {review}
+        </p>
       </div>
     </div>
   );
@@ -87,20 +111,20 @@ const ReviewContainer = () => {
       initial={{ x: 100, opacity: 0 }}
       animate={{ x: 0, opacity: inView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
-      className="mt-12 md:mt-24 pt-14 md:pt-14 pb-14 bg-secondry select-none"
+      className="mt-12 md:mt-24 pt-14 md:pt-14 pb-14  select-none overflow-hidden"
     >
-      <h1 className=" text-center font-poppins text-3xl md:text-5xl font-semibold leading-tight tracking-tighter text-header">
+      <h1 className="text-center  text-3xl md:text-5xl font-semibold leading-tight tracking-tighter text-primary">
         Testimonials
       </h1>
 
-      <div className="mt-8 md:mt-10">
+      <div className="mt-8 md:mt-16 testimonial-container">
         <Testimonial
           review={review[sliderIndex]['review']}
           userName={review[sliderIndex]['name']}
-          reviewCount={review[sliderIndex]['reviewCount']}
+          professional={review[sliderIndex]['professional']}
         />
       </div>
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center mt-16">
         {review.map((value, e) => (
           <span
             key={`slider-${e}`}
@@ -109,10 +133,23 @@ const ReviewContainer = () => {
             tabIndex={0}
             onKeyDown={() => handleClearInterval(e)}
             className={`h-1 ${
-              e === sliderIndex ? 'w-8 bg-white' : 'w-4 bg-primary'
-            } m-1 md:m-2 rounded-sm cursor-pointer hover:w-8 hover:bg-background transition-width  duration-300 ease-in-out text-secondry`}
+              e === sliderIndex ? 'w-8 bg-background' : 'w-4 bg-primary'
+            } m-1 md:m-2 rounded-sm cursor-pointer hover:w-8 hover:bg-background transition-width  duration-300 ease-in-out text-[#08589F]`}
           ></span>
         ))}
+      </div>
+      <div className=" md:mt-12 flex items-center justify-center">
+        <div className="h-[300px] w-[500px] flex justify-center items-center">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/cKQhsQhH6Qs"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </motion.div>
   );

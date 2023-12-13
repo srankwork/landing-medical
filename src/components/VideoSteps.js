@@ -44,7 +44,7 @@ export default function VideoSteps() {
           initial={{ x: '-5%', opacity: 0 }}
           animate={{ x: inView ? 0 : '-5%', opacity: inView ? 1 : 0 }}
           transition={{ duration: 0.3 }}
-          className="font-poppins text-4xl font-semibold leading-6 tracking-wider uppercase text-black mb-2 text-center"
+          className="text-center  text-3xl md:text-5xl font-semibold  tracking-tighter text-primary"
         >
           Hassle-free Onbroarding Process
         </motion.p>
@@ -55,7 +55,7 @@ export default function VideoSteps() {
               animate={{ x: inView ? 0 : '-5%', opacity: inView ? 1 : 0 }}
               transition={{ duration: 0.3 }}
             >
-              <h1 className="mt-8 font-poppins text-xl md:text-4xl font-semibold leading-none md:leading-snug  text-header text-center">
+              <h1 className="mt-8  text-xl md:text-4xl font-semibold leading-none md:leading-snug  text-primary text-center">
                 {services[counter]['header']}
               </h1>
             </motion.div>
@@ -116,17 +116,9 @@ export default function VideoSteps() {
             transition={{ duration: 0.5 }}
             className="mt-8 md:mt-12 flex items-center justify-center"
           >
-            {/* <img
-              className="md:h-96"
-              src={services[counter]['img']}
-              alt="our services"
-              width="auto"
-              height="auto"
-            /> */}
             <iframe
               width="560"
               height="315"
-            //   src="https://www.youtube.com/embed/rQurlB0sXL0?controls=0"
               src={services[counter]['viId']}
               title="YouTube video player"
               frameborder="0"

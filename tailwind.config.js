@@ -23,7 +23,7 @@ module.exports = {
         118: '1.18',
       },
       textColor: {
-        primary: '#ac81b7',
+        primary: '#28336e',
         secondry: '#95b3b3',
         'info-color': '#B1C8DC',
         lightblue: '#4D83B2',

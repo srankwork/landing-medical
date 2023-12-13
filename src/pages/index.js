@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from '../components/Headers';
 import HeroContainer from '../components/HeroContainer';
-// import BookAppointment from '../components/AppointmentBook';
+import BookAppointment from '../components/AppointmentBook';
 import { Helmet } from 'react-helmet';
 import ResultContainer from '../components/Result';
 import VideoSteps from '../components/VideoSteps';
@@ -9,7 +9,6 @@ import ReviewContainer from '../components/Reviews';
 import AboutUs from '../components/AboutUs';
 import FaqContainer from '../components/Faq';
 import Services from '../components/Services';
-import ServiceList from '../components/serviceList';
 import Rating from '../components/Rating';
 
 const IndexPage = () => {
@@ -62,10 +61,8 @@ const IndexPage = () => {
         <Services />
         <ResultContainer />
         <VideoSteps />
-        {/* <ServiceIntroduction changeServiceId={changeServiceId} /> */}
-        {/* <DoctorSction /> */}
         <ReviewContainer />
-        {/* <BookAppointment forModal={false} /> */}
+        <BookAppointment />
         <AboutUs />
         <FaqContainer />
         <hr className="mt-16" />

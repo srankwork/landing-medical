@@ -9,14 +9,7 @@ const AboutUs = () => {
     triggerOnce: true,
   });
 
-  useEffect(() => {
-    // const video = videoRef.current;
-    // if (video) {
-    //   video.addEventListener('loadedmetadata', () => {
-    //     video.currentTime = 1;
-    //   });
-    // }
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <motion.div
@@ -24,18 +17,22 @@ const AboutUs = () => {
       initial={{ x: 0, opacity: 0 }}
       animate={{ x: 0, opacity: inView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
-      className=" bg-background pt-8 md:pt-16 pb-16"
+      className=" hero-bg-2 pt-8 md:pt-16 pb-16"
     >
-      <h1 className="mt-3 font-poppins text-4xl font-semibold leading-tight tracking-tighter text-black text-center">
+      <h1 className="text-center  text-3xl md:text-5xl font-semibold leading-tight tracking-tighter text-primary">
         ABOUT US
       </h1>
       <div className="mt-8 md:mt-12 flex items-center justify-center">
-        {/* <video ref={videoRef} controls className="rounded-sm">
-          <source src={video} type="video/mp4" />
-        </video> */}
         <div className=" bg-secondry h-[300px] w-[500px]  items-center flex justify-center">
-          {' '}
-          Ad Video
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/cKQhsQhH6Qs"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
       <div className="flex justify-center items-center">

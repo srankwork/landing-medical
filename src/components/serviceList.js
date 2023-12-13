@@ -42,7 +42,7 @@ export default function ServiceList() {
       transition={{ duration: 0.5 }}
       className="m-32"
     >
-      <h1 className="mt-4 font-poppins text-center text-2xl md:text-5xl font-semibold leading-none">
+      <h1 className="mt-4  text-center text-2xl md:text-5xl font-semibold leading-none">
         Lift your aesthetic and your confidence!
       </h1>
 
@@ -52,7 +52,7 @@ export default function ServiceList() {
             key={`service-${e['header']}`}
             className="flex flex-col justify-center items-center md:w-4/3 hover-card mt-8 md:mt-0 m-4 text-center"
           >
-            <p className="mt-6 font-poppins text-center text-sm md:text-base font-semibold leading-6 tracking-wider  mb-2">
+            <p className="mt-6  text-center text-sm md:text-base font-semibold leading-6 tracking-wider  mb-2">
               {e['header']}
             </p>
             <p>{e['disc']}</p>
@@ -65,7 +65,7 @@ export default function ServiceList() {
             key={`service-${e['header']}`}
             className="flex flex-col justify-center items-center md:w-4/3 hover-card mt-8 md:mt-0 m-4 text-center"
           >
-            <p className="mt-6 font-poppins text-center text-sm md:text-base font-semibold leading-6 tracking-wider  mb-2">
+            <p className="mt-6  text-center text-sm md:text-base font-semibold leading-6 tracking-wider  mb-2">
               {e['header']}
             </p>
             <p>{e['disc']}</p>

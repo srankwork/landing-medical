@@ -26,44 +26,48 @@ const FaqItem = ({ question, answer }) => {
 const FaqContainer = () => {
   const faqData = [
     {
-      question: 'Is Thread Lift a painful procedure?',
+      question: 'How do I purchase a Rangeet subscription?',
       answer:
-        'Most patients report minimal discomfort during the procedure. Local anaesthesia is used to numb the treatment area for a more comfortable experience.',
+        'A Rangeet subscription can be purchased from inside the Rangeet app after creating an account.',
     },
     {
-      question: 'How long does a Thread Lift procedure take?',
+      question: 'Can a parent use Rangeet?',
       answer:
-        'The treatment typically takes around 30 to 60 minutes, making it a quick and convenient option for busy individuals.',
+        'Rangeet can be used by teachers, parents, and community members!',
     },
     {
-      question: 'What is the recovery time after a Thread Lift?',
+      question: 'Do I need a subscription for students as well?',
       answer:
-        'Recovery is usually minimal, with some mild swelling or bruising that typically subsides within a few days. Most patients can resume their daily activities almost immediately.',
+        'No, only a facilitator needs a subscription to teach Rangeet, which costs USD 100 per year.',
     },
     {
-      question: 'How long do the results of a Thread Lift last?',
+      question: 'Do I need a subscription for each teacher?',
       answer:
-        'The immediate results are visible right after the treatment. Over the following months, as collagen production continues, the results improve and can last up to 12-24 months or longer, depending on individual factors.',
+        'Yes, every teacher needs their own active subscription to teach Rangeet.',
     },
     {
-      question: 'Who is an ideal candidate for Thread Lift?',
+      question: 'What is included in the free version of Rangeet?',
       answer:
-        'Ideal candidates are individuals with mild to moderate skin laxity who want to achieve a more lifted and youthful appearance without undergoing surgery.',
+        'In the free version, you get access to one lesson from each umbrella as well as a fun game to test your empathy levels.',
     },
     {
-      question: 'Are threads safe?',
+      question: 'Can I create my own curriculum?',
       answer:
-        'Yes, threads have been used in the medical field for many years and are considered safe. They are biocompatible and fully absorbable by the body.',
+        'Yes, you can create your own curriculum on our authoring tool in our Web App. Once input, the curriculum can be used on the Rangeet platform or exported to HTML5 or pdf formats.',
     },
     {
-      question: 'Can Thread Lift be combined with other treatments?',
+      question: 'What are the UN SDGs?',
       answer:
-        'Yes, Thread Lift can be combined with other non-surgical treatments, such as dermal fillers or Botox, for a comprehensive facial rejuvenation approach.',
+        'The Sustainable Development Goals (SDGs) are an urgent call for action by all UN member states to end poverty and other hardships through improving health and education, reducing inequality and spurring economic growth, all whilst tackling climate change.',
+    },
+    {
+      question: 'How can I view my progress reports?',
+      answer: 'Progress reports can be viewed via Rangeet’s Web App.',
     },
   ];
   return (
     <div className="max-w-screen-lg mx-auto p-4 md:p-6 mt-6 md:mt-12">
-      <h2 className="text-center font-poppins text-4xl md:text-5xl font-semibold leading-tight tracking-tighter text-header">
+      <h2 className="text-center  text-3xl md:text-5xl font-semibold  tracking-tighter text-primary">
         FAQ
       </h2>
       <div className="mt-8 space-y-4">

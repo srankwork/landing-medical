@@ -14,13 +14,13 @@ const ResultContainer = () => {
   return (
     <div
       ref={ref}
-      className="mt-10 md:mt-20 overflow-hidden hero-bg-2 pt-24 pb-24"
+      className="mt-10 md:mt-16 overflow-hidden hero-bg-2 pt-24 pb-24"
     >
       <motion.p
         initial={{ x: '-25%', opacity: 0 }}
         animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
         transition={{ duration: 0.5 }}
-        className="font-poppins text-4xl  font-semibold leading-6 tracking-wider uppercase text-black text-center"
+        className="text-center  text-3xl md:text-5xl font-semibold leading-tight tracking-tighter text-primary"
       >
         Our Impact
       </motion.p>

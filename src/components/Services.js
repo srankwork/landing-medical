@@ -1,51 +1,54 @@
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import personalisedImg from '../image/photos/bg-1.png';
-import progressiveImg from '../image/photos/bg-2.jpg';
-import safetyImg from '../image/photos/bg-3.png';
-import minimallyImg from '../image/photos/bg-2.jpg';
+import builtforshcoolsImg from '../image/photos/builtforshcools.jpg';
+import seekImg from '../image/photos/seek.jpg';
+import realtimeassImg from '../image/photos/realtimeass.png';
+import performancedashboardImg from '../image/photos/performancedashboard.jpg';
+import holisticandglobalImg from '../image/photos/holisticandglobal.png';
+import scalableImg from '../image/photos/scalable.png';
+import unsdgImg from '../image/photos/unsdg.jpg';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 const services = [
   {
-    img: personalisedImg,
+    img: builtforshcoolsImg,
     header: 'BUILT FOR SCHOOLS',
     content:
       'Rangeet can help improve attendance, enrollment, retain teachers and improve grades. Schools and community centres observe greater attendance on days Rangeet is taught.',
   },
   {
-    img: minimallyImg,
+    img: seekImg,
     header: 'Digital SEEK Curriculum',
     content:
       'Social Emotional & Ecological Knowledge or SEEK™ uses active, playful teaching methods to prepare children for the challenges of the future.',
   },
   {
-    img: progressiveImg,
+    img: holisticandglobalImg,
     header: 'Holistic and Global Education',
     content:
       "Human-centric design in collaboration with educators from diverse backgrounds has resulted in an easy to use app, solving problems faced by communities around the world.",
   },
   {
-    img: safetyImg,
+    img: realtimeassImg,
     header: 'Real Time Assessment',
     content:
       'Built-in process and mechanism to measure, monitor and assess impact of the program in real-time, collective iterative feedback from facilitators and children',
   },
   {
-    img: safetyImg,
+    img: performancedashboardImg,
     header: 'Performance Dashboard',
     content:
       "Data visualisation and evaluation tools for administrators to manage implementations and monitor impact, informing timely decisions and adaptations.",
   },
   {
-    img: safetyImg,
+    img: scalableImg,
     header: 'Scalable, Affordable & Accessible',
     content:
       "Only one device, used by the facilitator, is needed to teach, collect and submit data. It’s also adaptable to language and cultural contexts.",
   },
   {
-    img: safetyImg,
+    img: unsdgImg,
     header: 'Designed around UN SDGs',
     content:
       "Rangeet's Platform is designed around the United Nations Sustainable Development Goals. ",
@@ -80,15 +83,6 @@ export default function Services() {
         className="mt-16 md:mt-28 px-4 md:px-0 md:w-4/5 justify-center m-auto select-none"
         id="serviceContainer"
       >
-        {/* header */}
-        <motion.p
-          initial={{ x: '-5%', opacity: 0 }}
-          animate={{ x: inView ? 0 : '-5%', opacity: inView ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
-          className="font-poppins text-lg md:text-xl font-semibold leading-6 tracking-wider uppercase text-black mb-2"
-        >
-          What We Offer
-        </motion.p>
         <div className="hidden md:block">
           <div className="flex justify-between items-center">
             <motion.div
@@ -96,7 +90,7 @@ export default function Services() {
               animate={{ x: inView ? 0 : '-5%', opacity: inView ? 1 : 0 }}
               transition={{ duration: 0.3 }}
             >
-              <h1 className="mt-8 font-poppins text-xl md:text-4xl font-semibold leading-none md:leading-snug  text-header">
+              <h1 className="mt-8 text-center  text-xl md:text-4xl font-semibold leading-tight tracking-tighter text-primary">
                 {services[counter]['header']}
               </h1>
             </motion.div>
@@ -210,7 +204,7 @@ export default function Services() {
                 transition={{ duration: 0.3 }}
                 className="text-left"
               >
-                <h1 className="mt-8 font-poppins text-xl md:text-4xl font-semibold leading-none md:leading-snug  text-header">
+                <h1 className="mt-8  text-xl md:text-4xl font-semibold leading-none md:leading-snug  text-header">
                   {e['header']}
                 </h1>
               </motion.div>
