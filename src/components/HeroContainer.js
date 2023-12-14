@@ -22,14 +22,14 @@ const HeroContainer = () => {
           <p className="text-secondary capitalize text-center  text-3xl md:text-5xl font-semibold leading-tight text-white">
             Revolutionize Education at your School with Rangeet{' '}
           </p>
-          <h1 className="mt-12 md:mt-20 capitalize text-center md:text-start  text-lg md:text-2xl font-semibold  leading-tight md:leading-snug  text-white">
+          <h1 className="mt-28 md:mt-20 capitalize text-center md:text-start  text-lg md:text-2xl font-semibold  leading-tight md:leading-snug  text-white">
             Improve Student Engagement with Play Based Curriculum
           </h1>
           <p className="mt-8 md:mt-16 capitalize text-center md:text-start  text-sm md:text-2xl font-semibold  leading-tight md:leading-snug  text-white">
             Shape the future with RANGEET
           </p>
           <div className="mt-4 md:mt-8 ml-4 bg-background py-2 px-4 rounded-2xl transition-all duration-500 font-semibold">
-            <a href="tel:+919152128731" className="text-white ">
+            <a href="https://play.google.com/store/apps/details?id=com.projectrangeet.app" target="_blank" className="text-white ">
               Learn More
             </a>
           </div>

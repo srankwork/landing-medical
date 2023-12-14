@@ -56,17 +56,17 @@ const review = [
 ];
 const Testimonial = ({ review, userName, professional }) => {
   return (
-    <div className="md:flex items-center justify-center">
+    <div className="flex items-center justify-center">
       <div className="w-[80vw] border-[1px] border-solid border-black rounded-xl p-[40px]">
         <div>
           <p className="capitalize text-lg font-semibold text-[#212529]">
             {userName}
           </p>
-          <span className="capitalize text-base font-medium text-[#212529]">
+          <span className="capitalize text-sm md:text-base font-medium text-[#212529]">
             {professional}
           </span>
         </div>
-        <p className="text-[#212529] mt-12  font-normal text-lg leading-snug tracking-tight h-[150px]">
+        <p className="text-[#212529] mt-8 md:mt-12  font-normal text-base md:text-lg leading-snug tracking-tight h-[480px] md:h-[150px]">
           {review}
         </p>
       </div>
@@ -138,12 +138,12 @@ const ReviewContainer = () => {
           ></span>
         ))}
       </div>
-      <div className=" md:mt-12 flex items-center justify-center">
-        <div className="h-[300px] w-[500px] flex justify-center items-center">
+      <div className="mt-12 flex items-center justify-center">
+        <div className="h-[300px] md:h-[400px] w-[800px] flex justify-center items-center">
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/cKQhsQhH6Qs"
+            src="https://www.youtube.com/embed/h-8bkv6qMKc"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

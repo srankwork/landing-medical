@@ -32,7 +32,7 @@ const IndexPage = () => {
         <title>Rangeet</title>
       </Helmet>
       <main className="w-full h-full">
-        <div className=" bg-primary h-10 w-full text-center flex  items-center text-white justify-around">
+        {/* <div className=" bg-primary h-10 w-full text-center flex  items-center text-white justify-around">
           <span>
             <a
               href="tel:+917208330809"
@@ -54,7 +54,7 @@ const IndexPage = () => {
               </span>
             </a>
           </span>
-        </div>
+        </div> */}
         <Header />
         <HeroContainer />
         <Rating />

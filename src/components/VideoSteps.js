@@ -36,7 +36,7 @@ export default function VideoSteps() {
     <>
       <div
         ref={ref}
-        className="mt-32 px-4 md:px-0 md:w-4/5 justify-center m-auto select-none"
+        className="mt-16 md:mt-32 px-4 md:px-0 md:w-4/5 justify-center m-auto select-none"
         id="serviceContainer"
       >
         {/* header */}
@@ -48,7 +48,7 @@ export default function VideoSteps() {
         >
           Hassle-free Onbroarding Process
         </motion.p>
-        <div className="mt-12">
+        <div className="mt-8 md:mt-12">
           <div className="flex justify-between items-center">
             <motion.div
               initial={{ x: '-5%', opacity: 0 }}
@@ -127,6 +127,54 @@ export default function VideoSteps() {
             ></iframe>
           </motion.div>
         </div>
+        <div className="space-x-4 flex md:hidden items-center justify-center mt-4">
+              <div
+                className="rounded-full w-14 h-14 bg-background flex items-center justify-center cursor-pointer"
+                onClick={() => {
+                  counter == 0
+                    ? setCounter(services.length - 1)
+                    : setCounter(counter - 1);
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="w-8 h-8 text-white font-bold rotate-180"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
+              <div
+                className="rounded-full w-14 h-14 bg-background flex items-center justify-center cursor-pointer"
+                onClick={() => {
+                  counter == services.length - 1
+                    ? setCounter(0)
+                    : setCounter(counter + 1);
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="w-8 h-8 text-white font-bold"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
+            </div>
       </div>
     </>
   );
