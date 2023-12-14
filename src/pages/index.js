@@ -68,7 +68,7 @@ const IndexPage = () => {
         <hr className="mt-16" />
         <script
           id="wf_anal"
-          src="https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=c029b288c892f1adde32678375ba81d276d420a0189ead5f9240cc6b65bc8f4fgidb25cb8f8ef33e0e98888bcba5fc285e2914f53ba89ae01046e1cc758c882cba3gid534cb20477b1d28b5f45f7cc241888c5gid4ee3a7e9ace6ab1be7c541b329164307&tw=096a715cbfc30dc79d6dc215bf71c5b4284d938378e51186a6daa9337f7519a8"
+          src="https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=f82b825d98c8f7305ca6548006b5c664eb9d65f4e1424f667aeddcd1c4cf0c4965146ee90e5f3d39f6b9a779400933c4gidd76e969dbb2b4c92f67eca8b8e66eb9644d6a9f4223b8f041b10550dbe9e97a6gid70ce19e355a56fbc33eb334b16ac0b3505f3b196700f2173184ef5319c656ac9gid0ee05e93cb68d6cc4327b98552ff7bfaf3b50be471e262c81e939dc30e03584b&tw=1ae29c5a3e5016680ec91d0265dd628e2aa297e6f9a8a3060a5169b3b5c63c51"
         ></script>
 
         <div className=" bg-primary h-10 w-full text-center flex flex-col text-white justify-center">

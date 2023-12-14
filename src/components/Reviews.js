@@ -85,7 +85,7 @@ const ReviewContainer = () => {
   useEffect(() => {
     if (!intervalId) {
       const id = setInterval(() => {
-        setSliderIndex((prevCounter) => (prevCounter + 1) % 5);
+        setSliderIndex((prevCounter) => (prevCounter + 1) % review.length);
       }, 3000);
       setIntervalId(id);
     }

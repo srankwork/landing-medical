@@ -17,7 +17,7 @@ const AboutUs = () => {
       initial={{ x: 0, opacity: 0 }}
       animate={{ x: 0, opacity: inView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
-      className="hero-bg-2 pt-16 md:pt-24 pb-16"
+      className="pt-16 md:pt-24 pb-16"
     >
       <h1 className="text-center text-3xl md:text-5xl font-semibold leading-tight tracking-tighter text-primary">
         ABOUT US
