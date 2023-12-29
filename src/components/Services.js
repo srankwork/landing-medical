@@ -19,39 +19,39 @@ const services = [
   },
   {
     img: seekImg,
-    header: 'Digital SEEK Curriculum',
+    header: 'PROPRIETARY SEEK™ CURRICULUM',
     content:
-      'Social Emotional & Ecological Knowledge or SEEK™ uses active, playful teaching methods to prepare children for the challenges of the future.',
+      'Social Emotional and Ecological Knowledge (SEEK)© uses active, playful teaching methods to prepare children for the challenges of the future.',
   },
   {
     img: holisticandglobalImg,
-    header: 'Holistic and Global Education',
+    header: 'HOLISTIC AND GLOBAL EDUCATION',
     content:
-      "Human-centric design in collaboration with educators from diverse backgrounds has resulted in an easy to use app, solving problems faced by communities around the world.",
+      'Through human-centric design and collaboration with diverse educators around the world, an easy-to-use aBUILT FOR TEACHERSpp has been created, solving problems faced by communities around the world.',
   },
   {
     img: realtimeassImg,
-    header: 'Real Time Assessment',
+    header: 'REAL TIME ASSESSMENT',
     content:
-      'Built-in process and mechanism to measure, monitor and assess impact of the program in real-time, collective iterative feedback from facilitators and children',
+      'Rangeet uses a built-in mechanism to measure, monitor and assess impact of the program in real-time and collect iterative feedback from facilitators and children.',
   },
   {
     img: performancedashboardImg,
-    header: 'Performance Dashboard',
+    header: 'PERFORMANCE DASHBOARD',
     content:
-      "Data visualisation and evaluation tools for administrators to manage implementations and monitor impact, informing timely decisions and adaptations.",
+      'Administrators can use data visualisation and evaluation tools to manage implementations and monitor impact, informing timely decisions and adaptations.',
   },
   {
     img: scalableImg,
-    header: 'Scalable, Affordable & Accessible',
+    header: 'SCALABLE, AFFORDABLE, ACCESSIBLE',
     content:
-      "Only one device, used by the facilitator, is needed to teach, collect and submit data. It’s also adaptable to language and cultural contexts.",
+      'Only one device, used by the facilitator, is needed to teach, collect and submit data. It’s also adaptable to language and cultural contexts and requires minimal time and resources to be able to teach.',
   },
   {
     img: unsdgImg,
-    header: 'Designed around UN SDGs',
+    header: 'DESIGNED AROUND THE UN SDGs',
     content:
-      "Rangeet's Platform is designed around the United Nations Sustainable Development Goals. ",
+      "Each of Rangeet’s activities is tagged based on the particular SDGs it assists the facilitator to teach. Accessing these activities through the curriculum or through search functionality places a powerful SDG teaching toolkit in the hands of facilitators anywhere.",
   },
 ];
 
@@ -84,65 +84,16 @@ export default function Services() {
         id="serviceContainer"
       >
         <div className="hidden md:block">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-center items-center">
             <motion.div
               initial={{ x: '-5%', opacity: 0 }}
               animate={{ x: inView ? 0 : '-5%', opacity: inView ? 1 : 0 }}
               transition={{ duration: 0.3 }}
             >
-              <h1 className="mt-8 text-center  text-xl md:text-4xl font-semibold leading-tight tracking-tighter text-primary">
+              <h1 className="mt-8 text-center uppercase text-xl md:text-4xl font-semibold leading-tight tracking-tighter text-primary">
                 {services[counter]['header']}
               </h1>
             </motion.div>
-
-            <div className="space-x-4 hidden md:flex">
-              <div
-                className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-background flex items-center justify-center cursor-pointer"
-                onClick={() => {
-                  counter == 0
-                    ? setCounter(services.length - 1)
-                    : setCounter(counter - 1);
-                }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-4 md:w-6 h-4 md:h-6 text-white font-bold rotate-180"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </div>
-              <div
-                className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-background flex items-center justify-center cursor-pointer"
-                onClick={() => {
-                  counter == services.length - 1
-                    ? setCounter(0)
-                    : setCounter(counter + 1);
-                }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-4 md:w-6 h-4 md:h-6 text-white font-bold"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </div>
-            </div>
           </div>
 
           <motion.div
@@ -184,6 +135,55 @@ export default function Services() {
               height="auto"
             />
           </motion.div>
+
+          <div className="space-x-4 hidden md:flex justify-center mt-8 gap-[20px]">
+            <div
+              className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-background flex items-center justify-center cursor-pointer"
+              onClick={() => {
+                counter == 0
+                  ? setCounter(services.length - 1)
+                  : setCounter(counter - 1);
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-4 md:w-6 h-4 md:h-6 text-white font-bold rotate-180"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="3"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </div>
+            <div
+              className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-background flex items-center justify-center cursor-pointer"
+              onClick={() => {
+                counter == services.length - 1
+                  ? setCounter(0)
+                  : setCounter(counter + 1);
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-4 md:w-6 h-4 md:h-6 text-white font-bold"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="3"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
 
         <Carousel
@@ -202,9 +202,9 @@ export default function Services() {
                 initial={{ x: '-5%', opacity: 0 }}
                 animate={{ x: inView ? 0 : '-5%', opacity: inView ? 1 : 0 }}
                 transition={{ duration: 0.3 }}
-                className="text-left"
+                className="text-center"
               >
-                <h1 className="mt-8  text-xl md:text-4xl font-semibold leading-none md:leading-snug  text-header">
+                <h1 className="mt-8 uppercase text-xl md:text-4xl font-semibold leading-none md:leading-snug  text-header">
                   {e['header']}
                 </h1>
               </motion.div>

@@ -7,9 +7,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        primary: '#ac81b7',
+        primary: '#283363',
         secondry: '#95b3b3',
-        background: '#28336e',
+        background: '#283363',
         'overlay-bg': '#060402',
       },
       borderColor: {
@@ -23,7 +23,7 @@ module.exports = {
         118: '1.18',
       },
       textColor: {
-        primary: '#28336e',
+        primary: '#283363',
         secondry: '#95b3b3',
         'info-color': '#B1C8DC',
         lightblue: '#4D83B2',

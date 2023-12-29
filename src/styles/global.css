@@ -1,13 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+
 
 * {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Cabin', sans-serif;
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Cabin', sans-serif;
 }
 
 div:focus {
@@ -55,7 +57,8 @@ a:active {
 
 .hero-bg-2 {
   background-image: url('../image/photos/bg-2.jpg');
-  background-size: cover;
+  /* background-size: cover; */
+  background-size: 100% 100%;
   background-position: center;
 }
 .hero-bg-3 {

@@ -29,7 +29,7 @@ const Rating = () => {
         className="flex flex-col mt-10"
       >
         <h1 className="text-center  text-3xl md:text-5xl font-semibold leading-tight tracking-tighter text-primary">
-          Trusted by
+          TRUSTED BY
         </h1>
 
         <div className=" flex overflow-hidden justify-center mt-14">
@@ -56,7 +56,11 @@ const Rating = () => {
                 className="flex items-center justify-center md:justify-start mr-24"
                 style={{ width: '200px' }}
               >
-                <img src={e.img} className="h-[40px] md:h-[80px] w-[200px]" alt="logo" />
+                <img
+                  src={e.img}
+                  className="h-[100%] md:h-[100%] w-[100%]"
+                  alt="logo"
+                />
               </div>
             ))}
           </div>

@@ -25,8 +25,6 @@ const services = [
 
 export default function VideoSteps() {
   const [counter, setCounter] = useState(0);
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [swipe, setSwipe] = useState(false);
 
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -44,70 +42,21 @@ export default function VideoSteps() {
           initial={{ x: '-5%', opacity: 0 }}
           animate={{ x: inView ? 0 : '-5%', opacity: inView ? 1 : 0 }}
           transition={{ duration: 0.3 }}
-          className="text-center  text-3xl md:text-5xl font-semibold  tracking-tighter text-primary"
+          className="text-center uppercase text-3xl md:text-5xl font-semibold  tracking-tighter text-primary"
         >
           Hassle-free Onbroarding Process
         </motion.p>
         <div className="mt-8 md:mt-12">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-center items-center">
             <motion.div
               initial={{ x: '-5%', opacity: 0 }}
               animate={{ x: inView ? 0 : '-5%', opacity: inView ? 1 : 0 }}
               transition={{ duration: 0.3 }}
             >
-              <h1 className="mt-8  text-xl md:text-4xl font-semibold leading-none md:leading-snug  text-primary text-center">
+              <h1 className="mt-8 uppercase text-xl md:text-4xl font-semibold leading-none md:leading-snug  text-primary text-center">
                 {services[counter]['header']}
               </h1>
             </motion.div>
-
-            <div className="space-x-4 hidden md:flex">
-              <div
-                className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-background flex items-center justify-center cursor-pointer"
-                onClick={() => {
-                  counter == 0
-                    ? setCounter(services.length - 1)
-                    : setCounter(counter - 1);
-                }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-4 md:w-6 h-4 md:h-6 text-white font-bold rotate-180"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </div>
-              <div
-                className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-background flex items-center justify-center cursor-pointer"
-                onClick={() => {
-                  counter == services.length - 1
-                    ? setCounter(0)
-                    : setCounter(counter + 1);
-                }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-4 md:w-6 h-4 md:h-6 text-white font-bold"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </div>
-            </div>
           </div>
 
           <motion.div
@@ -127,54 +76,54 @@ export default function VideoSteps() {
             ></iframe>
           </motion.div>
         </div>
-        <div className="space-x-4 flex md:hidden items-center justify-center mt-4">
-              <div
-                className="rounded-full w-14 h-14 bg-background flex items-center justify-center cursor-pointer"
-                onClick={() => {
-                  counter == 0
-                    ? setCounter(services.length - 1)
-                    : setCounter(counter - 1);
-                }}
+        <div className="space-x-4 hidden md:flex justify-center mt-8 gap-[20px]">
+            <div
+              className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-background flex items-center justify-center cursor-pointer"
+              onClick={() => {
+                counter == 0
+                  ? setCounter(services.length - 1)
+                  : setCounter(counter - 1);
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-4 md:w-6 h-4 md:h-6 text-white font-bold rotate-180"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-8 h-8 text-white font-bold rotate-180"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </div>
-              <div
-                className="rounded-full w-14 h-14 bg-background flex items-center justify-center cursor-pointer"
-                onClick={() => {
-                  counter == services.length - 1
-                    ? setCounter(0)
-                    : setCounter(counter + 1);
-                }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-8 h-8 text-white font-bold"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </div>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="3"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
             </div>
+            <div
+              className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-background flex items-center justify-center cursor-pointer"
+              onClick={() => {
+                counter == services.length - 1
+                  ? setCounter(0)
+                  : setCounter(counter + 1);
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-4 md:w-6 h-4 md:h-6 text-white font-bold"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="3"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </div>
+          </div>
       </div>
     </>
   );

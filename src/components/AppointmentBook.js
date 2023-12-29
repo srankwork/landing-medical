@@ -77,15 +77,11 @@ const BookAppointment = ({ forModal }) => {
       fetch('https://crm.zoho.in/crm/WebToLeadForm', requestOptions)
         .then((response) => response.text())
         .then((result) => {
-          window.location.assign(
-            'https://www.rangeet.com/thank-you.html'
-          );
+          window.location.assign('https://www.rangeet.com/thank-you.html');
         })
         .catch((error) => setFormError('Please try again'));
     }
   };
-
-
 
   return (
     <motion.div
@@ -99,9 +95,9 @@ const BookAppointment = ({ forModal }) => {
       id="appointmentForm"
     >
       <h1 className="font-poppins text-center text-lg md:text-3xl font-semibold leading-none md:leading-snug  text-primary">
-        Implement Rangeet in your School and help shape a brighter future for
-        students.
+        IMPLEMENT RANGEET IN YOUR SCHOOL
       </h1>
+      <p className='font-poppins text-center text-lg md:text-2xl mt-2 font-semibold leading-none md:leading-snug  text-primary'>Help us make the world Rangeet</p>
 
       <div className="md:flex md:space-x-4 mt-6 md:mt-14">
         <div className="md:w-3/4">
