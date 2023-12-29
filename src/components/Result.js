@@ -14,7 +14,7 @@ const ResultContainer = () => {
   return (
     <div
       ref={ref}
-      className="mt-10 md:mt-16 overflow-hidden hero-bg-2 pt-16 md:pt-12 pb-24"
+      className="mt-16 md:mt-24 overflow-hidden hero-bg-2 pt-16 md:pt-12 pb-24"
     >
       <motion.p
         initial={{ x: '-25%', opacity: 0 }}

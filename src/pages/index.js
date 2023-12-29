@@ -57,15 +57,15 @@ const IndexPage = () => {
         </div> */}
         <Header />
         <HeroContainer />
-        <Rating />
+        <AboutUs />
         <Services />
+        <Rating />
         <ResultContainer />
         <VideoSteps />
         <ReviewContainer />
-        <BookAppointment />
-        <AboutUs />
         <FaqContainer />
-        <hr className="mt-16" />
+        <BookAppointment />
+        <hr className="" />
         <script
           id="wf_anal"
           src="https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=f82b825d98c8f7305ca6548006b5c664eb9d65f4e1424f667aeddcd1c4cf0c4965146ee90e5f3d39f6b9a779400933c4gidd76e969dbb2b4c92f67eca8b8e66eb9644d6a9f4223b8f041b10550dbe9e97a6gid70ce19e355a56fbc33eb334b16ac0b3505f3b196700f2173184ef5319c656ac9gid0ee05e93cb68d6cc4327b98552ff7bfaf3b50be471e262c81e939dc30e03584b&tw=1ae29c5a3e5016680ec91d0265dd628e2aa297e6f9a8a3060a5169b3b5c63c51"

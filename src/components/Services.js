@@ -80,7 +80,7 @@ export default function Services() {
     <>
       <div
         ref={ref}
-        className="mt-16 md:mt-28 px-4 md:px-0 md:w-4/5 justify-center m-auto select-none"
+        className="mt-16 md:mt-24 px-4 md:px-0 md:w-4/5 justify-center m-auto select-none"
         id="serviceContainer"
       >
         <div className="hidden md:block">
@@ -204,7 +204,7 @@ export default function Services() {
                 transition={{ duration: 0.3 }}
                 className="text-center"
               >
-                <h1 className="mt-8 uppercase text-xl md:text-4xl font-semibold leading-none md:leading-snug  text-header">
+                <h1 className="mt-8 uppercase text-xl md:text-4xl font-semibold leading-none md:leading-snug  text-primary">
                   {e['header']}
                 </h1>
               </motion.div>

@@ -89,7 +89,7 @@ const BookAppointment = ({ forModal }) => {
       initial={{ x: '-20%', opacity: 0 }}
       animate={{ x: inView ? 0 : '-20%', opacity: inView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
-      className={`px-4 md:px-10 ${
+      className={`px-4 md:px-10 mt-16 ${
         forModal ? '' : 'pt-14 md:pt-28 pb-28'
       } container m-auto hero-bg-3 `}
       id="appointmentForm"

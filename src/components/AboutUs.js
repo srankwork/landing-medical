@@ -17,7 +17,7 @@ const AboutUs = () => {
       initial={{ x: 0, opacity: 0 }}
       animate={{ x: 0, opacity: inView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
-      className="pt-16 md:pt-24 pb-16"
+      className="pt-16"
     >
       <h1 className="text-center text-3xl md:text-5xl font-semibold leading-tight tracking-tighter text-primary">
         ABOUT US
@@ -36,15 +36,13 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="flex justify-center items-center">
-        <p className="px-4 md:w-3/4 text-left mt-8 md:mt-10 font-normal md:tracking-wide text-xl md:text-lg text-header">
+        <p className="px-4 md:w-3/4 text-center mt-8 md:mt-10 font-normal md:tracking-wide text-xl md:text-lg text-header">
           Rangeet is a digital platform for authoring, delivering and measuring
           the impact of teaching materials for schools, communities and
           families.
           <br />
-          <br />
           It features Rangeet’s proprietary Social Emotional and Ecological
           Knowledge (SEEK)© curriculum and teaching resources.
-          <br />
           <br />
           SEEK™ uses active, playful teaching methods to prepare children for
           the challenges of the future by measurably developing a breadth of

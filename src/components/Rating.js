@@ -26,7 +26,7 @@ const Rating = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: inView ? 1 : 0 }}
         transition={{ duration: 0.5 }}
-        className="flex flex-col mt-10"
+        className="flex flex-col mt-28"
       >
         <h1 className="text-center  text-3xl md:text-5xl font-semibold leading-tight tracking-tighter text-primary">
           TRUSTED BY
