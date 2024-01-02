@@ -27,7 +27,7 @@ const services = [
     img: holisticandglobalImg,
     header: 'HOLISTIC AND GLOBAL EDUCATION',
     content:
-      'Through human-centric design and collaboration with diverse educators around the world, an easy-to-use aBUILT FOR TEACHERSpp has been created, solving problems faced by communities around the world.',
+      'Through human-centric design and collaboration with diverse educators around the world, an easy-to-use aapp has been created, solving problems faced by communities around the world.',
   },
   {
     img: realtimeassImg,
@@ -100,7 +100,7 @@ export default function Services() {
             initial={{ x: '-20%', opacity: 0 }}
             animate={{ x: inView ? 0 : '-20%', opacity: inView ? 1 : 0 }}
             transition={{ duration: 0.5 }}
-            className="mt-4 md:w-3/4 font-normal md:tracking-wide text-sm md:text-lg text-header"
+            className="mt-4 font-normal md:tracking-wide text-sm md:text-lg text-header"
           >
             <p
               className={`${
