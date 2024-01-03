@@ -1,10 +1,18 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import brookingsLogo from '../image/Icons/brookings-logo.png';
-import jacobLogo from '../image/Icons/jacob-foundation-logo.jpg';
-import undpLogo from '../image/Icons/undp-logo.jpeg';
-import oupLogo from '../image/Icons/oup-logo-big.jpg';
+import partner1 from '../image/photos/1.jpg';
+import partner2 from '../image/photos/2.jpg';
+import partner3 from '../image/photos/3.jpg';
+import partner4 from '../image/photos/4.jpg';
+import partner5 from '../image/photos/5.jpg';
+import partner6 from '../image/photos/6.jpg';
+import partner7 from '../image/photos/7.jpg';
+import partner8 from '../image/photos/8.jpg';
+import partner9 from '../image/photos/9.jpg';
+import partner10 from '../image/photos/10.jpg';
+import partner11 from '../image/photos/hundOrdg.png';
+
 
 function replicateArray(arr, times) {
   const result = [];
@@ -37,28 +45,48 @@ const Rating = () => {
             {replicateArray(
               [
                 {
-                  img: brookingsLogo,
+                  img: partner1,
                 },
                 {
-                  img: jacobLogo,
+                  img: partner2,
                 },
                 {
-                  img: undpLogo,
+                  img: partner3,
                 },
                 {
-                  img: oupLogo,
+                  img: partner4,
                 },
+                {
+                  img: partner5,
+                },
+                {
+                  img: partner6,
+                },
+                {
+                  img: partner7,
+                },
+                {
+                  img: partner8,
+                },
+                {
+                  img: partner9,
+                },
+                {
+                  img: partner10,
+                },
+                // {
+                //   img: partner11,
+                // },
               ],
-              30
+              50
             ).map((e, index) => (
               <div
                 key={`rating-${index}`}
-                className="flex items-center justify-center md:justify-start mr-24"
-                style={{ width: '200px' }}
+                className="flex items-center justify-center md:justify-start mr-24 object-fill w-[200px] md:w-[200px]"
               >
                 <img
                   src={e.img}
-                  className="h-[100%] md:h-[100%] w-[100%]"
+                  className="object-fill w-[200px] md:w-[200px]"
                   alt="logo"
                 />
               </div>

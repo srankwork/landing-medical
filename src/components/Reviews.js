@@ -79,31 +79,12 @@ const ReviewContainer = () => {
     triggerOnce: true,
   });
 
-  const [sliderIndex, setSliderIndex] = useState(0);
-  const [intervalId, setIntervalId] = useState(null);
+  const [counter, setCounter] = useState(0);
+
 
   useEffect(() => {
-    if (!intervalId) {
-      const id = setInterval(() => {
-        setSliderIndex((prevCounter) => (prevCounter + 1) % review.length);
-      }, 3000);
-      setIntervalId(id);
-    }
 
-    return () => {
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
-    };
   }, []);
-
-  const handleClearInterval = (e) => {
-    setSliderIndex(e);
-    if (intervalId) {
-      clearInterval(intervalId);
-      setIntervalId(null);
-    }
-  };
 
   return (
     <motion.div
@@ -119,24 +100,58 @@ const ReviewContainer = () => {
 
       <div className="mt-8 md:mt-16 testimonial-container">
         <Testimonial
-          review={review[sliderIndex]['review']}
-          userName={review[sliderIndex]['name']}
-          professional={review[sliderIndex]['professional']}
+          review={review[counter]['review']}
+          userName={review[counter]['name']}
+          professional={review[counter]['professional']}
         />
       </div>
-      <div className="flex justify-center mt-16">
-        {review.map((value, e) => (
-          <span
-            key={`slider-${e}`}
-            onClick={() => handleClearInterval(e)}
-            role="button"
-            tabIndex={0}
-            onKeyDown={() => handleClearInterval(e)}
-            className={`h-1 ${
-              e === sliderIndex ? 'w-8 bg-background' : 'w-4 bg-primary'
-            } m-1 md:m-2 rounded-sm cursor-pointer hover:w-8 hover:bg-background transition-width  duration-300 ease-in-out text-[#08589F]`}
-          ></span>
-        ))}
+      <div className="space-x-4 hidden md:flex justify-center mt-8 gap-[20px]">
+        <div
+          className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-background flex items-center justify-center cursor-pointer"
+          onClick={() => {
+            counter == 0
+              ? setCounter(review.length - 1)
+              : setCounter(counter - 1);
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            className="w-4 md:w-6 h-4 md:h-6 text-white font-bold rotate-180"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="3"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </div>
+        <div
+          className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-background flex items-center justify-center cursor-pointer"
+          onClick={() => {
+            counter == review.length - 1
+              ? setCounter(0)
+              : setCounter(counter + 1);
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            className="w-4 md:w-6 h-4 md:h-6 text-white font-bold"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="3"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </div>
       </div>
       <div className="mt-12 flex items-center justify-center">
         <div className="h-[300px] md:h-[400px] w-[800px] flex justify-center items-center">
@@ -145,9 +160,8 @@ const ReviewContainer = () => {
             height="100%"
             src="https://www.youtube.com/embed/h-8bkv6qMKc"
             title="YouTube video player"
-            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
       </div>

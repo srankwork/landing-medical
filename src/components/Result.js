@@ -1,10 +1,10 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import impact1 from '../image/photos/impact1.jpg';
-import impact2 from '../image/photos/impact2.jpg';
-import impact3 from '../image/photos/impact3.jpg';
-import impact4 from '../image/photos/impact4.jpg';
+import impact1 from '../image/photos/impact1.png';
+import impact2 from '../image/photos/impact2.png';
+import impact3 from '../image/photos/impact3.png';
+import impact4 from '../image/photos/impact4.png';
 
 const ResultContainer = () => {
   const [ref, inView] = useInView({
@@ -45,7 +45,7 @@ const ResultContainer = () => {
           { b: 'Uttarakhand (India):', p: 'A ten year-old boy convinced his parents to help him stop their neighbours from marrying off their child and send her to school instead.' },
           { b: 'Rajasthan (India):', p: 'Children deduced their elders were wasting water and instituted a system to regulate usage with buy-in from their village elders, demonstrating advocacy/agency.' },
         ].map((e) => (
-          <p className="text-[#212529] mt-10 md:mt-0 md:leading-10 impact-point">
+          <p className="text-[#212529] mt-10 md:mt-0 md:leading-10 impact-point" key={e.p}>
             <b className="text-[#28336e] font-bold">
               {e.b}
             </b>{' '}

@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import builtforshcoolsImg from '../image/photos/builtforshcools.jpg';
-import seekImg from '../image/photos/seek.jpg';
+import builtforteachersImg from '../image/photos/builtforshcools.jpg';
+import seekImg from '../image/photos/seek.png';
 import realtimeassImg from '../image/photos/realtimeass.png';
 import performancedashboardImg from '../image/photos/performancedashboard.jpg';
 import holisticandglobalImg from '../image/photos/holisticandglobal.png';
 import scalableImg from '../image/photos/scalable.png';
-import unsdgImg from '../image/photos/unsdg.jpg';
+import universalApproach from '../image/photos/universal-approach.jpg';
+import unsdgImg from '../image/photos/unsdg.png';
+import learningCicleImage from '../image/photos/learning-cicle-image.png';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 const services = [
   {
-    img: builtforshcoolsImg,
-    header: 'BUILT FOR SCHOOLS',
+    img: builtforteachersImg,
+    header: 'BUILT FOR TEACHERS',
     content:
       'Rangeet can help improve attendance, enrollment, retain teachers and improve grades. Schools and community centres observe greater attendance on days Rangeet is taught.',
   },
@@ -27,7 +29,7 @@ const services = [
     img: holisticandglobalImg,
     header: 'HOLISTIC AND GLOBAL EDUCATION',
     content:
-      'Through human-centric design and collaboration with diverse educators around the world, an easy-to-use aapp has been created, solving problems faced by communities around the world.',
+      'Through human-centric design and collaboration with diverse educators around the world, an easy-to-use app has been created, solving problems faced by communities around the world.',
   },
   {
     img: realtimeassImg,
@@ -53,7 +55,20 @@ const services = [
     content:
       "Each of Rangeet’s activities is tagged based on the particular SDGs it assists the facilitator to teach. Accessing these activities through the curriculum or through search functionality places a powerful SDG teaching toolkit in the hands of facilitators anywhere.",
   },
+  {
+    img: learningCicleImage,
+    header: 'learning-science based approach',
+    content:
+      "Active pedagogies and the application of multiple intelligences theory include every learner.\n\n Activities are searchable to help educators:",
+  },
+  {
+    img: universalApproach,
+    header: 'Universal Appeal',
+    content:
+      "Rangeet encourages facilitators to bring their lived experiences, cultures and contexts into teaching.\nChildren’s identities and experiences are mirrored in original activities, which also serve as windows, making unknown worlds accessible, encouraging different viewpoints.",
+  },
 ];
+;
 
 export default function Services() {
   const [counter, setCounter] = useState(0);
@@ -65,15 +80,15 @@ export default function Services() {
   });
 
   useEffect(() => {
-    const textContainer = document.querySelector('.p-text-container');
-    const readMore = document.querySelector('.read-more');
-    setIsExpanded(false);
+    // const textContainer = document.querySelector('');
+    // const readMore = document.querySelector('.read-more');
+    // setIsExpanded(false);
 
-    if (textContainer.scrollHeight > textContainer.clientHeight) {
-      readMore.classList.remove('hidden');
-    } else {
-      readMore.classList.add('hidden');
-    }
+    // if (textContainer.scrollHeight > textContainer.clientHeight) {
+    //   readMore.classList.remove('hidden');
+    // } else {
+    //   readMore.classList.add('hidden');
+    // }
   }, [counter, swipe]);
 
   return (
@@ -103,13 +118,11 @@ export default function Services() {
             className="mt-4 font-normal md:tracking-wide text-sm md:text-lg text-header"
           >
             <p
-              className={`${
-                isExpanded ? 'expanded' : 'collapsed line-clamp-3'
-              } p-text-container`}
+              className={`expanded text-center`}
             >
               {services[counter]['content']}
             </p>
-            <div className="h-8">
+            {/* <div className="h-8">
               <span
                 onClick={() => {
                   setIsExpanded(!isExpanded);
@@ -118,7 +131,7 @@ export default function Services() {
               >
                 {isExpanded ? 'Read Less' : 'Read More'}
               </span>
-            </div>
+            </div> */}
           </motion.div>
 
           <motion.div
@@ -197,7 +210,7 @@ export default function Services() {
           onChange={() => setSwipe(!swipe)}
         >
           {services.map((e) => (
-            <div key={e.id}>
+            <div key={`${e.id}-service`}>
               <motion.div
                 initial={{ x: '-5%', opacity: 0 }}
                 animate={{ x: inView ? 0 : '-5%', opacity: inView ? 1 : 0 }}
@@ -216,22 +229,11 @@ export default function Services() {
                 className="mt-4 md:w-3/4 font-normal md:tracking-wide text-sm md:text-lg text-header text-left"
               >
                 <p
-                  className={`${
-                    isExpanded ? 'expanded' : 'collapsed line-clamp-3'
-                  } p-text-container`}
+                  className={`collapsed line-clamp-3 text-center`}
                 >
                   {e['content']}
                 </p>
-                <div className="h-8">
-                  <span
-                    onClick={() => {
-                      setIsExpanded(!isExpanded);
-                    }}
-                    className=" text-primary text-sm cursor-pointer read-more"
-                  >
-                    {isExpanded ? 'Read Less' : 'Read More'}
-                  </span>
-                </div>
+                
               </motion.div>
 
               <motion.div
@@ -241,11 +243,9 @@ export default function Services() {
                 className="mt-8 md:mt-12 flex items-center justify-center"
               >
                 <img
-                  className="md:h-96"
+                  className=" h-64 md:h-96 object-fill "
                   src={e['img']}
                   alt="our services"
-                  width="auto"
-                  height="auto"
                 />
               </motion.div>
             </div>
