@@ -20,7 +20,7 @@ const ResultContainer = () => {
         initial={{ x: '-25%', opacity: 0 }}
         animate={{ x: inView ? 0 : '-25%', opacity: inView ? 1 : 0 }}
         transition={{ duration: 0.5 }}
-        className="text-center uppercase text-3xl md:text-5xl font-semibold leading-tight tracking-tighter text-primary"
+        className="text-center uppercase text-4xl md:text-5xl font-semibold leading-tight tracking-tighter text-primary"
       >
         Our Impact
       </motion.p>
@@ -45,7 +45,7 @@ const ResultContainer = () => {
           { b: 'Uttarakhand (India):', p: 'A ten year-old boy convinced his parents to help him stop their neighbours from marrying off their child and send her to school instead.' },
           { b: 'Rajasthan (India):', p: 'Children deduced their elders were wasting water and instituted a system to regulate usage with buy-in from their village elders, demonstrating advocacy/agency.' },
         ].map((e) => (
-          <p className="text-[#212529] mt-10 md:mt-0 md:leading-10 impact-point" key={e.p}>
+          <p className="text-[#212529] mt-10 md:mt-0 md:leading-10 impact-point text-lg" key={e.p}>
             <b className="text-[#28336e] font-bold">
               {e.b}
             </b>{' '}

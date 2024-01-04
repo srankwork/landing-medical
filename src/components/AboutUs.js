@@ -19,7 +19,7 @@ const AboutUs = () => {
       transition={{ duration: 0.5 }}
       className="pt-16"
     >
-      <h1 className="text-center text-3xl md:text-5xl font-semibold leading-tight tracking-tighter text-primary">
+      <h1 className="text-center text-4xl md:text-5xl font-semibold leading-tight tracking-tighter text-primary">
         ABOUT US
       </h1>
       <div className="mt-12 md:mt-16 flex items-center justify-center">
@@ -36,7 +36,7 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="flex justify-center items-center">
-        <p className="px-4 md:w-3/4 text-center mt-8 md:mt-10 font-normal md:tracking-wide text-xl md:text-lg text-header">
+        <p className="px-4 md:w-3/4 text-center mt-8 md:mt-10 font-normal md:tracking-wide text-lg text-header">
           Rangeet is a digital platform for authoring, delivering and measuring
           the impact of teaching materials for schools, communities and
           families.

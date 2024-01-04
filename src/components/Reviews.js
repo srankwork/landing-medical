@@ -94,7 +94,7 @@ const ReviewContainer = () => {
       transition={{ duration: 0.5 }}
       className="mt-12 md:mt-24 pt-14 md:pt-14 pb-14  select-none overflow-hidden"
     >
-      <h1 className="text-center uppercase text-3xl md:text-5xl font-semibold leading-tight tracking-tighter text-primary">
+      <h1 className="text-center uppercase text-4xl md:text-5xl font-semibold leading-tight tracking-tighter text-primary">
         Testimonials
       </h1>
 
@@ -105,7 +105,7 @@ const ReviewContainer = () => {
           professional={review[counter]['professional']}
         />
       </div>
-      <div className="space-x-4 hidden md:flex justify-center mt-8 gap-[20px]">
+      <div className="space-x-4 flex justify-center mt-8 gap-[20px]">
         <div
           className="rounded-full w-8 md:w-10 h-8 md:h-10 bg-background flex items-center justify-center cursor-pointer"
           onClick={() => {

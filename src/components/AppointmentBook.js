@@ -5,7 +5,7 @@ import logo from '../image/Icons/logorang.png';
 
 const BookAppointment = ({ forModal }) => {
   const [ref, inView] = useInView({
-    triggerOnce: true,
+    triggerOnce: true
   });
 
   const [name, setName] = useState('');
@@ -71,7 +71,7 @@ const BookAppointment = ({ forModal }) => {
         method: 'POST',
         headers: myHeaders,
         body: raw,
-        redirect: 'follow',
+        redirect: 'follow'
       };
 
       fetch('https://crm.zoho.in/crm/WebToLeadForm', requestOptions)
@@ -84,120 +84,124 @@ const BookAppointment = ({ forModal }) => {
   };
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ x: '-20%', opacity: 0 }}
-      animate={{ x: inView ? 0 : '-20%', opacity: inView ? 1 : 0 }}
-      transition={{ duration: 0.5 }}
-      className={`px-4 md:px-10 mt-16 ${
-        forModal ? '' : 'pt-14 md:pt-28 pb-28'
-      } container m-auto hero-bg-3 `}
-      id="appointmentForm"
-    >
-      <h1 className="font-poppins text-center text-lg md:text-3xl font-semibold leading-none md:leading-snug  text-primary">
-        IMPLEMENT RANGEET IN YOUR SCHOOL
-      </h1>
-      <p className='font-poppins text-center text-lg md:text-2xl mt-2 font-semibold leading-none md:leading-snug  text-primary'>Help us make the world Rangeet</p>
+    <div className='hero-bg-3 '>
+      <motion.div
+        ref={ref}
+        initial={{ x: '-20%', opacity: 0 }}
+        animate={{ x: inView ? 0 : '-20%', opacity: inView ? 1 : 0 }}
+        transition={{ duration: 0.5 }}
+        className={`px-4 md:px-10 mt-16 ${
+          forModal ? '' : 'pt-14 md:pt-28 pb-28'
+        } container m-auto `}
+        id='appointmentForm'
+      >
+        <h1 className='font-poppins text-center text-3xl md:text-3xl font-semibold leading-none md:leading-snug  text-primary'>
+          IMPLEMENT RANGEET IN YOUR SCHOOL
+        </h1>
+        <p className='font-poppins text-center text-xl md:text-2xl mt-4 font-semibold leading-none md:leading-snug  text-primary'>
+          Help us make the world Rangeet
+        </p>
 
-      <div className="md:flex md:space-x-4 mt-6 md:mt-14">
-        <div className="md:w-3/4">
-          {formError && (
-            <div className="text-red-500 mt-1 text-center mb-2">
-              {formError}
-            </div>
-          )}
+        <div className='md:flex md:space-x-4 mt-6 md:mt-14'>
+          <div className='md:w-3/4'>
+            {formError && (
+              <div className='text-red-500 mt-1 text-center mb-2'>
+                {formError}
+              </div>
+            )}
 
-          <form>
-            <div className="md:flex md:space-x-4  mb-0 md:mb-4">
-              <div className="mt-2 md:w-1/2">
-                <input
-                  type="text"
-                  className={`border-b-2 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder ${
-                    nameError ? 'border-red-500' : ''
-                  }`}
-                  placeholder="NAME"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-                {nameError && (
-                  <div className="text-red-500 mt-1">{nameError}</div>
-                )}
-              </div>
+            <form>
+              <div className='md:flex md:space-x-4  mb-0 md:mb-4'>
+                <div className='mt-2 md:w-1/2'>
+                  <input
+                    type='text'
+                    className={`border-b-2 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder ${
+                      nameError ? 'border-red-500' : ''
+                    }`}
+                    placeholder='NAME'
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                  {nameError && (
+                    <div className='text-red-500 mt-1'>{nameError}</div>
+                  )}
+                </div>
 
-              {/* Phone input */}
-              <div className="mt-2 md:w-1/2">
-                <input
-                  type="number"
-                  className={`border-b-2 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder ${
-                    phoneError ? 'border-red-500' : ''
-                  }`}
-                  placeholder="PHONE"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                />
-                {phoneError && (
-                  <div className="text-red-500 mt-1">{phoneError}</div>
-                )}
+                {/* Phone input */}
+                <div className='mt-2 md:w-1/2'>
+                  <input
+                    type='number'
+                    className={`border-b-2 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder ${
+                      phoneError ? 'border-red-500' : ''
+                    }`}
+                    placeholder='PHONE'
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                  />
+                  {phoneError && (
+                    <div className='text-red-500 mt-1'>{phoneError}</div>
+                  )}
+                </div>
               </div>
-            </div>
-            <div className="md:mb-4 md:flex md:space-x-4">
-              <div className="mt-2 md:w-1/2">
-                <input
-                  type="email"
-                  className={`border-b-2 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder ${
-                    emailError ? 'border-red-500' : ''
-                  }`}
-                  placeholder="YOUR EMAIL"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                {emailError && (
-                  <div className="text-red-500 mt-1">{emailError}</div>
-                )}
+              <div className='md:mb-4 md:flex md:space-x-4'>
+                <div className='mt-2 md:w-1/2'>
+                  <input
+                    type='email'
+                    className={`border-b-2 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder ${
+                      emailError ? 'border-red-500' : ''
+                    }`}
+                    placeholder='YOUR EMAIL'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  {emailError && (
+                    <div className='text-red-500 mt-1'>{emailError}</div>
+                  )}
+                </div>
+                <div className='mt-2 md:w-1/2'>
+                  <input
+                    type='text'
+                    className='border-b-2 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder'
+                    placeholder='INSITITUE'
+                    value={insititue}
+                    onChange={(e) => setInsititue(e.target.value)}
+                  />
+                </div>
               </div>
-              <div className="mt-2 md:w-1/2">
-                <input
-                  type="text"
-                  className="border-b-2 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder"
-                  placeholder="INSITITUE"
-                  value={insititue}
-                  onChange={(e) => setInsititue(e.target.value)}
-                />
+              <div className='md:mb-4 md:flex md:space-x-4'>
+                <div className='mt-2 md:w-1/2'>
+                  <input
+                    type='email'
+                    className={`border-b-2 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder`}
+                    placeholder='DESIGNATION'
+                    value={designation}
+                    onChange={(e) => setDesignation(e.target.value)}
+                  />
+                </div>
+                <div className='mt-2 md:w-1/2'></div>
               </div>
-            </div>
-            <div className="md:mb-4 md:flex md:space-x-4">
-              <div className="mt-2 md:w-1/2">
-                <input
-                  type="email"
-                  className={`border-b-2 outline-none font-semibold py-2 w-full font-montserrat leading-2 placeholder-placeholder`}
-                  placeholder="DESIGNATION"
-                  value={designation}
-                  onChange={(e) => setDesignation(e.target.value)}
-                />
-              </div>
-              <div className="mt-2 md:w-1/2"></div>
-            </div>
-          </form>
-        </div>
-        <div className="md:w-1/4 mt-12 md:mt-0 items-center flex flex-col justify-center">
-          <div className="hidden md:flex  justify-center items-center">
-            <img
-              src={logo}
-              className="h-12 mr-2 mb-4"
-              alt="logo"
-              width="auto"
-              height="auto"
-            />
+            </form>
           </div>
-          <button
-            onClick={handleFindOutClick}
-            className="w-full bg-primary py-2 px-6 rounded-sm transition-all duration-500 font-semibold text-lg text-center cursor-pointer text-white"
-          >
-            Submit
-          </button>
+          <div className='md:w-1/4 mt-12 md:mt-0 items-center flex flex-col justify-center'>
+            <div className='hidden md:flex  justify-center items-center'>
+              <img
+                src={logo}
+                className='h-12 mr-2 mb-4'
+                alt='logo'
+                width='auto'
+                height='auto'
+              />
+            </div>
+            <button
+              onClick={handleFindOutClick}
+              className='w-full bg-primary py-2 px-6 rounded-sm transition-all duration-500 font-semibold text-lg text-center cursor-pointer text-white'
+            >
+              Submit
+            </button>
+          </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 

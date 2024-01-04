@@ -105,7 +105,7 @@ export default function Services() {
               animate={{ x: inView ? 0 : '-5%', opacity: inView ? 1 : 0 }}
               transition={{ duration: 0.3 }}
             >
-              <h1 className="mt-8 text-center uppercase text-xl md:text-4xl font-semibold leading-tight tracking-tighter text-primary">
+              <h1 className="mt-8 text-center uppercase text-2xl md:text-4xl font-semibold leading-tight tracking-tighter text-primary">
                 {services[counter]['header']}
               </h1>
             </motion.div>
@@ -115,10 +115,10 @@ export default function Services() {
             initial={{ x: '-20%', opacity: 0 }}
             animate={{ x: inView ? 0 : '-20%', opacity: inView ? 1 : 0 }}
             transition={{ duration: 0.5 }}
-            className="mt-4 font-normal md:tracking-wide text-sm md:text-lg text-header"
+            className="mt-4 font-normal md:tracking-wide text-lg text-header"
           >
             <p
-              className={`expanded text-center`}
+              className={`expanded text-center font-normal md:tracking-wide text-lg`}
             >
               {services[counter]['content']}
             </p>
@@ -217,7 +217,7 @@ export default function Services() {
                 transition={{ duration: 0.3 }}
                 className="text-center"
               >
-                <h1 className="mt-8 uppercase text-xl md:text-4xl font-semibold leading-none md:leading-snug  text-primary">
+                <h1 className="mt-8 uppercase text-2xl md:text-4xl font-semibold leading-none md:leading-snug  text-primary">
                   {e['header']}
                 </h1>
               </motion.div>
@@ -229,7 +229,7 @@ export default function Services() {
                 className="mt-4 md:w-3/4 font-normal md:tracking-wide text-sm md:text-lg text-header text-left"
               >
                 <p
-                  className={`collapsed line-clamp-3 text-center`}
+                  className={`collapsed line-clamp-3 text-center font-normal md:tracking-wide text-lg`}
                 >
                   {e['content']}
                 </p>
