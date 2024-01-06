@@ -11,7 +11,7 @@ import partner7 from '../image/photos/7.jpg';
 import partner8 from '../image/photos/8.jpg';
 import partner9 from '../image/photos/9.jpg';
 import partner10 from '../image/photos/10.jpg';
-import partner11 from '../image/photos/hundOrdg.png';
+import partner12 from '../image/photos/12.png';
 
 
 function replicateArray(arr, times) {
@@ -74,9 +74,9 @@ const Rating = () => {
                 {
                   img: partner10,
                 },
-                // {
-                //   img: partner11,
-                // },
+                {
+                  img: partner12,
+                },
               ],
               50
             ).map((e, index) => (
