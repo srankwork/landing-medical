@@ -19,29 +19,6 @@ const IndexPage = () => {
         <title>Rangeet</title>
       </Helmet>
       <main className="w-full h-full">
-        {/* <div className=" bg-primary h-10 w-full text-center flex  items-center text-white justify-around">
-          <span>
-            <a
-              href="tel:+917208330809"
-              rel="noreferrer"
-              className="font-semibold"
-            >
-              +91 7208330809
-            </a>
-          </span>
-          <span className="flex items-center space-x-2">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.projectrangeet.app"
-              className="flex items-center"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span className="text-white font-semibold ml-2">
-                Download App
-              </span>
-            </a>
-          </span>
-        </div> */}
         <Header />
         <HeroContainer />
         <AboutUs />
@@ -60,7 +37,7 @@ const IndexPage = () => {
 
         <div className=" bg-primary w-full text-center flex flex-col text-white justify-center py-[20px] mt-16">
           <span>Copyright © 2023 Rangeet Pvt Ltd All Rights Reserved</span>
-          <span className='pt-2 text-[12px] md:text-[16px]'>
+          <span className="pt-2 text-[12px] md:text-[16px]">
             All copyright and trademark rights in the mark Social Emotional &
             Ecological Knowledge (SEEK) are owned exclusively by Rangeet Private
             Limited and no use of the mark is permitted other than by express

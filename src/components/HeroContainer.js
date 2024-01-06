@@ -8,6 +8,16 @@ const HeroContainer = () => {
     triggerOnce: true,
   });
 
+  const scrollToDiv = () => {
+    const targetDiv = document.getElementById('appointmentForm');
+
+    if (targetDiv) {
+      window.scrollTo({
+        top: targetDiv.offsetTop - 50,
+        behavior: 'smooth',
+      });
+    }
+  };
   return (
     <>
       <motion.div
@@ -28,14 +38,11 @@ const HeroContainer = () => {
           <p className="mt-8 md:mt-16 capitalize text-center md:text-start  text-sm md:text-xl font-semibold  leading-tight md:leading-snug  text-white">
             Shape the future with Rangeet
           </p>
-          <div className="mt-4 md:mt-8 ml-4 bg-background py-2 px-4 rounded-2xl transition-all duration-500 font-semibold">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.projectrangeet.app"
-              target="_blank"
-              className="text-white "
-            >
-              Learn More
-            </a>
+          <div
+            onClick={() => scrollToDiv()}
+            className="cursor-pointer mt-4 md:mt-8 ml-4 bg-background py-2 px-4 rounded-2xl transition-all duration-500 font-semibold"
+          >
+            <p className="text-white">Learn More</p>
           </div>
         </div>
       </motion.div>
