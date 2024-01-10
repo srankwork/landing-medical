@@ -74,7 +74,7 @@ export default function VideoSteps() {
             className='mt-8 md:mt-12 flex items-center justify-center'
           >
             {services[counter]['component'] == 'image' ? (
-              <img src={services[counter]['viId']} width='600' height='400px' className='h-[350px]'/>
+              <img src={services[counter]['viId']} className='md:h-[350px]'/>
             ) : (
               <iframe
                 width='600'

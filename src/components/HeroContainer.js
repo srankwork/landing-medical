@@ -33,7 +33,7 @@ const HeroContainer = () => {
             Revolutionize Education at your School with Rangeet
           </p>
           <h1 className="mt-20 md:mt-20 capitalize text-center md:text-start  text-2xl md:text-3xl font-semibold  leading-tight md:leading-snug  text-white">
-            Improve Student Engagement with Play-Based Curriculum
+           Develop a Breadth of Skills Children Need For the Future
           </h1>
           <p className="mt-8 md:mt-16 capitalize text-center md:text-start  text-sm md:text-xl font-semibold  leading-tight md:leading-snug  text-white">
             Shape the future with Rangeet
