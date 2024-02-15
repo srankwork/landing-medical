@@ -8,7 +8,7 @@ import performancedashboardImg from '../image/photos/performancedashboard.jpg';
 import holisticandglobalImg from '../image/photos/holisticandglobal.png';
 import scalableImg from '../image/photos/scalable.png';
 import universalApproach from '../image/photos/universal-approach.jpg';
-import unsdgImg from '../image/photos/unsdg.png';
+import unsdgImg from '../image/photos/unsdg_new.png';
 import learningCicleImage from '../image/photos/learning-cicle-image.png';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
