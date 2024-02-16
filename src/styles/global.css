@@ -10,6 +10,7 @@
 
 body {
   font-family: 'Cabin', sans-serif;
+  overflow-x: hidden;
 }
 
 div:focus {
@@ -116,4 +117,9 @@ input{
 ::placeholder {
   letter-spacing: 2px;
   padding-left: 5px;
+}
+
+.iframe{
+  height: 230vh;
+  width: 100vw;
 }
