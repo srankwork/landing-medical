@@ -4,6 +4,17 @@ import React, { useState } from 'react';
 import logo from '../image/Icons/logorang.png'
 
 const Header = () => {
+ const scrollToDiv = () => {
+    const targetDiv = document.getElementById('appointmentForm');
+
+    if (targetDiv) {
+      window.scrollTo({
+        top: targetDiv.offsetTop - 50,
+        behavior: 'smooth',
+      });
+    }
+  };
+  
   return (
     <>
       <div className="my-2 md:my-4 px-4 md:px-10">
@@ -17,7 +28,7 @@ const Header = () => {
           />
 
           <div className=" bg-background py-2 px-4 md:px-6 rounded-2xl transition-all duration-500 font-semibold text-sm md:text-lg">
-            <a href="tel:+919152128731" className="text-white ">
+            <a href="#" onClick={()=>scrollToDiv()} className="text-white ">
               Call Us
             </a>
           </div>
